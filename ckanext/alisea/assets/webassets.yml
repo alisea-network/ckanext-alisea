@@ -1,0 +1,14 @@
+alisea-js:
+  filter: rjsmin
+  output: ckanext-alisea/%(version)s-alisea.js
+  contents:
+    - js/alisea.js
+  extra:
+    preload:
+      - base/main
+
+alisea-css:
+  filter: cssrewrite
+  output: ckanext-alisea/%(version)s-alisea.css
+  contents:
+    - css/alisea.css

@@ -1,0 +1,376 @@
+
+
+.module-heading {
+    background: #2D7C3D !important;
+    color: #ffff;
+    padding: 0.8rem 0;
+}
+
+.module-heading i {
+    color: #ffff;
+}
+
+.btn-primary {
+    background-color: #2D7C3D;
+}
+
+.btn-primary i {
+    display: none;
+}
+
+.site-footer {
+    background: #2D7C3D;
+}
+
+.account-masthead {
+    background-color: #F1F2F2;
+}
+
+.masthead {
+    background-color: #ffff;
+}
+
+.navbar-nav li {
+    color: red !important;
+}
+
+.header-image .navbar-left a img {
+    width: 100%;
+    max-width: 320px;
+}
+
+.masthead .main-navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.masthead .main-navbar ul li a {
+    text-transform: uppercase;
+    color: #41A7D4;
+    font-size: 1rem;
+    padding: 8px !important;
+    border-radius: 0 !important;
+
+}
+
+.copy-right-title {
+    font-size: 16px
+}
+
+.hero-conatiner {
+    min-height: 500px;
+    height: 100%;
+}
+
+.masthead .main-navbar ul li:focus a, .masthead .main-navbar ul li.active a {
+    background-color: transparent !important;
+    font-weight: 900;
+    border-bottom: 2px solid #41A7D4;
+}
+
+.masthead .main-navbar ul li:hover a {
+    background-color: transparent !important;
+}
+
+.wrapper {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.main {
+    padding-top: 0 !important;
+    background: #ffff;
+}
+
+.breadcrumb {
+    opacity: 0.7;
+}
+
+.primary {
+    padding: 0;
+}
+
+.module-content .nav li a{
+    color: #000000 !important;
+}
+
+.footer-links-right-side p{
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #ffff !important;
+}
+
+.footer-links-right-side p a{
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #ffff !important;
+}
+
+.footer-links-left-side p {
+    font-size: 16px !important;
+    color: #ffff !important;
+}
+
+.footer-secondary-title {
+    font-size: 1.75rem !important;
+    font-weight: 500 !important;
+}
+
+.footer-main-title {
+    font-size: 2.5rem;
+    font-weight: 700 !important;
+}
+
+.search-form .search-input-group .input-group-btn .btn{
+    background-color: #2D7C3D;   
+}
+.search-form .search-input-group .input-group-btn .btn:hover{
+    background-color: #65a372 !important;   
+}
+
+.search-form .search-input-group .input-group-btn .btn i{
+    color: #ffff;   
+}
+
+.dataset-resources li a {
+    background-color: #197EA3;
+    color: #ffff;
+}
+
+a.tag:hover {
+    background-color: #197EA3 !important;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.alisea-logo {
+    width: 140px;
+    height: 76px;
+    background-color: #F1F2F2;
+}
+
+@media screen and (max-width: 980px) {
+    .alisea-logo {
+        display: none;
+    }
+
+    .hero-section-title {
+        max-width: none !important;
+        font-size: 2rem !important;
+    }
+
+    .map-conatiner {
+        width: 100% !important;
+    }
+
+    .title-container{
+        width: 100% !important;
+        order: 2;
+    }
+
+    .hero-section-description {
+        max-width: none !important;
+    }
+    
+    .main-navbar .navbar-nav .nav-item .library-item {
+        padding: 8px 16px !important;
+    }
+}
+
+.navbar-nav li a {
+    font-weight: 700;
+}
+
+.masthead .main-navbar ul li a:hover, .masthead .main-navbar ul li a:focus {
+    color: #1488bb;
+}
+.masthead {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.alisea-logo img {
+    width: 100%;
+    padding: 20px;
+    min-width: 140px;
+    padding-top: 15px;
+}
+
+.hero-section {
+    margin-bottom: 2rem;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.account .form-group {
+    margin-bottom: 0;
+    max-width: 150px;
+    margin-right: 10px;
+}
+
+.account .form-group label {
+    display: none;
+}
+
+.module-narrow #dataset-map-container {
+    height: 100% !important;
+    min-height: 500px !important;
+}
+
+.hero-section-title {
+    font-size: 3.5rem;
+    max-width: 300px;
+    font-weight: 900 !important;
+    margin-bottom: 2rem;
+    color:#ffff;
+}
+
+.masthead .navbar .logo img {
+    max-height: 50px !important;
+}
+
+.hero-section-description {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffff;
+    max-width: 350px;
+}
+
+.account .list-unstyled li a {
+    color: #2D7C3D !important;
+}
+
+.account .list-unstyled li a:hover {
+    background-color: #2D7C3D !important;
+    color: white !important;
+}
+
+.account-masthead .account ul li {
+    border-color: darkgray;
+}
+
+.module-heading .action {
+    color: #ffff !important;
+    text-decoration: none !important;
+}
+
+#agroecology_keyword {
+    width: 100%;
+    min-height: 300px;
+}
+
+.language form .form-group {
+    margin-bottom: 0 !important;
+}
+
+.language {
+    max-width: 100px;
+}
+
+.agroecology-keyword-form .controls div {
+    width: 100%;
+}
+
+.select2-search-choice-close, .select2-container-multi .select2-search-choice-close {
+    top: 2px !important;
+}
+
+.main-navbar .navbar-nav .nav-item .library-item{
+    color: #41A7D4;
+    padding: 0;
+}
+
+.navbar { 
+    padding-bottom: 0 !important;
+}
+
+.flag-container {
+    margin-right: 10px;
+}
+
+.flag-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flash-messages .alert {
+    box-shadow: 0 0 0 1px white;
+    opacity: 1;
+}
+
+.custom-hero-section-title {
+    max-width: 523px !important;
+}
+
+
+#dataset-search-form {
+    margin-top: -24px  !important;
+}
+
+#organization-search-form {
+    margin-top: -24px  !important;
+}
+
+#custom_page_primary_action {
+    margin-bottom: 44px !important;
+    margin-top: -24px !important;
+}
+
+#field-year-metadata {
+    width: 100px;
+}
+
+.page_primary_action {
+    margin-bottom: 44px !important;
+}
+
+.footer {
+    background-color: #2d7c3d;
+}
+
+.footer span{
+    font-size: 1.2rem;
+}
+.footer p{
+    font-size: 1.1rem;
+}
+
+.footer h1 {
+    font-size: 2.5rem !important;
+}
+
+.footer h3 {
+    font-size: 1.75rem !important;
+}
+
+.footer-contact-item {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1450px) {
+
+    .logo img {
+        max-width: 240px !important;
+    }
+
+    .masthead .main-navbar ul li a{
+        padding: 5px !important;
+        font-size: 0.9rem !important;
+
+    }
+
+}

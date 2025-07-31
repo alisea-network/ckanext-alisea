@@ -1,0 +1,246 @@
+{% set dataset_type = h.default_package_type() %}
+
+{% block header_wrapper %} {% block header_account %}
+<div class="account-masthead">
+  <div class="col-xl-10 offset-xl-1">
+    <div class="d-flex align-center justify-content-end">
+      <div class="d-flex align-items-center">
+        <a href="{% url_for h.current_url(), locale='km' %}" class="flag-container">
+          <img src="https://kh.ali-sea.org/wp-content/themes/alisea-wordpress-theme/assets/flags/kh.png" />
+        </a>
+        <a href="{{ h.lao_current_url() }}" class="flag-container">
+          <img src="https://kh.ali-sea.org/wp-content/themes/alisea-wordpress-theme/assets/flags/la.png" />
+        </a>
+        <a href="{% url_for h.current_url(), locale='my_MM' %}" class="flag-container">
+          <img src="https://kh.ali-sea.org/wp-content/themes/alisea-wordpress-theme/assets/flags/mm.png" />
+        </a>
+        <a href="{% url_for h.current_url(), locale='vi' %}" class="flag-container">
+          <img src="https://kh.ali-sea.org/wp-content/themes/alisea-wordpress-theme/assets/flags/vn.png" />
+        </a>
+        <a href="{% url_for h.current_url(), locale='en' %}" class="flag-container">
+          <img src="https://kh.ali-sea.org/wp-content/themes/alisea-wordpress-theme/assets/flags/gb.png" />
+        </a>
+      </div>
+      {% block header_account_container_content %} {% if c.userobj %}
+      <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
+        <ul class="list-unstyled">
+          {% block header_account_logged %} {% if c.userobj.sysadmin %}
+          <li>
+            <a href="{{ h.url_for('admin.index') }}" title="{{ _('Sysadmin settings') }}">
+              <i class="fa fa-gavel" aria-hidden="true"></i>
+              <span class="text">{{ _('Admin') }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% block header_account_profile %}
+          <li>
+            <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}">
+              {{ h.user_image((c.user if c and c.user else ''), size=22) }}
+              <span class="username">{{ c.userobj.display_name }}</span>
+            </a>
+          </li>
+          {% endblock %}
+          {% block header_dashboard %}
+          <li>
+            <a href="{{ h.url_for('dashboard.datasets') }}" title="{{ _(" View dashboard") }}">
+              <i class="fa fa-tachometer" aria-hidden="true"></i>
+              <span class="text">{{ _('Dashboard') }}</span>
+            </a>
+          </li>
+          {% endblock %}
+          {% block header_account_settings_link %}
+          <li>
+            <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Profile settings') }}">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+              <span class="text">{{ _('Profile settings') }}</span>
+            </a>
+          </li>
+          {% endblock %} {% block header_account_log_out_link %}
+          <li>
+            <a href="{{ h.url_for('user.logout') }}" title="{{ _('Log out') }}">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              <span class="text">{{ _('Log out') }}</span>
+            </a>
+          </li>
+          {% endblock %} {% endblock %}
+        </ul>
+      </div>
+      {% else %}
+      <nav class="account not-authed" aria-label="{{ _('Account') }}">
+        <ul class="list-unstyled">
+          {% block header_account_notlogged %}
+          <li>{% link_for _('Log in'), named_route='user.login' %}</li>
+          {% if h.check_access('user_create') %}
+          <li>{% link_for _('Register'), named_route='user.register', class_='sub' %}</li>
+          {% endif %} {% endblock %}
+        </ul>
+      </nav>
+      {% endif %} {% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+<header class="masthead">
+  <div class="col-xl-10 offset-xl-1">
+    {% block header_debug %} {% if g.debug and not g.debug_supress_header %}
+    <div class="debug">Blueprint : {{ g.blueprint }}<br />View : {{ g.view }}</div>
+    {% endif %} {% endblock %}
+    <nav class="navbar navbar-expand-lg navbar-light pt-0">
+      <hgroup class="{{ g.header_class }} navbar-left">
+      {% set current_lang = request.environ.CKAN_LANG %}
+        {% block header_logo %}
+        {% set current_lang = request.environ.CKAN_LANG %}
+        {% if g.site_logo %}
+          {% if current_lang == 'en' %}
+            <a class="logo" href="https://kh.ali-sea.org/">
+          {% elif current_lang == 'km' %}
+            <a class="logo" href="https://kh.ali-sea.org/kh/alisea-knowledge-hub-khmer/">
+          {% elif current_lang == 'lo' %}
+            <a class="logo" href="https://kh.ali-sea.org/la/alisea-knowledge-hub-lao/">
+          {% elif current_lang == 'my_MM' %}         
+            <a class="logo" href="https://kh.ali-sea.org/mm/alisea-knowledge-hub-myanmar/">
+          {% elif current_lang == 'vi' %}         
+            <a class="logo" href="https://kh.ali-sea.org/vn/alisea-knowledge-hub-vietnam/">
+          {% endif %}
+              <img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}"
+                title="{{ g.site_title }}" />
+            </a>
+        {% else %}
+        <h1>
+          <a href="https://kh.ali-sea.org/">{{ g.site_title }}</a>
+        </h1>
+        {% if g.site_description %}
+        <h2>{{ g.site_description }}</h2>
+        {% endif %}
+        {% endif %}
+        {% endblock %}
+
+      </hgroup>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation-toggle"
+        aria-controls="main-navigation-toggle" aria-expanded="false" aria-label="{{ _('Toggle navigation') }}">
+        <span class="fa fa-bars"></span>
+      </button>
+
+      <div class="main-navbar collapse navbar-collapse" id="main-navigation-toggle">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+          {% if current_lang == 'en' %}
+          <li>
+            <a href="https://kh.ali-sea.org/insights">{{ _('Insights') }}</a>
+          </li>
+          <li>
+          {{ h.build_nav_main(
+            (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Library'), ["dataset", "resource"]) ) }}
+          </li>
+          <li>         
+            <a href="https://kh.ali-sea.org/map-explorer/">{{ _('Map Explorer') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/datablog/">{{ _('Datablog') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/experts/">{{ _('Experts') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/about/">{{ _('About') }}</a>
+          </li>
+
+          {% elif current_lang == 'km' %}
+          <li>
+            <a href="https://kh.ali-sea.org/kh/insights-khmer/">{{ _('Insights') }}</a>
+          </li>
+          <li>
+          {{ h.build_nav_main(
+            (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Library'), ["dataset", "resource"]) ) }}
+          </li>
+          <li>         
+            <a href="https://kh.ali-sea.org/kh/map-explorer-khmer/">{{ _('Map Explorer') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/kh/datablog-khmer/">{{ _('Datablog') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/kh/experts-khmer/">{{ _('Experts') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/kh/about-khmer/">{{ _('About') }}</a>
+          </li>
+          
+          {% elif current_lang == 'lo' %}
+          <li>
+            <a href="https://kh.ali-sea.org/la/insights-lao/">{{ _('Insights') }}</a>
+          </li>
+          <li>
+          {{ h.build_nav_main(
+            (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Library'), ["dataset", "resource"]) ) }}
+          </li>
+          <li>         
+            <a href="https://kh.ali-sea.org/la/map-explorer-lao/">{{ _('Map Explorer') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/la/datablog-lao/">{{ _('Datablog') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/la/experts-lao/">{{ _('Experts') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/la/about-lao/">{{ _('About') }}</a>
+          </li>
+
+          {% elif current_lang == 'my_MM' %}
+          <li>
+            <a href="https://kh.ali-sea.org/mm/insights-myanmar/">{{ _('Insights') }}</a>
+          </li>
+          <li>
+          {{ h.build_nav_main(
+            (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Library'), ["dataset", "resource"]) ) }}
+          </li>
+          <li>         
+            <a href="https://kh.ali-sea.org/mm/map-explorer-myanmar/">{{ _('Map Explorer') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/mm/datablog-myanmar/">{{ _('Datablog') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/mm/experts-myanmar/">{{ _('Experts') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/mm/about-myanmar/">{{ _('About') }}</a>
+          </li>
+        
+          {% elif current_lang == 'vi' %}
+          <li>
+            <a href="https://kh.ali-sea.org/vn/insights-vietnam/">{{ _('Insights') }}</a>
+          </li>
+          <li>
+          {{ h.build_nav_main(
+            (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Library'), ["dataset", "resource"]) ) }}
+          </li>
+          <li>         
+            <a href="https://kh.ali-sea.org/vn/map-explorer-vietnam/">{{ _('Map Explorer') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/vn/datablog-vietnam/">{{ _('Datablog') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/vn/experts-vietnam/">{{ _('Experts') }}</a>
+          </li>
+          <li>
+            <a href="https://kh.ali-sea.org/vn/about-vietnam/">{{ _('About') }}</a>
+          </li>
+        {% endif %}
+        </ul>
+
+        {% block header_site_search %}
+        <div class="alisea-logo">
+          <a href="https://atmo.joomlafact.com/">
+            <img id="masthead-bg" src="https://kh.ali-sea.org/wp-content/uploads/2024/09/cropped-alisea-side-logo-1.png"
+              alt="">
+          </a>
+        </div>
+        {% endblock %}
+      </div>
+    </nav>
+  </div>
+</header>
+{% endblock %}

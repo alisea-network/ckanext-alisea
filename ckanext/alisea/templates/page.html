@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{%- block page -%}
+
+  {% block skip %}
+    <div class="skip-content"><a class="sr-only sr-only-focusable" href="#content">{{ _('Skip to main content') }}</a></div>
+  {% endblock %}
+
+  {#
+  Override the header on a page by page basis by extending this block. If
+  making sitewide header changes it is preferable to override the header.html
+  file.
+  #}
+  {%- block header %}
+    {% include "header.html" %}
+  {% endblock -%}
+
+  {# The content block allows you to replace the content of the page if needed #}
+  {%- block content %}
+    {% block maintag %}<div class="main">{% endblock %}
+      <!-- <div class="d-flex flex-wrap offset-xl-1 align-items-center">
+        {% if (request.path == "/dataset") or (request.path == "/dataset/") %}
+          <div class="col-md-3 col-sm-12 col-xs-12 title-container p-2">
+            
+          </div>
+          <div class="col-md-9 col-sm-12 map-conatiner">
+            {# Uncoment this section to add spatial query map search on frontpage
+            {% snippet "spatial/snippets/spatial_query.html", default_extent= [[2.62, 85.21], [24.92, 113.00]] %}
+            #}
+            <img src="/images/library_frontpage.jpeg" alt="Frontpage Alisea dataset library image" width="100%">
+          </div>
+          {% endif %}
+      </div> -->
+      {% if (request.path == "/dataset") or (request.path == "/dataset/") %}
+      <header class="font-page-header" style="background-image: url('/images/library_frontpage.png');background-size: cover;background-position: center; min-height: 500px;">
+        <div class="offset-xl-1">
+            {% set current_lang = request.environ.CKAN_LANG %}   
+            {% if current_lang != 'my_MM' %} 
+            <div class="d-flex align-items-center text-white header-home px-3 w-100 hero-conatiner">
+              <div class="hero-title-container text-white">
+                <h1 class="hero-section-title">{{ _('Agroecology Library') }}</h1>
+                <p class="hero-section-description">{{ _('Our repository of literature on agroecology on Southeast Asia includes more than 750 documents.') }}</p></div>
+            </div>
+            {% elif current_lang == 'my_MM' %}
+            <div class="d-flex align-items-center text-white header-home px-3 w-100 hero-conatiner">
+              <div class="hero-title-container text-white">
+                <h1 class="hero-section-title custom-hero-section-title">{{ _('Agroecology Library') }}</h1>
+                <p class="hero-section-description">{{ _('Our repository of literature on agroecology on Southeast Asia includes more than 750 documents.') }}</p></div>
+            </div>
+            {% endif %}
+        </div>
+      </header>
+      {% endif %}
+      <div id="content" class="container-fluid col-xl-10 offset-xl-1 pt-4">
+        {% block main_content %}
+          {% block flash %}
+            <div class="flash-messages">
+              {% block flash_inner %}
+              {% for category, message in h.get_flashed_messages(with_categories=true) %}
+                  <div class="alert fade in {{ category }}">
+                    {{ h.literal(message) }}
+                  </div>
+                {% endfor %}
+              {% endblock %}
+            </div>
+          {% endblock %}
+
+          {% block toolbar %}
+            <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
+              {% block breadcrumb %}
+                {% if self.breadcrumb_content() | trim %}
+                  <ol class="breadcrumb">
+                    {% snippet 'snippets/home_breadcrumb_item.html' %}
+                    {% block breadcrumb_content %}{% endblock %}
+                  </ol>
+                {% endif %}
+              {% endblock %}
+            </div>
+          {% endblock %}
+
+          <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' or c.action=='resource_read' %} no-nav{% endif %} 123">
+            {#
+            The pre_primary block can be used to add content to before the
+            rendering of the main content columns of the page.
+            #}
+            {% block pre_primary %}
+            {% endblock %}
+
+            {% block secondary %}
+              <aside class="secondary col-sm-3">
+                {#
+                The secondary_content block can be used to add content to the
+                sidebar of the page. This is the main block that is likely to be
+                used within a template.
+
+                Example:
+
+                  {% block secondary_content %}
+                    <h2>A sidebar item</h2>
+                    <p>Some content for the item</p>
+                  {% endblock %}
+                #}
+                {% block secondary_content %}{% endblock %}
+              </aside>
+            {% endblock %}
+
+            {% block primary %}
+              <div class="primary col-sm-9 col-xs-12" role="main">
+                {#
+                The primary_content block can be used to add content to the page.
+                This is the main block that is likely to be used within a template.
+
+                Example:
+
+                  {% block primary_content %}
+                    <h1>My page content</h1>
+                    <p>Some content for the page</p>
+                  {% endblock %}
+                #}
+                {% block primary_content %}
+                  <article class="module">
+                    {% block page_header %}
+                      <header class="module-content page-header">
+                        {% if self.content_action() | trim %}
+                          <div class="content_action">
+                            {% block content_action %}{% endblock %}
+                          </div>
+                        {% endif %}
+                        <ul class="nav nav-tabs">
+                          {% block content_primary_nav %}{% endblock %}
+                        </ul>
+                      </header>
+                    {% endblock %}
+                    <div class="module-content">
+                      {% if self.page_primary_action() | trim %}
+                        <div class="page_primary_action">
+                          {% block page_primary_action %}{% endblock %}
+                        </div>
+                      {% endif %}
+                      {% block primary_content_inner %}
+                      {% endblock %}
+                    </div>
+                  </article>
+                {% endblock %}
+              </div>
+            {% endblock %}
+          </div>
+        {% endblock %}
+      </div>
+    </div>
+  {% endblock -%}
+
+  {#
+  Override the footer on a page by page basis by extending this block. If
+  making sitewide header changes it is preferable to override the footer.html-u
+  file.
+  #}
+  {%- block footer %}
+    {% include "footer.html" %}
+    {% include 'snippets/gtm_noscript.html' %}
+  {% endblock -%}
+{%- endblock -%}
+
+{%- block scripts %}
+  {% asset 'base/main' %}
+  {% asset 'base/ckan' %}
+  {% if g.tracking_enabled %}
+    {% asset 'base/tracking' %}
+  {% endif %}
+  {{ super() }}
+{% endblock -%}

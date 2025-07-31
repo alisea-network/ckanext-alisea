@@ -1,0 +1,2170 @@
+scheming_version: 2
+dataset_type: dataset
+about: ALiSEA custom metadata scheme
+about_url: https://github.com/keitaroinc/ckanext-alisea
+form_languages: [en, vi, km, my_MM, lo]
+
+dataset_fields:
+- field_name: type_of_alisea_product
+  required: true
+  label: 
+    en: Type of ALiSEA product   
+    vi: loại hình sản phẩm của ALiSEA
+    km: ប្រភេទផលិតផលចំណេះដឹង បណ្ដាញកសិអេកូឡូស៊ី
+    my_MM: ALiSEA ရလဒ်အမျိုးအစားများ 
+    lo: ປະເພດຜະລິດຕະພັນຂອງອາລິເຊຍ
+  preset: select
+  choices:
+  - value: None
+    label: 
+      en: None
+      vi: Không
+      km: មិនមាន
+      my_MM: မရှိ
+      lo: ບໍ່ມີ
+  - value: Policy Brief
+    label:
+      en: Policy Brief
+      vi: Tóm tắt chính sách
+      km: គោលនយោបាយសង្ខេប
+      my_MM: မူဝါဒအကျဉ်း
+      lo: ບົດຄັດຫຍໍ້ນະໂຍບາຍ
+  - value: Research Brief
+    label:
+      en: Research Brief
+      vi: Tóm tắt nghiên cứu
+      km: ការស្រាវជ្រាវសង្ខេប
+      my_MM: သုတေသနအကျဉ်း
+      lo: ບົດຄັດຫຍໍ້ການຄົ້ນຄ້ວາ
+  - value: Agroecology Insights
+    label: 
+      en: Agroecology Insights
+      vi: Thông tin chi tiết về Nông nghiệp sinh thái
+      km: ទិន្នន័យកសិអេកូឡីស៊ី
+      my_MM: စိုက်ပျိုးရေးဂေဟဆိုင်ရာသဘောထားအမြင်များ
+      lo: ຂໍ້ມູນແບບເຈາະເລິກດ້ານນິເວດກະສິກຳ
+  - value: Videos
+    label: 
+      en: Videos
+      vi: Video
+      km: វីដេអូ
+      my_MM: ဗီဒီယိုများ
+      lo: ວີດີໂອ
+  
+- field_name: title_translated
+  label:
+    en: Title
+    vi: Tiêu đề
+    km: ចំណងជើង
+    my_MM: ခေါင်းစဉ်
+    lo: ຊື່ເລື່ອງ
+  fluent_form_label:
+    en:
+      en: Title (English)
+      vi: Tiêu đề (tiếng Anh)
+      km:  ចំណងជើង (ភាសាអង់គ្លេស)
+      my_MM: ခေါင်းစဉ် (အင်္ဂလိပ်)
+      lo: ຊື່ເລື່ອງ(ພາສາອັງກິດ)
+    vi:
+      en: Title (Vietnamese)
+      vi: Tiêu đề (Tiếng Việt)
+      km:  ចំណងជើង (វៀតណាម)
+      my_MM: ခေါင်းစဉ် (ဗီယက်နမ်)
+      lo: ຊື່ເລື່ອງ (ພາສາຫວຽດນາມ)
+    km:
+      en: Title (Khmer)
+      vi: Tiêu đề (Khmer)
+      km:  ចំណងជើង (ខ្មែរ)
+      my_MM: ခေါင်းစဉ် (ခမာ)
+      lo: ຊື່ເລື່ອງ (ພາສາຂະເໝນ)
+    my_MM: 
+      en: Title (Myanmar)
+      vi: Tiêu đề (Myanmar)
+      km:  ចំណងជើង (មីយ៉ាន់ម៉ា)
+      my_MM: ခေါင်းစဉ် (မြန်မာ)
+      lo: ຊື່ເລື່ອງ (ພາສາມຽນມາ)
+    lo: 
+      en: Title (Lao)
+      vi: Tiêu đề (Lào)
+      km:  ចំណងជើង (ឡាវ)
+      my_MM: ခေါင်းစဉ် (လာအို)
+      lo: ຊື່ເລື່ອງ (ພາສາລາວ)
+  fluent_help_text:
+    en:
+      en: The English name by which the dataset is known
+      vi: Tên tiếng Anh mà tập dữ liệu đã được biết đến
+      km: ឈ្មោះជាភាសារអង់គ្លេស ដែលមានក្នុងទិន្នន័យ
+      my_MM: ဒေတာကိုသိရှိနိုင်သောအင်္ဂလိပ်အမည်
+      lo: ຊື່ພາສາອັງກິດທີ່ໃຊ້ເອີ້ນຊຸດຂໍ້ມູນ
+    vi:
+      en: The Vietnamese name by which the dataset is known
+      vi: Tên tiếng Anh mà tập dữ liệu đã được biết đến
+      km: ឈ្មោះជាភាសារវៀតណាម ដែលមានក្នុងទិន្នន័យ
+      my_MM: ဒေတာကိုသိရှိနိုင်သောဗီယက်နမ်အမည်
+      lo: ຊື່ພາສາຫວຽດນາມທີ່ໃຊ້ເອີ້ນຊຸດຂໍ້ມູນ
+    km: 
+      en: The Khmer name by which the dataset is known
+      vi: Tên tiếng Khme mà tập dữ liệu đã được biết đến
+      km: ឈ្មោះជាភាសារខ្មែរ ដែលមានក្នុងទិន្នន័យ
+      my_MM: ဒေတာကိုသိရှိနိုင်သောခမာအမည်
+      lo: ຊື່ພາສາຂະເໝນທີ່ໃຊ້ເອີ້ນຊຸດຂໍ້ມູນ
+    my_MM: 
+      en: The Burmese name by which the dataset is known
+      vi: Tên tiếng Miến Điện mà tập dữ liệu đã được biết đến
+      km: ឈ្មោះជាភាសារមីយ៉ាន់ម៉ា ដែលមានក្នុងទិន្នន័យ
+      my_MM: ဒေတာကိုသိရှိနိုင်သောမြန်မာအမည်
+      lo: ຊື່ພາສາມຽນມາທີ່ໃຊ້ເອີ້ນຊຸດຂໍ້ມູນ
+    lo: 
+      en: The Lao name by which the dataset is known
+      vi: Tên tiếng Lào mà tập dữ liệu đã được biết đến
+      km: ឈ្មោះជាភាសារឡាវ ដែលមានក្នុងទិន្នន័យ
+      my_MM: ဒေတာကိုသိရှိနိုင်သောလာအိုအမည်
+      lo: ຊື່ພາສາລາວທີ່ໃຊ້ເອີ້ນຊຸດຂໍ້ມູນ
+  preset: fluent_core_translated
+
+- field_name: name
+  label: URL
+  preset: dataset_slug
+
+- field_name: notes_translated
+  label:
+    en: Description  
+    vi: Mô tả
+    km:  ការពិពណ៌នា
+    my_MM: Description
+    lo: ຄຳອະທິບາ
+  fluent_form_label:
+    en:
+      en: Description (English)
+      vi: Mô tả (Tiếng Anh)
+      km:  ការពិពណ៌នា (ភាសាអង់គ្លេស)
+      my_MM: ဖော်ပြချက် (အင်္ဂလိပ်)
+      lo: ຄຳອະທິບາຍ(ພາສາອັງກິດ)
+    vi:
+      en: Description (Vietnamese)
+      vi: Mô tả (Tiếng Việt)
+      km:  ការពិពណ៌នា (ភាសាវៀតណាម)
+      my_MM: ဖော်ပြချက် (ဗီယက်နမ်)
+      lo: ຄຳອະທິບາຍ(ພາສາຫວຽດນາມ)
+    km: 
+      en: Description (Khmer)
+      vi: Mô tả (Khmer)
+      km:  ការពិពណ៌នា (ភាសាខ្មែរ)
+      my_MM: ဖော်ပြချက် (ခမာ)
+      lo: ຄຳອະທິບາຍ(ພາສາຂະເໝນ)
+    my_MM: 
+      en: Description (Myanmar)
+      vi: Mô tả (Myanmar)
+      km:  ការពិពណ៌នា (ភាសាមីយ៉ាន់ម៉ា)
+      my_MM: ဖော်ပြချက် (မြန်မာ)
+      lo: ຄຳອະທິບາຍ(ພາສາມຽນມາ)
+    lo: 
+      en: Description (Lao)
+      vi: Mô tả (tiếng Lào)
+      km:  ការពិពណ៌នា (ភាសាឡាវ)
+      my_MM: ဖော်ပြချက် (လာအို)
+      lo: ຄຳອະທິບາຍ(ພາສາລາວ)
+
+  fluent_help_text:
+    en:
+      en: "An account of the dataset, in English. A description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource."
+      vi: "Bản tóm tắt về tập dữ liệu bằng tiếng Anh không giới han bao gồm: tóm tắt, mục lục hoặc bản tường trình dạng văn bản tự do"
+      km: គណនីនៃសំណុំទិន្នន័យ ជាភាសាអង់គ្លេស។ ការពិពណ៌នាអាចរួមបញ្ចូល ប៉ុន្តែមិនកំណត់ចំពោះ៖ សង្ខេបបទ តារាងមាតិកា ឬប្រភពបញ្ចូលទិន្នន័យ។ 
+      my_MM: အင်္ဂလိပ်ဘာသာဖြင့်ဒေတာအကောင့်တစ်ခု။ ဖော်ပြချက်တွင်ကန့်သတ်ထားခြင်းမရှိသော အကျဉ်းချုပ်၊ မာတိကာပါဝင်နိုင်ပါသည်။ သို့မဟုတ် ဒေတာအရင်းအမြစ်ဆိုင်ရာအစီအစဉ်တကျမဟုတ်သည့်ဒေတာများဖြင့်အကောင့်တစ်ခု
+      lo: "ບັນຊີຂອງຊຸດຂໍ້ມູນເປັນພາສາອັງກິດ.ອາດຈະມີຄຳອະທິບາຍ ແຕ່ບໍ່ໄດ້ຈຳກັດເຊັ່ນ: ບົດຄັດຫຍໍ້, ສາລະບານ,ຫຼືຂໍ້ຄວາມອິດສະລະ."
+    vi:
+      en: "An account of the dataset, in Vietnamese. A description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource."
+      vi: "Bản tóm tắt về tập dữ liệu bằng tiếng Việt không giới han bao gồm: tóm tắt, mục lục hoặc bản tường trình dạng văn bản tự do"
+      km: គណនីនៃសំណុំទិន្នន័យ ជាភាសាវៀតណាម។ ការពិពណ៌នាអាចរួមបញ្ចូល ប៉ុន្តែមិនកំណត់ចំពោះ៖ សង្ខេបបទ តារាងមាតិកា ឬប្រភពបញ្ចូលទិន្នន័យ។
+      my_MM: ဗီယက်နမ်ဘာသာဖြင့်ဒေတာအကောင့်တစ်ခု။ ဖော်ပြချက်တွင်ကန့်သတ်ထားခြင်းမရှိသော အကျဉ်းချုပ်၊ မာတိကာပါဝင်နိုင်ပါသည်။ သို့မဟုတ် ဒေတာအရင်းအမြစ်ဆိုင်ရာအစီအစဉ်တကျမဟုတ်သည့်ဒေတာများဖြင့်အကောင့်တစ်ခု
+      lo: "ບັນຊີຂອງຊຸດຂໍ້ມູນເປັນພາສາຫວຽດນາມ. ອາດຈະມີຄຳອະທິບາຍ ແຕ່ບໍ່ໄດ້ຈຳກັດເຊັ່ນ: ບົດຄັດຫຍໍ້, ສາລະບານ, ຫຼືຂໍ້ຄວາມອິດສະລະ."
+    km: 
+      en: "An account of the dataset, in Khmer. A description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource."
+      vi: "Bản tóm tắt về tập dữ liệu bằng tiếng Khme không giới han bao gồm: tóm tắt, mục lục hoặc bản tường trình dạng văn bản tự do"
+      km: គណនីនៃសំណុំទិន្នន័យ ជាភាសាខ្មែរ។ ការពិពណ៌នាអាចរួមបញ្ចូល ប៉ុន្តែមិនកំណត់ចំពោះ៖ សង្ខេបបទ តារាងមាតិកា ឬប្រភពបញ្ចូលទិន្នន័យ។
+      my_MM: ခမာဘာသာဖြင့်ဒေတာအကောင့်တစ်ခု။ ဖော်ပြချက်တွင်ကန့်သတ်ထားခြင်းမရှိသော အကျဉ်းချုပ်၊ မာတိကာပါဝင်နိုင်ပါသည်။ သို့မဟုတ် ဒေတာအရင်းအမြစ်ဆိုင်ရာအစီအစဉ်တကျမဟုတ်သည့်ဒေတာများဖြင့်အကောင့်တစ်ခု
+      lo: "ບັນຊີຂອງຊຸດຂໍ້ມູນເປັນພາສາຂະເໝນ. ອາດຈະມີຄຳອະທິບາຍ ແຕ່ບໍ່ໄດ້ຈຳກັດເຊັ່ນ: ບົດຄັດຫຍໍ້, ສາລະບານ, ຫຼືຂໍ້ຄວາມອິດສະລະ."
+    my_MM: 
+      en: "An account of the dataset, in Burmese. A description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource."
+      vi: "Bản tóm tắt về tập dữ liệu bằng tiếng Miến Điện không giới han bao gồm: tóm tắt, mục lục hoặc bản tường trình dạng văn bản tự do"
+      km: គណនីនៃសំណុំទិន្នន័យ ជាភាសាមីយ៉ាន់ម៉ា។ ការពិពណ៌នាអាចរួមបញ្ចូល ប៉ុន្តែមិនកំណត់ចំពោះ៖ សង្ខេបបទ តារាងមាតិកា ឬប្រភពបញ្ចូលទិន្នន័យ។
+      my_MM: မြန်မာဘာသာဖြင့်ဒေတာအကောင့်တစ်ခု။ ဖော်ပြချက်တွင်ကန့်သတ်ထားခြင်းမရှိသော အကျဉ်းချုပ်၊ မာတိကာပါဝင်နိုင်ပါသည်။ သို့မဟုတ် ဒေတာအရင်းအမြစ်ဆိုင်ရာအစီအစဉ်တကျမဟုတ်သည့်ဒေတာများဖြင့်အကောင့်တစ်ခု
+      lo: "ບັນຊີຂອງຊຸດຂໍ້ມູນເປັນພາສາມຽນມາ. ອາດຈະມີຄຳອະທິບາຍ ແຕ່ບໍ່ໄດ້ຈຳກັດເຊັ່ນ: ບົດຄັດຫຍໍ້, ສາລະບານ, ຫຼືຂໍ້ຄວາມອິດສະລະ."
+    lo: 
+      en: "An account of the dataset, in Lao. A description may include but is not limited to: an abstract, a table of contents, or a free-text account of the resource."
+      vi: "Bản tóm tắt về tập dữ liệu bằng tiếng Lào không giới han bao gồm: tóm tắt, mục lục hoặc bản tường trình dạng văn bản tự do"
+      km: គណនីនៃសំណុំទិន្នន័យ ជាភាសាឡាវ។ ការពិពណ៌នាអាចរួមបញ្ចូល ប៉ុន្តែមិនកំណត់ចំពោះ៖ សង្ខេបបទ តារាងមាតិកា ឬប្រភពបញ្ចូលទិន្នន័យ។
+      my_MM: လာအိုဘာသာဖြင့်ဒေတာအကောင့်တစ်ခု။ ဖော်ပြချက်တွင်ကန့်သတ်ထားခြင်းမရှိသော အကျဉ်းချုပ်၊ မာတိကာပါဝင်နိုင်ပါသည်။ သို့မဟုတ် ဒေတာအရင်းအမြစ်ဆိုင်ရာအစီအစဉ်တကျမဟုတ်သည့်ဒေတာများဖြင့်အကောင့်တစ်ခု
+      lo: "ບັນຊີຂອງຊຸດຂໍ້ມູນເປັນພາສາລາວ. ອາດຈະມີຄຳອະທິບາຍ ແຕ່ບໍ່ໄດ້ຈຳກັດເຊັ່ນ: ບົດຄັດຫຍໍ້, ສາລະບານ, ຫຼືຂໍ້ຄວາມອິດສະລະ."
+  preset: fluent_core_translated
+  form_snippet: fluent_markdown.html
+
+
+- field_name: agroecology_category
+  label: 
+    en: Agroecology Category  
+    vi: Lĩnh vực Nông nghiệp sinh thái
+    km: ប្រភេទកសិអេកូឡូស៊ី
+    my_MM: စိုက်ပျိုးဂေဟစနစ်အမျိုးအစား
+    lo: ໝວດໝູ່ນິເວດກະສິກຳ
+  help_text: Choose agroecology categories by holding the Ctrl button and click
+  preset: multiple_select
+  choices:
+  - value: Integrated systems
+    label: 
+      en: Integrated systems  
+      vi: Hệ thống tích hợp
+      km: ប្រព័ន្ធកសិកម្មចំរុះ
+      my_MM: ဘက်စုံပေါင်းစပ်မှုစနစ်
+      lo: ລະບົບປະສົມປະສານ
+  - value: Animal health
+    label:
+      en: Animal health   
+      vi: Sức khỏe động vật
+      km: 
+      my_MM: တိရိစ္ဆာန်ကျန်းမာရေး
+      lo: ສຸຂະພາບສັດ
+  - value: Input reduction and recycling
+    label: 
+      en: Input reduction and recycling  
+      vi: Giảm đầu vào và tái chế
+      km: កាត់បន្ថយធាតុចូល និងការកៃច្នៃឡើងវិញ
+      my_MM: သွင်းအားစုလျော့ချခြင်းနှင့်ပြန်လည်အသုံးပြုခြင်း
+      lo: ຫຼຸດຜ່ອນປັດໄຈການຜະລິດ ແລະ ນຳກັບມາໃຊ້ໃໝ່
+  - value: Seed management
+    label: 
+      en: Seed management  
+      vi: Giảm đầu vào và tái chế
+      km: ការគ្រប់គ្រងគ្រាប់ពូជ
+      my_MM: မျိုးစေ့ဆိုင်ရာ စီမံခန့်ခွဲမှု
+      lo: ການຈັດການແນວພັນ
+  - value: Soil health
+    label: 
+      en: Soil health  
+      vi: Sức khỏe đất
+      km: សុខភាពដី
+      my_MM: မြေဆီလွှာကျန်းမာရေး
+      lo: ສຸຂະພາບດິນ
+  - value: Economy and income
+    label: 
+      en: Economy and income
+      vi: Kinh tế và thu nhập
+      km: សេដ្ធកិច្ច និងប្រាក់ចំណូល
+      my_MM: စီးပွားရေးတွက်ချေကိုက်မှုနှင့် ဝင်ငွေ
+      lo: ເສດຖະກິດ ແລະ ລາຍຮັບ
+  - value: Nutrition and diets
+    label: 
+      en: Nutrition and diets
+      vi: Dinh dưỡng và chế độ ăn uống
+      km: អាហារូបត្ថម្ភ និងរបបអាហារ
+      my_MM: အာဟာရဓာတ်နှင့် အစားအစာများ
+      lo: ສຸຂະພາບ ແລະ ໂພສະນາການ
+  - value: Sustainable food system
+    label: 
+      en: Sustainable food system
+      vi: Hệ thống thực phẩm bền vững
+      km: ប្រព័ន្ធនិរន្ដរភាពស្បៀងអាហារ 
+      my_MM: ရေရှည်တည်တံ့သောအစားအစာစနစ်
+      lo: ລະບົບອາຫານທີ່ຍືນຍົງ
+  - value: Biodiversity
+    label: 
+      en: Biodiversity
+      vi: Đa dạng sinh học
+      km: ជីវចម្រុះ
+      my_MM: ဇီဝမျိုးစုံမျိုးကွဲ
+      lo: ຊີວະນາໆພັນ
+  - value: Climate
+    label: 
+      en: Climate
+      vi: Khí hậu
+      km: អាកាសធាតុ
+      my_MM: ရာသီဥတု
+      lo: ສະພາບອາກາດ
+  - value: Natural resources governance
+    label: 
+      en: Natural resources governance
+      vi: Quản trị tài nguyên thiên nhiên
+      km: ការគ្រប់គ្រងធនធានធម្មជាតិ
+      my_MM: သဘာဝသယံဇာတအရင်းအမြစ်စီမံခန့်ခွဲမှု
+      lo: ການຄຸ້ມຄອງຊັບພະຍາກອນທຳມະຊາດ
+  - value: Water management
+    label: 
+      en: Water management
+      vi: Quản lý nước
+      km: ការគ្រប់គ្រងទឹក
+      my_MM: ရေ စီမံခန့်ခွဲမှု
+      lo: ການຄຸ້ມຄອງ ແລະ ຈັດສັນນ້ຳ
+  - value: Collaboration
+    label: 
+      en: Collaboration
+      vi: Hợp tác
+      km: ការសហការ
+      my_MM: ပူးပေါင်းဆောင်ရွက်ခြင်း
+      lo: ການຮ່ວມມື
+  - value: Equity
+    label: 
+      en: Equity
+      vi: Công bằng
+      km: សមធម៌
+      my_MM: တန်းတူညီမျှမှု
+      lo: ທຶນ
+  - value: Supportive policies
+    label: 
+      en: Supportive policies
+      vi: Chính sách hỗ trợ
+      km: កាំទ្រគោលនយោបាយ
+      my_MM: ထောက်ပံ့ရေး မူဝါဒများ
+      lo: ນະໂຍບາຍສະໜັບສະໜູນ
+  - value: Knowledge and values
+    label: 
+      en: Knowledge and values
+      vi: Kiến thức và giá trị
+      km: ចំណេះដឹង និងគុណតម្លៃ
+      my_MM: အသိပညာရှိမှုနှင့် အလေးထားမှုများ
+      lo: ຄວາມຮູ້ ແລະ ຄຸນຄ່າ
+
+- field_name: agroecology_keyword
+  label: 
+    en: Agroecology Keyword
+    vi: Từ khóa nông sinh thái
+    km: ពាក្យគន្លឹះ Agroecology
+    my_MM: စိုက်ပျိုးရေးဆိုင်ရာ သော့ချက်စာလုံး
+    lo: ຄໍາສໍາຄັນດ້ານນິເວດວິທະຍາ
+  form_snippet: agroecology_keyword.html
+  preset: multiple_select
+  choices:
+  - value: Agroecological transition
+    label: 
+      en: Agroecological transition
+      vi: Chuyển đổi Nông nghiệp sinh thái
+      km: វិវឌ្ឍនាការកសិកអេកូឡូស៊ី
+      my_MM: စိုက်ပျိုးဂေဟစနစ်ဆိုင်ရာအကူးအပြောင်း
+      lo: ການຫັນປ່ຽນທາງດ້ານນິເວດກະສິກຳ
+  - value: Agroforestry
+    label: 
+      en: Agroforestry
+      vi: Nông lâm kết hợp
+      km: កសិរុក្ខកម្ម
+      my_MM: သီးနှံ-သစ်တောရောနှောစိုက်ပျိုးခြင်း
+      lo: ກະສິກຳປ່າໄມ່້
+  - value: Agro-silvo-pastoralism
+    label:
+      en: Agro-silvo-pastoralism
+      vi: Nông lâm nghiệp- Chăn nuôi
+      km:  កសិកម្មរូមបញ្ចូលសត្វ និងវាលស្មៅ
+      my_MM: သစ်တောမြေတွင် မွေးမြူရေးနှင့်စိုက်ပျိုးရေးပေါင်းစည်းဆောင်ရွက်သည့် ထုတ်လုပ်မှုစနစ်
+      lo: ກະສິກຳ-ປະສຸສັດ-ປ່າໄມ້
+  - value: Biodynamic agriculture
+    label: 
+      en: Biodynamic agriculture
+      vi: Nông nghiệp sinh học
+      km: កសិកម្មជីវឌីណាមិក
+      my_MM: ဇီဝပိုးမွှားအခြေပြုနည်းစနစ်ဖြင့် စိုက်ပျိုးရေး
+      lo: ກະສິກຳຊີວະພາບ
+  - value: Conservation agriculture
+    label: 
+      en: Conservation agriculture
+      vi: Nông nghiệp bảo tồn
+      km: កសិកម្មអភិរក្ស
+      my_MM: ဝန်းကျင်မပျက်စိုက်ပျိုးရေး
+      lo: ກະສິກຳອະນຸລັກ
+  - value: Crop intensification system
+    label: 
+      en: Crop intensification system
+      vi: Hệ thống thâm canh cây trồng
+      km: ប្រព័ន្ធប្រពលវប្បកម្មដំណាំ
+      my_MM: သီးနှံအစွမ်းဖွင့်စိုက်ပျိုးရေးစနစ်
+      lo: ລະບົບການເພີ່ມພູນການປູກພືດ
+  - value: Environmental performance
+    label: 
+      en: Environmental performance
+      vi: Hiệu quả môi trường
+      km: បរិស្ថាន 
+      my_MM: ပတ်ဝန်းကျင်ဆိုင်ရာစွမ်းဆောင်မှု
+      lo: ປະສິດທິພາບດ້ານສິ່ງແວດລ້ອມ
+  - value: Extensive farming
+    label: 
+      en: Extensive farming
+      vi: Quảng canh nông nghiệp
+      km: កសិកម្មយថាផល
+      my_MM: သွင်းအားစုအနည်းဆုံးဖြင့် မြေဧရိယာကျယ်ကျယ်စိုက်ပျိုးရေး
+      lo: ກະສິກຳແບບກ້ວາງຂວາງ
+  - value: Integrated crop livestock system
+    label: 
+      en: Integrated crop livestock system
+      vi: Hệ thống chăn nuôi tích hợp
+      km: ប្រព័ន្ធចិញ្ចឹមសត្វ និងដាំដំណាំរួមបញ្ចូលគ្នា
+      my_MM: ဘက်စုံစိုက်ပျိုးရေး၊ မွေးမြူရေးပေါင်းစည်းလယ်ယာစနစ်
+      lo: ລະບົບການປູກ-ລ້ຽງແບບປະສົມປະສານ
+  - value: Natural farming
+    label: 
+      en: Natural farming
+      vi: Nông nghiệp tự nhiên
+      km: កសិកម្មធម្មជាតិ
+      my_MM: ဘက်စုံစိုက်ပျိုးရေး၊ မွေးမြူရေးပေါင်းစည်းလယ်ယာစနစ်
+      lo: ກະສິກຳທຳມະຊາດ
+  - value: Organic agriculture
+    label: 
+      en: Organic agriculture
+      vi: Nông nghiệp hữu cơ
+      km: កសិកម្មសរីរាង្គ
+      my_MM: အော်ဂဲနစ်စိုက်ပျိုးရေး
+      lo: ກະສິກຳອິນຊີ
+  - value: Permaculture
+    label: 
+      en: Permaculture
+      vi: Nuôi trồng thủy sản
+      km: កសិកម្មអចិន្រ្ដៃយ៍
+      my_MM: ဂေဟစနစ်များပေါင်းစည်းစနစ်ဖြင့် အမြဲတမ်းစိုက်ပျိုးရေး
+      lo: ກະສິກຳແບບຍືນຍົງ
+  - value: Precision agriculture
+    label: 
+      en: Precision agriculture
+      vi: Nông nghiệp chính xác
+      km: កសិកម្មជាក់លាក់
+      my_MM: သတင်းအချက်အလက်အခြေခံတိကျသောစိုက်ပျိုးရေး
+      lo: ກະສິກຳແນ່ນອນ
+  - value: System of rice intensification
+    label: 
+      en: System of rice intensification
+      vi: Hệ thống thâm canh lúa
+      km: ប្រព័ន្ធប្រពលវប្បកម្មដំណាំស្រូវ
+      my_MM: စပါးအစွမ်းဖွင့်စိုက်ပျိုးရေးစနစ်
+      lo: ລະບົບການປູກເຂົ້າດ້ວຍກ້າກີບດຽວ
+  - value: Animal wellbeing
+    label: 
+      en: Animal wellbeing
+      vi: Sức khỏe động vật
+      km: សុខុមាលភាពសត្វ
+      my_MM: တိရစ္ဆာန်များ စိတ်ရောကိုယ်ပါကောင်းမွန်ခြင်း
+      lo: ສະຫວັດດີການຂອງສັດ
+  - value: Extensive aquaculture
+    label: 
+      en: Extensive aquaculture
+      vi: Nuôi trồng quảng canh
+      km: ជលផលយថាផល
+      my_MM: သဘာဝရေစီးတွင် ပါလာသောငါးများကို ကန်တွင် အစာကျွေးမွေးမြူရေးစနစ်
+      lo: ການລ້ຽງແບບທຳມະຊາດ
+  - value: Free range
+    label: 
+      en: Free range
+      vi: Chăn thả tự do
+      km:  ការចិញ្ចឹមសត្វដោយមានទីធ្លា
+      my_MM: အလွတ်တန်းမွေးမြူရေးစနစ်
+      lo: ຂອບເຂດອິດສະລະ
+  - value: Integrated animal health
+    label: 
+      en: Integrated animal health
+      vi: Sức khỏe động vật tổng hợp
+      km: សមាហរណសុខភាពសត្វ
+      my_MM: တိရစ္ဆာန်ကျန်းမာရေး ပေါင်းစည်းကာကွယ်ရေး
+      lo: ການດູແລສຸຂະພາບສັດແບບປະສົມປະສານ
+  - value: Rotational grazing system
+    label: 
+      en: Rotational grazing system
+      vi: Hệ thống chăn thả luân phiên
+      km: ប្រព័ន្ធវាលស្មៅបង្វិល
+      my_MM: အလှည့်ကျစားကျက်မြေထိန်းကျောင်းစနစ်
+      lo: ລະບົບການປູກພືດໝູນວຽນ
+  - value: Sustainable animal feeding
+    label: 
+      en: Sustainable animal feeding
+      vi: Chăn nuôi bền vững
+      km: ការចិញ្ចឹមសត្វប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့သောတိရိစ္ဆာန်အစာကျွေးခြင်း
+      lo: ການລ້ຽງສັດແບບຍືນຍົງ
+  - value: Zoonose
+    label: 
+      en: Zoonose
+      vi: Bệnh trên động vật
+      km: ជំងឺឆ្លងពីសត្វទៅមនុស្ស
+      my_MM: တိရစ္ဆာန်မှ လူဆီသို့ ကူးစက်သောရောဂါ
+      lo: ພະຍາດຕິດຕໍ່ຈາກສັດສູ່ຄົນ
+  - value: Allelopathy
+    label: 
+      en: Allelopathy
+      vi: Bệnh dị ứng
+      km: ជំងឺ Allelopathy
+      my_MM: အယ်လီလိုပသီ
+      lo: ຂະບວນການຕໍ່ຕ້ານກັນຂອງພືດ
+  - value: Antimicrobial resistance
+    label: 
+      en: Antimicrobial resistance
+      vi: Kháng kháng sinh
+      km: ភាពធន់នឹងថ្នាំសំលាប់មេរោគ
+      my_MM: ရောဂါပိုးမွှားခုခံနိုင်မှု
+      lo: ຈຸລິນຊີດື້ຢາ
+  - value: Bio-fertilizer
+    label: 
+      en: Bio-fertilizer
+      vi: Phân bón vi sinh
+      km: ជី ជីវសាស្រ្ត
+      my_MM: ဇီဝမြေဩဇာ
+      lo: ຝຸ່ນຊີວະພາບ
+  - value: Biological control
+    label: 
+      en: Biological control
+      vi: Kiểm soát sinh học
+      km: ការត្រួតពិនិត្យជីវសាស្រ្ត
+      my_MM: ဇီဝနည်းဖြင့် ကာကွယ်နှိမ်နင်းခြင်း
+      lo: ການຄວບຄຸມທາງຊີວະພາບ
+  - value: Bio-pesticide
+    label: 
+      en: Bio-pesticide
+      vi: Thước trừ sâu sinh học
+      km: ជីវថ្នាំសម្លាប់សត្វល្អិត
+      my_MM: ဇီဝပိုးသတ်ဆေး
+      lo: ຢາປາບສັດຕູພືດຊີວະພາບ
+  - value: Chemical input control
+    label: 
+      en: Chemical input control
+      vi: Kiểm soát hóa chất đầu vào
+      km: ការត្រួតពិនិត្យធាតុបញ្ចូលគីមី
+      my_MM: ဓာတုနည်းဖြင့် ကာကွယ်နှိမ်နင်းခြင်း
+      lo: ຄວບຄຸມປັດໄຈທາງເຄມີ
+  - value: Compost
+    label: 
+      en: Compost
+      vi: Phân ủ
+      km: ជីកំប៉ុស
+      my_MM: မြေဆွေး
+      lo: ຝຸ່ນບົ່ມ
+  - value: Crop protection
+    label: 
+      en: Crop protection
+      vi: Bảo vệ cây trồng tự động
+      km: ការការពារដំណាំ
+      my_MM: သီးနှံကာကွယ်ရေး
+      lo: ປ້ອງກັນພືດ
+  - value: Ecological recycling
+    label: 
+      en: Ecological recycling
+      vi: Tái chế sinh thái
+      km: ការកែច្នៃអេកូឡូស៊ី
+      my_MM: ဂေဟဗေဒအခြေခံ ပြန်လည်အသုံးပြုခြင်း
+      lo: ການໝູນວຽນທາງນິເວດ
+  - value: Input autonomy
+    label: 
+      en: Input autonomy
+      vi: Tự chủ đầu vào
+      km: ស្វ័យយ័ត្នភាពធាតុចូលកសិកម្ម
+      my_MM: သွင်းအားစုအသုံးပြုခြင်းဆိုင်ရာ ကိုယ်ပိုင်ဆုံးဖြတ်ခြင်း
+      lo: ການຄວບຄຸມປັດໄຈການຜະລິດ
+  - value: Input reduction
+    label: 
+      en: Input reduction
+      vi: Giảm đầu vào
+      km: ការកាត់បន្ថយធាតុចូល
+      my_MM: သွင်းအားစုလျော့ချခြင်း
+      lo: ການຫຼຸດຜ່ອນປັດໄຈການຜະລິດ
+  - value: Insect-plant interaction
+    label: 
+      en: Insect-plant interaction
+      vi: Tương tác giữa côn trùng-thực vật
+      km: អន្តរកម្មសត្វល្អិត-រុក្ខជាតិ
+      my_MM: ပိုးမွှား-အပင် အပြန်အလှန်ပြုမူမှု
+      lo: ປະຕິສຳພັນລະຫວ່າງແມງໄມ້ກັບພືດ
+  - value: Integrated pest management
+    label: 
+      en: Integrated pest management
+      vi: Quản lý dịch hại tổng hợp
+      km: ការគ្រប់គ្រងសត្វល្អិតចម្រុះ
+      my_MM: ဘက်စုံပိုးမွှားကာကွယ်နှိမ်နင်းရေး
+      lo: ການຈັດການສັດຕູພືດແບບປະສົມປະສານ
+  - value: Organic manure
+    label: 
+      en: Organic manure
+      vi: Phân hữu cơ
+      km: កាកសំណល់សរីរាង្គ
+      my_MM: သစ်ဆွေး၊ မြေဆွေး
+      lo: ຝຸ່ນບົ່ມອິນຊີ
+  - value: Plant health
+    label: 
+      en: Plant health
+      vi: Sức khỏe thực vật
+      km: សុខភាពរុក្ខជាតិ
+      my_MM: အပင်ကျန်းမာရေး
+      lo: ສຸຂະພາບພືດ
+  - value: Sanitary and phytosanitary measure
+    label: 
+      en: Sanitary and phytosanitary measure
+      vi: Biện pháp vệ sinh và kiểm dịch thực vật
+      km: វិធានការអនាម័យ និងភូតគាមអនាម័យ
+      my_MM: ပိုးမွှားကင်းစင်ကြောင်း သက်သေခံအထောက်အထား
+      lo: ມາດຕະການສຸຂະອະນາໄມ ແລະ ສຸຂະພາບພືດ
+  - value: Veterinary waste management
+    label: 
+      en: Veterinary waste management
+      vi: Quản lý chất thải thú y
+      km: ការគ្រប់គ្រងកាកសំណល់បសុពេទ្យ
+      my_MM: တိရစ္ဆာန်စွန့်ပစ်ပစ္စည်း စီမံခန့်ခွဲမှု
+      lo: ການຈັດການຂີ້ເຫຍື້ອທາງສັດຕະວະແພດ
+  - value: Waste management
+    label: 
+      en: Waste management
+      vi: Quản lý chất thải
+      km: ការគ្រប់គ្រងកាកសំណល់
+      my_MM: စွန့်ပစ်ပစ္စည်းစီမံခန့်ခွဲမှု
+      lo: ການຈັດການຂີ້ເຫຍື້ອ
+  - value: Abiotic stress
+    label: 
+      en: Abiotic stress
+      vi: Ức chế phi sinh học từ môi trường
+      km:  ឥទ្ធិពលAbiotic
+      my_MM: အပူဒဏ်၊ ရေငတ်ဒစ်၊ မိုးခေါင်ဒဏ်၊ အအေးဒဏ် စသည့်သက်မဲ့ဆိုင်ရာဒဏ်
+      lo: ຜົນກະທົບຈາກປັດໄຈທາງກາຍະພາບ
+  - value: Annual crop
+    label: 
+      en: Annual crop
+      vi: Cây hàng năm
+      km: ដំណាំប្រចាំរដូវកាល
+      my_MM: နှစ်စဉ်သီးနှံ
+      lo: ພືດລະດູດຽວ
+  - value: Disease resistance
+    label: 
+      en: Disease resistance
+      vi: Kháng bệnh
+      km: ភាពធនទ្រាំនឹងជំងឺ
+      my_MM: ရောဂါခံနိုင်ရည်ရှိမှု
+      lo: ຄວາມທົນທານຕໍ່ເຊື້ອພະຍາດ
+  - value: GMO free
+    label: 
+      en: GMO free
+      vi: Không biến đổi gen
+      km: មិនមាន GMO
+      my_MM: ဇီဝနည်းပညာသုံးကင်းစင်ရေး
+      lo: ບໍ່ມີການດັດແປງຢີນໃດໆ
+  - value: Hybrid variety
+    label: 
+      en: Hybrid variety
+      vi: Giống lai
+      km: ប្រភេទកូនកាត់
+      my_MM: စပ်မျိုး
+      lo: ແນວພັນປະສົມ
+  - value: Local variety
+    label: 
+      en: Local variety
+      vi: Giống địa phương
+      km: ប្រភេទក្នុងស្រុក
+      my_MM: ဒေသမျိုး
+      lo: ແນວພັນທ້ອງຖິ່ນ
+  - value: Organic seed
+    label: 
+      en: Organic seed
+      vi: Hạt giống hữu cơ
+      km: គ្រាប់ពូជសរីរាង្គ
+      my_MM: အော်ဂဲနစ်မျိုးစေ့
+      lo: ແນວພັນອິນຊີ
+  - value: Rice variety
+    label: 
+      en: Rice variety
+      vi: Giống Lúa
+      km: ប្រភេទដំណាំស្រូវ
+      my_MM: စပါးမျိုးကွဲ
+      lo: ແນວພັນເຂົ້າ
+  - value: Seed bank
+    label: 
+      en: Seed bank
+      vi: Ngân hàng hạt giống
+      km: ធនាគារគ្រាប់ពូជ
+      my_MM: မျိုးစေ့ဘဏ်
+      lo: ທະນາຄານແນວພັນ
+  - value: Seed management
+    label: 
+      en: Seed management
+      vi: Quản lý hạt giống
+      km: ការគ្រប់គ្រងគ្រាប់ពូជ
+      my_MM: မျိုးစေ့ဆိုင်ရာစီမံခန့်ခွဲမှု
+      lo: ການຈັດການແນວພັນ
+  - value: Biomass
+    label: 
+      en: Biomass
+      vi: Sinh khối
+      km: ជីវម៉ាស
+      my_MM: ဇီဝလောင်စာ
+      lo: ຊີວະມວນ
+  - value: Cover crop
+    label: 
+      en: Cover crop
+      vi: Cây che phủ
+      km: ដំណាំគម្របដី
+      my_MM: မြေဖုံးသီးနှံ
+      lo: ພືດຄຸມດິນ
+  - value: Earthworm
+    label: 
+      en: Earthworm
+      vi: Giun đất
+      km: ជន្លេន
+      my_MM: သံကောင်၊ တုပ်ကောင်
+      lo: ຂີ້ກະເດືອນ
+  - value: Ecological synergy
+    label: 
+      en: Ecological synergy
+      vi: Sức mạnh tổng hợp sinh thái
+      km: សហបង្កើតអេកូឡូស៊ី
+      my_MM: ဂေဟစနစ်အကျိုးသက်ရောက်မှု
+      lo: ການເຮັດວຽກຮ່ວມກັນຂອງລະບົບນິເວດ
+  - value: Crop rotation
+    label: 
+      en: Crop rotation
+      vi: Luân canh cây trồng
+      km: ដំណាំបង្វិល
+      my_MM: သီးလှည့်စိုက်စနစ်
+      lo: ພືດໝູນວຽນ
+  - value: Green manure
+    label: 
+      en: Green manure
+      vi: Phân xanh
+      km: ជីស្រស់
+      my_MM: သစ်စိမ်းမြေဩဇာ
+      lo: ປຸ໋ຍພືດສົດ
+  - value: Monocrop
+    label: 
+      en: Monocrop
+      vi: Độc canh
+      km: ដំណាំមួយមុខ
+      my_MM: သီးနှံတစ်မျိုးတည်းစိုက်ပျိုးခြင်း
+      lo: ການປູກພືດຊະນິດດຽວ
+  - value: Nematode
+    label: 
+      en: Nematode
+      vi: Tuyến trùng
+      km: បរាសិតណេម៉ាតូដ
+      my_MM: နီမတုတ်
+      lo: ຂີ້ກະເດືອນຝອຍ
+  - value: Soil biological activity
+    label: 
+      en: Soil biological activity
+      vi: Hoạt động sinh học đất
+      km: សកម្មភាពជីវសាស្រ្តនៃដី
+      my_MM: မြေဆီဩဇာထက်သန်ရေး သက်ရှိဇီဝဖြစ်စဉ်
+      lo: ກິດຈະກຳທາງຊີວະພາບໃນດິນ
+  - value: Soil degradation reduction
+    label: 
+      en: Soil degradation reduction
+      vi: Giảm suy thoái đất
+      km: ការកាត់បន្ថយការរិចរិលដី
+      my_MM: မြေဆီလွှာပျက်စီးမှု လျော့နည်းခြင်း
+      lo: ການຫຼຸດຜ່ອນຄວາມເຊື່ອມໂຊມຂອງດິນ
+  - value: Soil fertility
+    label: 
+      en: Soil fertility
+      vi: Độ phì nhiêu của đất
+      km: ជីជាតិដី
+      my_MM: မြေဆီဩဇာ
+      lo: ຄວາມອຸດົມສົມບູນຂອງດິນ
+  - value: Soil health
+    label: 
+      en: Soil health
+      vi: Sức khỏe đất
+      km: សុខភាពដី
+      my_MM: မြေဆီလွှာကျန်းမာရေး
+      lo: ສຸຂະພາບດິນ
+  - value: Soil protection
+    label: 
+      en: Soil protection
+      vi: Bảo vệ đất
+      km: ការការពារដី
+      my_MM: မြေဆီလွှာကာကွယ်ရေး
+      lo: ການອະນຸລັກດິນ
+  - value: Soil quality
+    label: 
+      en: Soil quality
+      vi: Chất lượng đất
+      km: គុណភាពដី
+      my_MM: မြေဆီလွှာအရည်အသွေး
+      lo: ຄຸນະພາບດິນ
+  - value: Soil restoration
+    label: 
+      en: Soil restoration
+      vi: Phục hồi đất
+      km: ការស្តារដីឡើងវិញ
+      my_MM: မြေဆီလွှာကောင်းမွန်ရေးနည်းလမ်း
+      lo: ການຟື້ນຟູດິນ
+  - value: Soil-borne disease
+    label: 
+      en: Soil-borne disease
+      vi: Bệnh truyền qua đất
+      km: ជំងឺដែលកើតឡើងក្នុងដី
+      my_MM: မြေဆောင်ရောဂါ
+      lo: ພະຍາດພືດທີ່ເກີດຈາກເຊື້ອລາໃນດິນ
+  - value: Tillage reduction
+    label: 
+      en: Tillage reduction
+      vi: Giảm làm đất
+      km: ការកាត់បន្ថយការភ្ជួររាស់
+      my_MM: ထွန်ယက်မြေပြင်မှုလျော့ချခြင်း
+      lo: ການຫຼຸດຜ່ອນການໄຖພວນ
+  - value: Circular economy
+    label: 
+      en: Circular economy
+      vi: Kinh tế tuần hoàn
+      km: សេដ្ឋកិច្ចវិលជុំ
+      my_MM: ရေရှည်တည်တံသောစနစ်တို့ဖြင့် ကုန်ထုတ်လုပ်မှုနှင့်အသုံးပြုမှုတို့၏ စီးပွားရေးစနစ်
+      lo: ເສດຖະກິດໝູນວຽນ
+  - value: Income diversification
+    label: 
+      en: Income diversification
+      vi: Đa dạng hóa thu nhập
+      km: ពិពិធកម្មប្រាក់ចំណូល
+      my_MM: အရင်းအမြစ်အမျိုးမျိုးမှ ဝင်ငွေ
+      lo: ການກະຈາຍລາຍໄດ້
+  - value: Solidarity economy
+    label: 
+      en: Solidarity economy
+      vi: Nền kinh tế xã hội và đoàn kết
+      km: សេដ្ឋកិច្ចសាមគី
+      my_MM: ပုဂ္ဂလိက-အစိုးရ-စီးပွားရေးအသင့်အဖွဲ့တို့ ပေါင်းစည်းအကျိုးတူစီးပွားရေး
+      lo: ເສດຖະກິດແຫ່ງການຮ່ວມມື
+  - value: Fair employment
+    label: 
+      en: Fair employment
+      vi: Việc làm công bằng
+      km: ការងារដោយស្មើរភាព
+      my_MM: ညီမျှသောအလုပ်အကိုင်
+      lo: ຄວາມຍຸດຕິທຳໃນການຈ້າງງານ
+  - value: Small entrepreneur
+    label: 
+      en: Small entrepreneur
+      vi: Doanh nhân nhỏ
+      km: សហគ្រិនខ្នាតតូច
+      my_MM: စွန့်ဦးတီထွင်လုပ်ငန်းငယ်
+      lo: ຜູ້ປະກອບການຂະຫນາດນ້ອຍ
+  - value: Market change
+    label: 
+      en: Market change
+      vi: Thay đổi thị trường
+      km: ការផ្លាស់ប្តូរទីផ្សារ
+      my_MM: ဈေးကွက်အပြောင်းအလဲ
+      lo: ການປ່ຽນແປງຂອງຕະຫຼາດ
+  - value: Family farming
+    label: 
+      en: Family farming
+      vi: Nông nghiệp nông hộ
+      km: កសិកម្មគ្រួសារ
+      my_MM: မိသားစုစိုက်ပျိုးရေး
+      lo: ກະສິກຳຄອບຄົວ
+  - value: Consumer-producer organisation
+    label: 
+      en: Consumer-producer organisation
+      vi: Tổ chức sản xuất người tiêu dùng
+      km: សមាគមនអ្នកប្រើប្រាស់ និងអ្នកផលិត
+      my_MM: ဝယ်သူ-ထုတ်လုပ်သူအဖွဲ့အစည်း
+      lo: ອົງກອນທີ່ເຊື່ອມໂຍງຜູ້ບໍລິໂພກ-ຜູ້ຜະລິດ
+  - value: Market access
+    label: 
+      en: Market access
+      vi: Tiếp cận thị trường
+      km: ផ្សាភ្ជាប់ទីផ្សារ
+      my_MM: ဈေးကွက်ရရှိမှု
+      lo: ການເຂົ້າເຖິງຕະຫຼາດ
+  - value: Sustainable income
+    label: 
+      en: Sustainable income
+      vi: Thu nhập bền vững
+      km: ប្រាក់ចំណូលប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့သောပုံမှန်ဝင်ငွေ
+      lo: ລາຍຮັບທີ່ຍືນຍົງ
+  - value: Cash crop
+    label: 
+      en: Cash crop
+      vi: Nông sản thương maị
+      km: ដំណាំពាណិជ្ជកម្ម
+      my_MM: ဝင်ငွေရသီးနှံ
+      lo: ພືດເສດຖະກິດ
+  - value: Production costs reduction
+    label: 
+      en: Production costs reduction
+      vi: Giảm chi phí sản xuất
+      km: ថ្លៃដើមផលិតផល
+      my_MM: ထုတ်လုပ်မှုကုန်ကျစရိတ်လျော့ချခြင်း
+      lo: ການຫຼຸດຜ່ອນຕົ້ນທຶນການຜະລິດ
+  - value: Income
+    label: 
+      en: Income
+      vi: đỉnh thu nhập
+      km: ប្រាក់ចំណូល
+      my_MM: ဝင်ငွေ
+      lo: ລາຍຮັບ
+  - value: Microcredit
+    label: 
+      en: Microcredit
+      vi: Tín dụng vi mô
+      km: មីក្រូឥណទាន
+      my_MM: အသေးစားချေးငွေ
+      lo: ສິນເຊື່ອຈຸລະພາກ
+  - value: Production costs
+    label: 
+      en: Production costs
+      vi: Chi phí sản xuất
+      km: ថ្លៃដើមផលិតកម្ម
+      my_MM: ထုတ်လုပ်မှုကုန်ကျစရိတ်များ
+      lo: ຕົ້ນທຶນການຜະລິດ
+  - value: Self sufficiency
+    label: 
+      en: Self sufficiency
+      vi: Tự túc
+      km: ភាពគ្រប់គ្រាន់
+      my_MM: ပြည်တွင်းဖူလုံမှု
+      lo: ຄວາມພໍພຽງ
+  - value: Sustainable and decent livelihood and revenue
+    label: 
+      en: Sustainable and decent livelihood and revenue
+      vi: Sinh kế và doanh thu bền vững 
+      km: ជីវភាព និងប្រាក់ចំណូលសមរម្យ និងប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့ပြီး တင့်သင့်သောအသက်မွေးဝမ်းကြောင်းနှင့် ပြန်ရချက်
+      lo: ຄວາມເປັນຢູ່ທີ່ດີ ແລະ ມີລາຍຮັບໝັ້ນຄົງ
+  - value: Diversified diet
+    label: 
+      en: Diversified diet
+      vi: Chế độ ăn uống đa dạng
+      km: របបអាហារចម្រុះ
+      my_MM: အစားအစာအမျိုးအစားစုံစုံလင်လင်
+      lo: ອາຫານທີ່ຫຼາກຫຼາຍ
+  - value: Food quality
+    label: 
+      en: Food quality
+      vi: Chất lượng thực phẩm
+      km: គុណភាពអាហារ
+      my_MM: အစားအစာအရည်အသွေး
+      lo: ຄຸນະພາບອາຫານ
+  - value: Food safety
+    label: 
+      en: Food safety
+      vi: An toàn thực phẩm
+      km: សុវត្ថិភាពចំណីអាហារ
+      my_MM: အစားအစာ ဘေးကင်းလုံခြုံမှု
+      lo: ຄວາມປອດໄພຂອງອາຫານ
+  - value: Nutrition and health
+    label: 
+      en: Nutrition and health
+      vi: Dinh dưỡng và sức khỏe
+      km: អាហារូបត្ថម្ភ និង សុខភាព
+      my_MM: အာဟာရနှင့် ကျန်းမာရေး
+      lo: ສຸຂະພາບ ແລະ ໂພຊະນາການ
+  - value: Human health
+    label: 
+      en: Human health
+      vi: Sức khỏe con người
+      km: សុខភាពមនុស្ស
+      my_MM: ပြည်သူ့ကျန်းမာရေး
+      lo: ສຸຂະພາບຂອງມະນຸດ
+  - value: Nutrient
+    label: 
+      en: Nutrient
+      vi: Dinh dưỡng
+      km: សារធាតុចិញ្ចឹម
+      my_MM: အာဟာရ
+      lo: ສານອາຫານ
+  - value: Nutrition sensitive agriculture
+    label: 
+      en: Nutrition sensitive agriculture
+      vi: Nông nghiệp giàu dinh dưỡng
+      km: អាហារូបត្ថម្ភកសិកម្ម
+      my_MM: အာဟာရဇောင်းပေးစိုက်ပျိုးရေး
+      lo: ກະສິກຳທີ່ຄຳນຶງເຖິງໂພຊະນາການ
+  - value: Recipe
+    label: 
+      en: Recipe
+      vi: Công thức
+      km: រូបមន្តធ្វើម្ហូបអាហារ
+      my_MM: ချက်နည်းပြုတ်နည်း
+      lo: ຕຳລາ
+  - value: Wild food
+    label: 
+      en: Wild food
+      vi: Thức ăn ngoài tự nhiên
+      km: អាហារពីព្រៃ
+      my_MM: အစိမ်းစား အစားအစာ
+      lo: ອາຫານປ່າ
+  - value: Woman and child nutrition and health
+    label: 
+      en: Woman and child nutrition and health
+      vi: Dinh dưỡng và sức khỏe phụ nữ, trẻ em
+      km: អាហារូបត្ថម្ភ និងសុខភាពស្ត្រី និងកុមារ
+      my_MM: အမျိုးသမီး၊ ကလေးသူငယ်အာဟာရနှင့် ကျန်းမာရေး
+      lo: ສຸຂະພາບ ແລະ ໂພຊະນາການຂອງແມ່ຍິງ ແລະ ເດັກນ້ອຍ
+  - value: Home gardening
+    label: 
+      en: Home gardening
+      vi: Làm vườn tại nhà
+      km: សួនដំណាំតាមផ្ទះ
+      my_MM: အိမ်ခြံဝန်းဥယျာဉ်ခြံစိုက်ပျိုးခြင်း
+      lo: ສວນຄົວ
+  - value: Seasonal food
+    label: 
+      en: Seasonal food
+      vi: Thực phẩm theo mùa
+      km: អាហារតាមរដូវកាល
+      my_MM: ရာသီစာ
+      lo: ອາຫານປະຈຳລະດູການ
+  - value: Certification
+    label: 
+      en: Certification
+      vi: Chứng nhận
+      km: វិញ្ញាបនប័ត្រ
+      my_MM: အသိအမှတ်ပြုမှု
+      lo: ໃບຢັ້ງຢືນ
+  - value: Participatory guarantee system
+    label: 
+      en: Participatory guarantee system
+      vi: Hệ thống đảm bảo có sự tham gia
+      km: ប្រព័ន្ធធានាសុវត្ថិភាពដោយមានការចូលរួម
+      my_MM: ပူးပေါင်းပါဝင်သောအာမခံစနစ်
+      lo: ການຢັ້ງຢືນແບບມີສ່ວນຮ່ວມ
+  - value: Quality standard
+    label: 
+      en: Quality standard
+      vi: Tiêu chuẩn chất lượng
+      km: ស្តង់ដាគុណភាព
+      my_MM: အရည်အသွေးစံချိန်စံညွှန်း
+      lo: ຄຸນະພາບມາດຕະຖານ
+  - value: Food waste reduction
+    label: 
+      en: Food waste reduction
+      vi: Giảm lãng phí thực phẩm
+      km: ការកាត់បន្ថយកាកសំណល់អាហារ
+      my_MM: အစားအစာအလေအလွင့်လျော့ချခြင်း
+      lo: ການຫຼຸດຜ່ອນເສດອາຫານ
+  - value: Market information system
+    label: 
+      en: Market information system
+      vi: Hệ thống thông tin thị trường
+      km: ប្រព័ន្ធព័ត៌មានទីផ្សារ
+      my_MM: ဈေးကွက်သတင်းအချက်အလက်စနစ်
+      lo: ລະບົບຂໍ້ມູນທາງຕະຫຼາດ
+  - value: Perenial crop
+    label: 
+      en: Perenial crop
+      vi: Cây lâu năm
+      km: ដំណាំរយៈពេលវែង
+      my_MM: နှစ်ရှည်သီးနှံ
+      lo: ພືດຢືນຕົ້ນ
+  - value: Sustainable yield
+    label: 
+      en: Sustainable yield
+      vi: Năng suất bền vững
+      km: ទិន្នផលនិរន្តរភាព
+      my_MM: စဉ်ဆက်မပြတ်ရရှိနေသောအထွက်နှုန်း
+      lo: ຜົນຜະລິດທີ່ຍືນຍົງ
+  - value: Yield increase
+    label: 
+      en: Yield increase
+      vi: Tăng năng suất
+      km: ការកើនឡើងទិន្នផល
+      my_MM: 
+      lo: ຜົນຜະລິດເພີ່ມຂຶ້ນ
+  - value: Ecological intensification
+    label: 
+      en: Ecological intensification
+      vi: Tăng cường sinh thái
+      km: ប្រពលវប្បកម្មអេកូឡូស៊ី
+      my_MM: အထွက်နှုန်းမြင့်မားခြင်း
+      lo: ການເພີ່ມຜົນຜະລິດທາງນິເວດ
+  - value: Local food system
+    label: 
+      en: Local food system
+      vi: Hệ thống thực phẩm địa phương
+      km: ប្រព័ន្ធអាហារក្នុងស្រុក
+      my_MM: ဒေသအစားအစာစနစ်
+      lo: ລະບົບອາຫານທ້ອງຖິ່ນ
+  - value: Sustainable food system
+    label: 
+      en: Sustainable food system
+      vi: Hệ thống thực phẩm bền vững
+      km: ប្រព័ន្ធអាហារប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့သောအစားအစာစနစ်
+      lo: ລະບົບອາຫານທີ່ຍືນຍົງ
+  - value: Food security
+    label: 
+      en: Food security
+      vi: An ninh lương thực
+      km: សន្តិសុខស្បៀងអាហារ
+      my_MM: စားရေရိက္ခာဖူလုံမှု
+      lo: ຄວາມໝັ້ນຄົງດ້ານສະບຽງອາຫານ
+  - value: Food sovereignety
+    label: 
+      en: Food sovereignety
+      vi: Chủ quyền lương thực
+      km: អធិបតេយ្យភាពអាហារ
+      my_MM: အစားအစာအချုပ်ခြာအာဏာ
+      lo: ອະທິປະໄຕທາງດ້ານອາຫານ
+  - value: Food processing
+    label: 
+      en: Food processing
+      vi: Chế biến thực phẩm
+      km: ការកែច្នៃអាហារ
+      my_MM: စားသောက်ကုန်ထုတ်လုပ်ခြင်း
+      lo: ການແປຮູບອາຫານ
+  - value: Sustainable livelihood
+    label: 
+      en: Sustainable livelihood
+      vi:
+      km: ជីវភាពប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့သောအသက်မွေးဝမ်းကြောင်း
+      lo: ຄວາມຍືນຍົງໃນການດຳລົງຊີວິດ
+  - value: Urban agriculture
+    label: 
+      en: Urban agriculture
+      vi: Nông nghiệp đô thị
+      km: កសិកម្មជាយទីក្រុង
+      my_MM: မြို့ပြစိုက်ပျိုးရေး
+      lo: ກະສິກຳໃນຕົວເມືອງ
+  - value: Bee keeping
+    label: 
+      en: Bee keeping
+      vi: Nuôi ong
+      km: ការចិញ្ចឹមឃ្មុំ
+      my_MM: ပျားမွေးမြူရေး
+      lo: ການລ້ຽງເຜິ້ງ
+  - value: Biodiversity
+    label: 
+      en: Biodiversity
+      vi:
+      km: ជីវៈចំរុះ
+      my_MM: ဇီဝမျိုးစုံမျိုးကွဲ
+      lo: ຊີວະນາໆພັນ
+  - value: Biodiversity protection
+    label: 
+      en: Biodiversity protection
+      vi: Bảo vệ đa dạng sinh học
+      km: ការថែរក្សាជីវៈចំរុះ
+      my_MM: ဇီဝမျိုးစုံမျိုးကွဲထိန်းသိမ်းရေး
+      lo: ການຄຸ້ມຄອງຊີວະນາໆພັນ
+  - value: Bioeconomy
+    label: 
+      en: Bioeconomy
+      vi: Kinh tế sinh học
+      km: ជីវសេដ្ឋកិច្ច
+      my_MM: ဇီဝအခြေပြုစီးပွားရေး
+      lo: ເສດຖະກິດຊີວະພາບ
+  - value: Crop diversification
+    label: 
+      en: Crop diversification
+      vi: Đa dạng hóa cây trồng
+      km: ការធ្វើពិពិធកម្មដំណាំ
+      my_MM: အမယ်စုံသီးနှံစိုက်ပျိုးခြင်း
+      lo: ຄວາມຫຼາກຫຼາຍຂອງການປູກພືດ
+  - value: Ecological integration
+    label: 
+      en: Ecological integration
+      vi: Tích hợp sinh thái
+      km: ការរួមបញ្ចូលអេកូឡូស៊ី
+      my_MM: ဂေဟစနစ်ချိတ်ဆက်မှု
+      lo: ການເຊື່ອມໂຍງຂອງລະບົບນິເວດ
+  - value: Intercropping
+    label: 
+      en: Intercropping
+      vi: Xen canh
+      km: ការដាំដុះចំរុះ
+      my_MM: သီးညှပ်စိုက်ပျိုးခြင်း
+      lo: ການປູກສະລັບກັນ
+  - value: Environmental protection
+    label: 
+      en: Environmental protection
+      vi: Bảo vệ môi trường
+      km: ការការពារបរិស្ថាន
+      my_MM: ပတ်ဝန်းကျင်ထိန်းသိမ်းကာကွယ်ရေး
+      lo: ການປົກປັກຮັກສາສິ່ງແວດລ້ອມ
+  - value: Forest biodiversity
+    label: 
+      en: Forest biodiversity
+      vi: Đa dạng sinh học rừng
+      km: ជីវចម្រុះព្រៃឈើ
+      my_MM: သစ်တောဇီဝမျိုးစုံမျိုးကွဲ
+      lo: ຊີວະນາໆພັນປ່າໄມ້
+  - value: Forest encroachment
+    label: 
+      en: Forest encroachment
+      vi: Lấn chiếm rừng
+      km: ការទន្ទ្រានព្រៃ
+      my_MM: သစ်တောကြိုးဝိုင်းကျူးကျော်စိုက်ပျိုးခြင်း
+      lo: ການບຸກລຸກປ່າ
+  - value: Forest protection
+    label: 
+      en: Forest protection
+      vi: Bảo vệ rừng
+      km: ការការពារព្រៃឈើ
+      my_MM: သစ်တောကာကွယ်ထိန်းသိမ်းခြင်း
+      lo: ການປົກປັກຮັກສາປ່າໄມ້
+  - value: Grassland
+    label: 
+      en: Grassland
+      vi: Đồng cỏ
+      km: វាលស្មៅ
+      my_MM: မြက်ခင်းပြင်
+      lo: ທົ່ງຫຍ້າ
+  - value: Habitat
+    label: 
+      en: Habitat
+      vi: Môi trường sống
+      km: ទីជម្រក
+      my_MM: ရှင်သန်ပေါက်ရောက်ရာဝန်းကျင်
+      lo: ທີ່ຢູ່ອາໄສ
+  - value: Local breeds and species
+    label: 
+      en: Local breeds and species
+      vi: Giống và loài địa phương
+      km: ពូជ និងប្រភេទសត្វក្នុងស្រុក
+      my_MM: ဒေသမျိုးစိတ်နှင့် မျိုးကွဲများ
+      lo: ແນວພັນທ້ອງຖິ່ນ
+  - value: Open pollination
+    label: 
+      en: Open pollination
+      vi: Thụ phấn mở
+      km: នាំលំអងបង្កាត់ពូជដំំណាំ
+      my_MM: ပင်ခြားဝတ်မှုံကူးခြင်း
+      lo: ການປະສົມເກສອນແບບເປີດ
+  - value: Species protection
+    label: 
+      en: Species protection
+      vi: Bảo vệ loài
+      km: ការការពារប្រភេទពូជ
+      my_MM: မျိုးစိတ်မျိုးကွဲများကာကွယ်ထိန်းသိမ်းခြင်း
+      lo: ການອະນຸລັກສາຍພັນ
+  - value: Adaptation to climate change
+    label: 
+      en: Adaptation to climate change
+      vi: Thích ứng với biến đổi khí hậu
+      km: ការសម្របខ្លួនទៅនឹងការប្រែប្រួលអាកាសធាតុ
+      my_MM: ရာသီဥတုပြောင်းလဲမှုနှင့်လိုက်လျောညီထွေမှုရှိခြင်း
+      lo: ການປັບຕົວຕໍ່ການປ່ຽນແປງຂອງສະພາບອາກາດ
+  - value: Carbon market
+    label: 
+      en: Carbon market
+      vi: Thị trường carbon
+      km: ទីផ្សារកាបូន
+      my_MM: ကာဗွန်ဈေးကွက်
+      lo: ຕະຫຼາດກາກບອນ
+  - value: Carbon neutrality
+    label: 
+      en: Carbon neutrality
+      vi: Trung hòa carbon
+      km: អព្យាក្រឹតភាពកាបូន
+      my_MM: ထုတ်လွှင့်ကာဗွန်နှင့် စုပ်ယူကာဗွန်ကြား မျှချေရှိမှု
+      lo: ສະພາວະເປັນກາງຂອງກາກບອນ
+  - value: Climate change
+    label: 
+      en: Climate change
+      vi: Biến đổi khí hậu
+      km: ការប្រែប្រួលអាកាសធាតុ
+      my_MM: ရာသီဥတုပြောင်းလဲမှု
+      lo: ການປ່ຽນແປງຂອງສະພາບອາກາດ
+  - value: Climate resilience
+    label: 
+      en: Climate resilience
+      vi: Khả năng chống chịu với khí hậu
+      km: ភាពធន់នឹងអាកាសធាតុ
+      my_MM: ရာသီဥတုကြံ့ကြံ့ခံနိုင်ရည်ရှိမှု
+      lo: ຄວາມທົນທານຕໍ່ສະພາບອາກາດ
+  - value: Climate risk mitigation
+    label: 
+      en: Climate risk mitigation
+      vi: Giảm thiểu rủi ro khí hậu
+      km: ការកាត់បន្ថយហានិភ័យអាកាសធាតុ
+      my_MM: ရာသီဥတုအန္တရာယ်လျော့ပါးစေခြင်း
+      lo: ການຫຼຸດຜ່ອນຄວາມສ່ຽງດ້ານສະພາບອາກາດ
+  - value: Climate smart agriculture
+    label: 
+      en: Climate smart agriculture
+      vi: Nông nghiệp thông minh thích ứng với khí hậu
+      km: កសិកម្មឆ្លាតវៃអាកាសធាតុ
+      my_MM: ရာသီဥတုနှင့်လိုက်လျောညီထွေသောစိုက်ပျိုးရေး
+      lo: ກະສິກຳທັນສະໄໝ
+  - value: Drought
+    label: 
+      en: Drought
+      vi: Hạn hán
+      km: គ្រោះរាំងស្ងួត
+      my_MM: မိုးခေါင်ခြင်း
+      lo: ໄພແຫ້ງແລ້ງ
+  - value: Ecosystem resilience
+    label: 
+      en: Ecosystem resilience
+      vi: Khả năng phục hồi của hệ sinh thái
+      km: ភាពធន់នឹងប្រព័ន្ធអេកូឡូស៊ី
+      my_MM: ဂေဟစနစ်ကြံ့ကြံ့ခံနိုင်ရည်ရှိမှု
+      lo: ການປັບຕົວຂອງລະບົບນິເວດ
+  - value: Greenhouse gas reduction
+    label: 
+      en: Greenhouse gas reduction
+      vi: Giảm khí nhà kính
+      km: ការកាត់បន្ថយឧស្ម័នផ្ទះកញ្ចក់
+      my_MM: ဖန်လုံအိမ်ဓာတ်ငွေ့လျော့ချခြင်း
+      lo: ການຫຼຸດຜ່ອນກ໊າດເຮືອນແກ້ວ
+  - value: On farm anaerobic digestion
+    label: 
+      en: On farm anaerobic digestion
+      vi: Phân hủy kỵ khí trong trang trại 
+      km:  ការបែកដោយ anaerobic ក្នុងកសិដ្ឋាន
+      my_MM: လယ်ယာမြေတွင် စွန့်ပစ်ပစ္စည်းများအား လေမဲ့ဆွေးမြေ့စေခြင်း
+      lo: ການຍ່ອຍສະຫຼາຍແບບບໍ່ໃຊ້ອອກຊີເຈນ
+  - value: Renewable energy
+    label: 
+      en: Renewable energy
+      vi: Năng lượng tái tạo
+      km: ថាមពលកកើតឡើងវិញ
+      my_MM: ပြန်လည်ပြည့်ဖြိုးမြဲစွမ်းအင်
+      lo: ພະລັງງານທົດແທນ
+  - value: Vulnerability
+    label: 
+      en: Vulnerability
+      vi: Tính dễ tổn thương
+      km: ភាពងាយរងគ្រោះ
+      my_MM: ထိလွယ်ရှလွယ်ဖြစ်မှု
+      lo: ຄວາມເບາະບາງ
+  - value: Land investment
+    label: 
+      en: Land investment
+      vi: Đầu tư đất đai
+      km: ការវិនិយោគលើដី
+      my_MM: မြေယာရင်းနှီးမြုပ်နှံမှု
+      lo: ການລົງທຶນດ້ານທີ່ດິນ
+  - value: Land management
+    label: 
+      en: Land management
+      vi: Quản lý đất đai
+      km: ការគ្រប់គ្រងដី
+      my_MM: မြေယာစီမံခန့်ခွဲမှု
+      lo: ການຄຸ້ມຄອງ ແລະ ຈັດການດິນ
+  - value: Ecosystem service
+    label: 
+      en: Ecosystem service
+      vi: Dịch vụ hệ sinh thái
+      km: សេវាប្រព័ន្ធអេកូឡូស៊ី
+      my_MM: ဂေဟစနစ်ဝန်ဆောင်မှု
+      lo: ບໍລິການທາງລະບົບນິເວດ
+  - value: Land rights
+    label: 
+      en: Land rights
+      vi: Quyền sử dụng đất
+      km: សិទ្ធិដីធ្
+      my_MM: မြေယာအခွင့်အရေး
+      lo: ສິດນຳໃຊ້ທີ່ດິນ
+  - value: Landscape approach
+    label: 
+      en: Landscape approach
+      vi: Phương pháp tiếp cận cảnh quan
+      km: វិធីសាស្រ្តទេសភាព
+      my_MM: အမျိုးမျိုးသောမြေယာအသုံးချမှုအတွက် လက်တွေ့နှင့်မူဝါဒပေါင်းစပ်နှီးနွယ်သည့်မူဘောင်
+      lo: ຂະບວນການຈັດການພື້ນທີ່ແບບຍືນຍົງ 
+  - value: Local natural resources use
+    label: 
+      en: Local natural resources use
+      vi: Sử dụng tài nguyên thiên nhiên địa phương
+      km: ការប្រើប្រាស់ធនធានធម្មជាតិក្នុងស្រុក
+      my_MM: ဒေသသဘာဝသယံဇာတများအသုံးပြုခြင်း
+      lo: ການນຳໃຊ້ຊັບພະຍາກອນທຳມະຊາດທີ່ມີຢູ່ໃນທ້ອງຖິ່ນ
+  - value: Natural resources management
+    label: 
+      en: Natural resources management
+      vi: Quản lý tài nguyên thiên nhiên
+      km: ការគ្រប់គ្រងធនធានធម្មជាតិ
+      my_MM: သဘာဝသယံဇာတအရင်းအမြစ်စီမံခန့်ခွဲမှု
+      lo: 
+  - value: Natural resources protection
+    label: 
+      en: Natural resources protection
+      vi: Bảo vệ tài nguyên thiên nhiên
+      km: ការការពារធនធានធម្មជាតិ
+      my_MM: သဘာဝသယံဇာတအရင်းအမြစ်များထိန်းသိမ်းကာကွယ်ခြင်း
+      lo: ການປົກປັກຮັກສາຊັບພະຍາກອນທຳມະຊາດ
+  - value: Participatory land use planning
+    label: 
+      en: Participatory land use planning
+      vi: Kế hoạch sử dụng đất có sự tham gia
+      km: ការរៀបចំផែនការប្រើប្រាស់ដីដោយការចូលរួម
+      my_MM: ပူးပေါင်းပါဝင်သောမြေယာအသုံးချမှုစီမံကိန်းရေးဆွဲခြင်း
+      lo: ການວາງແຜນນຳໃຊ້ທີ່ດິນແບບມີສ່ວນຮ່ວມ
+  - value: Sustainable land management
+    label: 
+      en: Sustainable land management
+      vi: Quản lý đất đai bền vững
+      km: ការគ្រប់គ្រងដីធ្លីប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့သောမြေယာစီမံခန့်ခွဲမှု
+      lo: ການຄຸ້ມຄອງທີ່ດິນແບບຍືນຍົງ
+  - value: Watershed management
+    label: 
+      en: Watershed management
+      vi: Quản lý lưu vực sông
+      km: ការគ្រប់គ្រងអាងទឹក
+      my_MM: ရေဝေရေလဲတွင် ရေအရည်အသွေးနှင့် သဘာဝအရင်းအမြစ်စီမံခန့်ခွဲမှု
+      lo: ການຄຸ້ມຄອງອ່າງໂຕ່ງ
+  - value: Integrated water resources management
+    label: 
+      en: Integrated water resources management
+      vi: Quản lý tổng hợp tài nguyên nước
+      km: ការគ្រប់គ្រងធនធានទឹករួមបញ្ចូលគ្នា
+      my_MM: ဘက်ပေါင်းစုံ ရေအရင်းအမြစ် စီမံခန့်ခွဲမှု
+      lo: ການຄຸ້ມຄອງຊັບພະຍາກອນນ້ໍາແບບປະສົມປະສານ
+  - value: Irrigation system
+    label: 
+      en: Irrigation system
+      vi: Hệ thống thủy lợi
+      km: ប្រព័ន្ធធារាសាស្ត្រ
+      my_MM: ရေသွင်းစနစ်
+      lo: ລະບົບຊົນລະປະທານ
+  - value: Lagooning
+    label: 
+      en: Lagooning
+      vi: Đầm phá (loại hình thủy vực ven bờ biển)
+      km: អាងចំរុះទឹក
+      my_MM: သဘာဝရေသန့်စင်နည်းစနစ်
+      lo: ຂະບວນການບຳບັດນ້ຳເສຍ
+  - value: Water drainage
+    label: 
+      en: Water drainage
+      vi: Thoát nước
+      km: ការបង្ហូរទឹក
+      my_MM: ရေစီးဆင်းခြင်း
+      lo: ການລະບາຍນ້ຳ
+  - value: Water management
+    label: 
+      en: Water management
+      vi: Quản lý nước điện  giải
+      km: ការគ្រប់គ្រងទឹក
+      my_MM: ရေစီမံခန့်ခွဲမှု
+      lo: ການຈັດການນ້ຳ
+  - value: Water quality control
+    label: 
+      en: Water quality control
+      vi: Kiểm soát chất lượng nước
+      km: 
+      my_MM: ရေအရည်အသွေးထိန်းသိမ်းခြင်း
+      lo: ການຄວບຄຸມຄຸນະພາບນ້ຳ
+  - value: Water saving
+    label: 
+      en: Water saving
+      vi: Tiết kiệm nước
+      km: ការគ្រប់គ្រងគុណភាពទឹក
+      my_MM: ရေချွေတာသုံးစွဲခြင်း
+      lo: ປະຢັດນ້ຳ
+  - value: Community participation
+    label: 
+      en: Community participation
+      vi: Sự tham gia của cộng đồng
+      km: ការចូលរួមរបស់សហគមន៍
+      my_MM: လူ့အဖွဲ့အစည်းပူးပေါင်းပါဝင်ခြင်း
+      lo: ການມີສ່ວນຮ່ວມຂອງຊຸມຊົນ
+  - value: Cooperative
+    label: 
+      en: Cooperative
+      vi: Hợp tác xã
+      km: សហគមន៍
+      my_MM: ပူးပေါင်းဆောင်ရွက်ခြင်း
+      lo: ສະຫະກອນ
+  - value: Farmer participation
+    label: 
+      en: Farmer participation
+      vi: Sự tham gia của nông dân
+      km: ការចូលរួមរបស់កសិករ
+      my_MM: တောင်သူများပူးပေါင်းပါဝင်ခြင်း
+      lo: ການມີສ່ວນຮ່ວມຂອງຊາວກະສິກອນ
+  - value: Farmer to farmer exchange
+    label: 
+      en: Farmer to farmer exchange
+      vi: Trao đổi nông dân với nông dân
+      km: ការចែករំលែកចំណេះដឹងពីកសិករទៅកសិករ
+      my_MM: တောင်သူလယ်သမားအချင်းချင်း ဖလှယ်မှု
+      lo: ການແລກປ່ຽນລະຫວ່າງຊາວກະສິກອນ
+  - value: Farmers group
+    label: 
+      en: Farmers group
+      vi: Nhóm nông dân
+      km: ក្រុមកសិករ
+      my_MM: တောင်သူလယ်သမားအစုအဖွဲ့
+      lo: ກຸ່ມຊາວກະສິກອນ
+  - value: Education and awareness
+    label: 
+      en: Education and awareness
+      vi: Giáo dục và nhận thức
+      km: ការអប់រំ និងការយល់ដឹង
+      my_MM: ပညာပေးဝန်ဆောင်မှုနှင့် သတိထားလာမှု
+      lo: ການສຶກສາ ແລະ ການປູກຈິດສໍານຶກ
+  - value: Public-private partnership
+    label: 
+      en: Public-private partnership
+      vi: Hợp tác công tư
+      km: ភាពជាដៃគូសាធារណៈ និងឯកជន
+      my_MM: အစိုးရ-ပုဂ္ဂလိက ပူးပေါင်းဆောင်ရွက်ခြင်း
+      lo: ຄູ່ຮ່ວມງານ ພາກລັດ-ເອກະຊົນ
+  - value: Farmers union
+    label: 
+      en: Farmers union
+      vi: Hội Nông dân
+      km: សហព័ន្ធអង្គការកសិករ
+      my_MM: တောင်သူလယ်သမားသမဂ္ဂ
+      lo: ສະຫະພັນຊາວກະສິກອນ
+  - value: Knowledge co-production
+    label: 
+      en: Knowledge co-production
+      vi: Hợp tác sản xuất tri thức
+      km: ការបង្កើតចំណេះដឹងរួមគ្នា
+      my_MM: အသိပညာ အသုံးပြုသူနှင့် ဝန်ဆောင်မှုပေးသူတို့ တန်းတူညီမျှဆက်ဆံရေး
+      lo: ການຜະລິດຄວາມຮູ້ຮ່ວມກັນ
+  - value: Living lab
+    label: 
+      en: Living lab
+      vi: Phòng thí nghiệm sống (là một hệ sinh thái đổi mới mở)
+      km: មន្ទីពិសោធន៍ living Lab
+      my_MM: ပူးပေါင်းအဖြေရှာသုတေသန
+      lo: ຫ້ອງປະຕິບັດການຕົວຈິງ
+  - value: Mobile application
+    label: 
+      en: Mobile application
+      vi: Ứng dụng di động
+      km: កម្មវិធីទូរស័ព្ទ
+      my_MM: မိုဘိုင်း ပရိုဂရမ်
+      lo: ແອັບພີເຄຊັນ
+  - value: Participatory approach
+    label: 
+      en: Participatory approach
+      vi: Phương pháp tiếp cận có sự tham gia
+      km: វិធីសាស្រ្តចូលរួម
+      my_MM: ပူးပေါင်းပါဝင်ဆောင်ရွက်သည့်နည်းလမ်း
+      lo: ແນວທາງການມີສ່ວນຮ່ວມ
+  - value: Research action
+    label: 
+      en: Research action
+      vi: Hành động nghiên cứu
+      km: សកម្មភាពស្រាវជ្រាវ
+      my_MM: သုတေသန ပြုမူချက်
+      lo: ການຄົ້ນຄວ້າການຈັດຕັ້ງປະຕິບັດ
+  - value: Social media
+    label: 
+      en: Social media
+      vi: Truyền thông xã hội
+      km: ប្រព័ន្ធផ្សព្វផ្សាយសង្គម
+      my_MM: လူမှု မီဒီယာ
+      lo: ສື່ສັງຄົມອອນລາຍ
+  - value: Acces to employment
+    label: 
+      en: Acces to employment
+      vi: Tiếp cận việc làm
+      km: ការចូលទៅកាន់ការងារ
+      my_MM: အလုပ်အကိုင် ရရှိခြင်း
+      lo: ເຂົ້າເຖິງການຈ້າງງານ
+  - value: Equity
+    label: 
+      en: Equity
+      vi: Bình đẳng
+      km: សមធម៌
+      my_MM: တန်းတူညီမျှမှု
+      lo: ທຶນ
+  - value: Ethnic minority
+    label: 
+      en: Ethnic minority
+      vi: Dân tộc thiểu số
+      km: ជនជាតិភាគតិច
+      my_MM: တိုင်းရင်းသားလူနည်းစု
+      lo: ຊົນເຜົ່າ
+  - value: Fairtrade
+    label: 
+      en: Fairtrade
+      vi: Thương mại công bằng
+      km: 
+      my_MM: ညီမျှသောရောင်းဝယ်ဖောက်ကားခြင်း
+      lo: ການຄ້າທີ່ເປັນທຳ
+  - value: Fairness
+    label: 
+      en: Fairness
+      vi: Công bằng
+      km: ស្មើរភាព
+      my_MM: တရားမျှတမှု
+      lo: ຄວາມຍຸດຕິທຳ
+  - value: Farmers autonomy
+    label: 
+      en: Farmers autonomy
+      vi: Nông dân tự chủ
+      km: ស្វ័យភាពកសិករ
+      my_MM: တောင်သူလယ်သမားများ လွတ်လွတ်လပ်လပ်ဆုံးဖြတ်နိုင်ခြင်း
+      lo: ອິດສະລະພາບຂອງຊາວກະສິກອນ
+  - value: Food access
+    label: 
+      en: Food access
+      vi: Tiếp cận thực phẩm
+      km: ការទទួលបានអាហារ
+      my_MM: အစားအစာ ရရှိမှု
+      lo: ການເຂົ້າເຖິງອາຫານ
+  - value: Food justice
+    label: 
+      en: Food justice
+      vi: Công bằng thực phẩm
+      km: របសស្បៀងអាហារដោយស្មើរភាព
+      my_MM: အစားအစာရရှိမှု မျှမျှတတရှိခြင်း
+      lo: ຄວາມຍຸດຕິທໍາດ້ານອາຫານ
+  - value: Gender equity
+    label: 
+      en: Gender equity
+      vi: Bình đẳng giới
+      km: 
+      my_MM: ကျား/မ တန်းတူညီမှု
+      lo: ຄວາມສະເໝີພາບລະຫວ່າງຍິງ-ຊາຍ
+  - value: Responsible investment
+    label: 
+      en: Responsible investment
+      vi: Đầu tư có trách nhiệm
+      km: សមភាពយេនឌ័រ
+      my_MM: တာဝန်ခံမှု၊ တာဝန်ယူမှုရှိသည့် ရင်းနှီးမြှုပ်နှံမှု
+      lo: ການລົງທຶນຢ່າງມີຄວາມຮັບຜິດຊອບ
+  - value: Vulnerable group
+    label: 
+      en: Vulnerable group
+      vi: Nhóm dễ bị tổn thương
+      km: ក្រុមងាយរងគ្រោះ
+      my_MM: ထိလွယ်ရှလွယ်ဖြစ်လွယ်သော အစုအဖွဲ့
+      lo: ກຸ່ມທີ່ມີຄວາມສ່ຽງ
+  - value: Women rights
+    label: 
+      en: Women rights
+      vi: Quyền phụ nữ
+      km: សិទ្ធីនារី
+      my_MM: အမျိုးသမီးအခွင့်အရေး
+      lo: ສິດທິຂອງແມ່ຍິງ
+  - value: Youth rights
+    label: 
+      en: Youth rights
+      vi: Quyền thanh niên
+      km: សិទ្ធិយុវជន
+      my_MM: လူငယ်အခွင့်အရေး
+      lo: ສິດທິຂອງໄວໜຸ່ມ
+  - value: Agroecological infrastructure
+    label: 
+      en: Agroecological infrastructure
+      vi: Cơ sở hạ tầng nông nghiệp sinh thái
+      km: ហេដ្ឋារចនាសម្ព័ន្ធកសិអេកូឡូស៊ី
+      my_MM: ရေရှည်တည်တံ့သောစိုက်ပျိုးရေးဂေဟဆိုင်ရာ အခြေခံအဆောက်အဦ
+      lo: ພື້ນຖານໂຄງລ່າງຂອງນິເວດກະສິກຳ
+  - value: Bottom-up approach
+    label: 
+      en: Bottom-up approach
+      vi: Cách tiếp cận từ dưới lên
+      km: គោលនយោបាយសហវិមជ្ឈការ
+      my_MM: အောက်ခြေမှ အထက်ဆီသို့ ချဉ်းကပ်နည်း
+      lo: ວິທີການຈາກລຸ່ມຂຶ້ນສູ່ເທິງ
+  - value: Decentralised policy
+    label: 
+      en: Decentralised policy
+      vi: Chính sách phi tập trung
+      km: គោលនយោបាយវិមជ្ឈការ
+      my_MM: ဗဟိုချုပ်ကိုင်မှုလျော့နည်းသည့်မူဝါဒ
+      lo: ນະໂຍບາຍການແບ່ງຂັ້ນຄຸ້ມຄອງ
+  - value: Democratic governance
+    label: 
+      en: Democratic governance
+      vi: Quản trị dân chủ
+      km: ការគ្រប់គ្រងបែបប្រជាធិបតេយ្យ
+      my_MM: ဒီမိုကရက်တစ်အုပ်ချုပ်ရေး
+      lo: ການປົກຄອງແບບປະຊາທິປະໄຕ
+  - value: Enabling policy
+    label: 
+      en: Enabling policy
+      vi: Chính sách kích hoạt
+      km: ដំណើរការគោលនយោបាយ
+      my_MM: စွမ်းဆောင်နိုင်သော မူဝါဒ
+      lo: ນະໂຍບາຍເປີດກ້ວາງ
+  - value: Extension system
+    label: 
+      en: Extension system
+      vi: Hệ thống mở rộng
+      km: ប្រព័ន្ធពង្រីកបន្ថែម
+      my_MM: ပညာပေးတိုးချဲ့ဝန်ဆောင်မှုစနစ်
+      lo: ລະບົບຂະຫຍາຍ
+  - value: Fair property rights
+    label: 
+      en: Fair property rights
+      vi: Quyền sở hữu công bằng
+      km: សិទ្ធិអចលនទ្រព្យដោយស្មើរភាព
+      my_MM: မျှတသော ပိုင်ဆိုင်ရာ အခွင့်အရေးများ
+      lo: ສິດທິຊັບສິນຍຸດຕິທໍາ
+  - value: Innovation promotion
+    label: 
+      en: Innovation promotion
+      vi: Thúc đẩy đổi mới sáng tạo
+      km: ការលើកកម្ពស់ការច្នៃប្រឌិត
+      my_MM: ဆန်းသစ်တီထွင်မှု မြှင့်တင်ရေး
+      lo: ການສົ່ງເສີມນະວັດຕະກໍາ
+  - value: Local development plan
+    label: 
+      en: Local development plan
+      vi: Kế hoạch phát triển địa phương
+      km: ផែនការអភិវឌ្ឍន៍មូលដ្ឋាន
+      my_MM: ဒေသဖွံ့ဖြိုးရေး စီမံချက်
+      lo: ແຜນພັດທະນາທ້ອງຖິ່ນ
+  - value: Participatory land use policy
+    label: 
+      en: Participatory land use policy
+      vi: Chính sách sử dụng đất có sự tham gia
+      km: គោលនយោបាយប្រើប្រាស់ដីដោយការចូលរួម
+      my_MM: ပူးပေါင်းပါဝင်သောမြေအသုံးချမှုမူဝါဒ
+      lo: ນະໂຍບາຍການນຳໃຊ້ທີ່ດິນແບບມີສ່ວນຮ່ວມ
+  - value: Participatory plant breeding
+    label: 
+      en: Participatory plant breeding
+      vi: Chọn giống cây trồng cùng tham gia
+      km: ការបង្កាត់ពូជរុក្ខជាតិដោយការចូលរួម
+      my_MM: ပူးပေါင်းပါဝင်သော အပင်မျိုးစပ်ခြင်း
+      lo: ການປັບປຸງພັນພືດແບບມີສ່ວນຮ່ວມ
+  - value: Responsible gouvernance
+    label: 
+      en: Responsible gouvernance
+      vi: Quản trị có trách nhiệm
+      km: ទទួលខុសត្រូវលើការគ្រប់គ្រង
+      my_MM: တာဝန်ရှိသော အုပ်ချုပ်မှု
+      lo: ການປົງຄອງທີ່ດີ
+  - value: Rural development plan
+    label: 
+      en: Rural development plan
+      vi: Kế hoạch phát triển nông thôn
+      km: ផែនការអភិវឌ្ឍន៍ជនបទ
+      my_MM: ကျေးလက်ဒေသ ဖွံ့ဖြိုးတိုးတက်ရေး အစီအစဉ်
+      lo: ແຜນພັດທະນາຊົນນະບົດ
+  - value: Sustainable land use policy
+    label: 
+      en: Sustainable land use policy
+      vi: Chính sách sử dụng đất bền vững
+      km: គោលនយោបាយប្រើប្រាស់ដីប្រកបដោយនិរន្តរភាព
+      my_MM: ရေရှည်တည်တံ့သော မြေယာအသုံးချမှု မူဝါဒ
+      lo: ນະໂຍບາຍການນຳໃຊ້ທີ່ດິນແບບຍືນຍົງ
+  - value: Beliefs
+    label: 
+      en: Beliefs
+      vi: Niềm tin
+      km: ជំនឿ
+      my_MM: ယုံကြည်မှုများ
+      lo: ຄວາມເຊື່ອ
+  - value: Religion
+    label: 
+      en: Religion
+      vi: Tôn giáo
+      km: សាសនា
+      my_MM: ဘာသာတရား
+      lo: ສາດສະໜາ
+  - value: Cultural food system
+    label: 
+      en: Cultural food system
+      vi: Hệ thống ẩm thực văn hóa
+      km: 
+      my_MM: ရိုးရာဒေသ အစားအစာစနစ်
+      lo: ລະບົບອາຫານວັດທະນະທຳ
+  - value: Customary law
+    label: 
+      en: Customary law
+      vi: Pháp luật tập quán
+      km: ច្បាប់ទំនៀមទម្លាប់
+      my_MM: မြန်မာ့ဓလေ့ထုံးတမ်းဥပဒေ
+      lo: ຮີດຄອງປະເພນີ
+  - value: Wellbeing
+    label: 
+      en: Wellbeing
+      vi: Hạnh phúc
+      km: សុខុមាលភាព
+      my_MM: ကောင်းကျိုး
+      lo: ສະຫວັດດີການ
+  - value: Heritage
+    label: 
+      en: Heritage
+      vi:
+      km: បេតិកភណ្ឌ
+      my_MM: အမွေအနှစ်
+      lo: ມໍລະດົກ
+  - value: Intergeneration
+    label: 
+      en: Intergeneration
+      vi: Liên thế hệ (Xảy ra hoặc tồn tại giữa hai hoặc nhiều thế hệ)
+      km: អន្តរជំនាន់
+      my_MM: မျိုးရိုးစဉ်ဆက်
+      lo: ການລວມຕົວກັນຂອງຄົນຫຼາຍຮູ່ນ
+  - value: Knowledge intensive
+    label: 
+      en: Knowledge intensive
+      vi: Kiến thức chuyên sâu
+      km: ដែលត្រូវការចំណេះដឹងច្រើន
+      my_MM: အသိပညာကြွယ်ဝမှုရှိခြင်း
+      lo: ຄວາມຮູ້ສະເພາະທາງ
+  - value: Local adaptation systems
+    label: 
+      en: Local adaptation systems
+      vi: Hệ thống thích ứng địa phương
+      km: ប្រព័ន្ធសម្របខ្លួនក្នុងតំបន់
+      my_MM: ဒေသဆိုင်ရာလိုက်လျောညီထွေမှုစနစ်
+      lo: ລະບົບການປັບຕົວໃນທ້ອງຖິ່ນ
+  - value: Local knowledge
+    label: 
+      en: Local knowledge
+      vi: Kiến thức địa phương
+      km: ចំណេះដឹងក្នុងស្រុក
+      my_MM: ဒေသန္တရဗဟုသုတ
+      lo: ຄວາມຮູ້ທ້ອງຖິ່ນ
+  - value: Services and land exchanges
+    label: 
+      en: Services and land exchanges
+      vi: Dịch vụ và trao đổi đất đai
+      km: ប្រវ៉ាស់ (ផ្លាស់ប្ដូរ) សេវាកម្ម និងដីធ្លី
+      my_MM: ဝန်ဆောင်မှုများနှင့် မြေယာ ဖလှယ်မှုများ
+      lo: ບໍລິການ ແລະ ແລກປ່ຽນທີ່ດິນ
+  - value: Traditional knowledge
+    label: 
+      en: Traditional knowledge
+      vi: Kiến thức truyền thống
+      km: ចំណេះដឹងប្រពៃណី
+      my_MM: ရိုးရာဓလေ့ဗဟုသုတ
+      lo: ພູມປັນຍາຊາວບ້ານ
+  - value: Value chain
+    label: 
+      en: Value chain
+      vi: Chuỗi giá trị
+      km: ខ្សែសង្វាក់តម្លៃ
+      my_MM: တန်ဖိုးကွင်းဆက်
+      lo: ຕ່ອງໂສ້ມູນຄ່າ
+  - value: Short value chain
+    label: 
+      en: Short value chain
+      vi: Chuỗi giá trị ngắn
+      km: ខ្សែសង្វាក់តម្លៃខ្លី
+      my_MM: တိုတောင်းသောတန်ဖိုးကွင်းဆက်
+      lo: ຕ່ອງໂສ້ມູນຄ່າສັ້ນ
+
+- field_name: contributing_organisations
+  label: 
+    en: Contributing organisations
+    vi: Các tổ chức đóng góp
+    km: អង្គការដែលរួមចំណែក
+    my_MM: ပါဝင်ကူညီသောအဖွဲ့အစည်းများ
+    lo: ອົງການຈັດຕັ້ງປະກອບສ່ວນ
+
+- field_name: owner_org
+  label: Organization
+  preset: dataset_organization
+
+- field_name: author
+  label: Author
+  form_placeholder: Joe Bloggs
+  display_property: dc:creator
+
+- field_name: year
+  label:
+    en: Year
+    vi: Năm
+    km: ឆ្នាំ
+    my_MM: တစ်နှစ်
+    lo: ປີ
+  form_snippet: date_year.html
+
+- field_name: type_of_document
+  label: 
+    en: Type of document
+    vi: Loại tài liệu
+    km: ប្រភេទឯកសារ
+    my_MM: မှတ်တမ်းအမျိုးအစား
+    lo: ປະເພດຂອງເອກະສານ
+  preset: select
+  choices:
+  - value: Research article
+    label: 
+      en: Research articles
+      vi: Bài báo nghiên cứu
+      km: អត្ថបទស្រាវជ្រាវ
+      my_MM: သုတေသနစာတမ်းများ
+      lo: ບົດຄວາມການຄົ້ນຄວ້າ
+  - value: Discussion Paper
+    label: 
+      en: Discussion Paper
+      vi: Tài liệu thảo luận
+      km: ក្រដាសពិភាក្សា
+      my_MM: ဆွေးနွေးမှုစာတမ်း
+      lo: ບົດວິພາກ
+  - value: Theses
+    label: 
+      en: Theses
+      vi: Luận văn
+      km: ទាំងនេះ
+      my_MM: ကျမ်းများ
+      lo: ວິທະຍານິພົນ
+  - value: Briefs and Memos
+    label: 
+      en: Briefs and Memos
+      vi: Tóm tắt và ghi nhớ
+      km: សង្ខេប និងអនុស្សរណៈ
+      my_MM: အကျဉ်းချုပ်များနှင့် မှတ်စုတိုများ
+      lo: ບົດສະຫຼຸບ ແລະ ຄັດຫຍໍ້
+  - value: Brochure
+    label: 
+      en: Brochure
+      vi: Tờ rơi
+      km: ខិត្តប័ណ្ណ
+      my_MM: လက်ကမ်းစာစောင်
+      lo: ແຜ່ນພັບ
+  - value: Brief
+    label: 
+      en: Brief
+      vi: Tóm tắt
+      km: សង្ខេប
+      my_MM: အကျဉ်းချုပ်
+      lo: ຄັດຫຍໍ້
+  - value: Factsheet
+    label: 
+      en: Factsheet
+      vi: Bảng dữ kiện (là một tờ hay tệp thông tin liệt kê tất cả các thông tin chính, số liệu, sự kiện)
+      km: ឯកសារផ្សព្វផ្សាយ
+      my_MM: အချက်အလက်စာရွက်
+      lo: ບົດສັງລວມ
+  - value: Other Text Documents
+    label: 
+      en: Other Text Documents
+      vi: Các tài liệu văn bản khác
+      km: ឯកសារអត្ថបទផ្សេងៗ
+      my_MM: အခြားမှတ်တမ်းများ
+      lo: ເອກະສານຂໍ້ຄວາມອື່ນໆ
+  - value: Guideline
+    label: 
+      en: Guideline
+      vi: Hướng dẫn
+      km: ការណែនាំ
+      my_MM: လမ်းညွှန်ချက်
+      lo: ຄຳແນະນຳ
+  - value: Handbook or Manual
+    label: 
+      en: Handbook or Manual
+      vi: Sổ tay hoặc Sách hướng dẫn
+      km: សៀវភៅណែនាំ
+      my_MM: လက်စွဲစာအုပ်
+      lo: ປຶ້ມຄູ່ມື
+  - value: Audio Files
+    label: 
+      en: Audio files
+      vi: Tệp âm thanh
+      km: ឯកសារសំលេង
+      my_MM: အသံဖိုင်များ
+      lo: ຟາຍສຽງ
+  - value: Presentation
+    label: 
+      en: Presentation
+      vi: Trình bày
+      km: បទបង្ហាញ
+      my_MM: ဖော်ပြချက်
+      lo: ບົດນຳສະເໜີ
+  - value: Event proceedings and reports
+    label: 
+      en: Event proceedings and reports
+      vi: Kỷ yếu sự kiện và báo cáo
+      km: ដំណើរការកម្មវិធី និងរបាយការណ៍
+      my_MM: စာတမ်းဖတ်ပွဲစာစောင်များနှင့် အစီရင်ခံစာများ
+      lo: ການດຳເນີນງານ ແລະ ລາຍງານເຫດການ
+  - value: Poster or Illustration
+    label: 
+      en: Poster or Illustration
+      vi: Áp phích hoặc minh họa
+      km: ផ្ទាំងរូបភាព
+      my_MM: ပိုစတာ (သို့မဟုတ်)ရုပ်ပုံ
+      lo: ໂປສເຕີ ຫຼື ຮູບປະກອບ
+  - value: Legal Document
+    label: 
+      en: Legal Document
+      vi: Văn bản pháp lý
+      km: ឯកសារផ្លូវច្បាប់
+      my_MM: တရားဝင်မှတ်တမ်း
+      lo: ເອກະສານທາງກົດໝາຍ
+  - value: Strategy
+    label: 
+      en: Strategy
+      vi: Chiến lược
+      km: យុទ្ធសាស្ត្រ
+      my_MM: မဟာဗျူဟာ
+      lo: ຍຸດທະສາດ
+  - value: Case Study Report
+    label: 
+      en: Case Study Report
+      vi: Báo cáo nghiên cứu điển hình
+      km: របាយការណ៍ករណីសិក្សា
+      my_MM: ဖြစ်ရပ်မှန်လေ့လာမှုအစီရင်ခံစာ
+      lo: ບົດລາຍງານກໍລະນີສຶກສາ
+  - value: Report
+    label: 
+      en: Report
+      vi: Báo cáo
+      km: របាយការណ៍
+      my_MM: အစီရင်ခံစာ
+      lo: ບົດລາຍງານ
+
+- field_name: language
+  label: Language
+  preset: multiple_select
+  choices:
+  - value: English
+    label: 
+      en: English
+      vi: Tiếng anh
+      km: អង់គ្លេស
+      my_MM:  အင်္ဂလိပ်စာ
+      lo: ພາສາອັງກິດ
+  - value: Khmer
+    label:
+      en: Khmer
+      vi: Tiếng Khme
+      km: ខ្មែរ
+      my_MM: ခမာ
+      lo: ພາສາຂະເໝນ
+  - value: Lao
+    label:
+      en: Lao
+      vi: Tiếng Lào
+      km: ឡាវ
+      my_MM: လာအို
+      lo: ພາສາລາວ
+  - value: Myanmar
+    label:
+      en: Myanmar
+      vi: Tiếng Myama
+      km: មីយ៉ាន់ម៉ា
+      my_MM: မြန်မာ
+      lo: ພາສາມຽນມາ
+  - value: Vietnamese
+    label:
+      en: Vietnamese
+      vi: Tiếng Việt
+      km: វៀតណាម
+      my_MM: ဗီယက်နမ်
+      lo: ພາສາຫວຽດນາມ
+
+- field_name : spatial
+  label: 
+    en: Spatial Information
+    vi: Thông tin không gian
+    km: ព័ត៌មានលំហ
+    my_MM: Spatial အချက်အလက်
+    lo: ຂໍ້ມູນພື້ນທີ່
+  form_placeholder : valid geojson data format
+
+- field_name: country
+  label: 
+    en: Country
+    vi: Quốc gia
+    km: ប្រទេស
+    my_MM: တိုင်းပြည်
+    lo: ປະເທດ
+  preset: select
+  choices:
+  - value: Brunei Darussalam
+    label: Brunei Darussalam
+  - value: Global
+    label: Global
+  - value: Asia
+    label: Asia
+  - value: Southeast Asia
+    label: Southeast Asia
+  - value: ASEAN
+    label: ASEAN
+  - value: Mekong Region
+    label: Mekong Region
+  - value: Europe
+    label: Europe
+  - value: Latin America
+    label: Latin America
+  - value: West Africa
+    label: West Africa
+  - value: Bangladesh
+    label: Bangladesh
+  - value: Benin
+    label: Benin
+  - value: Bhutan
+    label: Bhutan
+  - value: Cambodia
+    label: Cambodia
+  - value: China
+    label: China
+  - value: Germany
+    label: Germany
+  - value: Ghana
+    label: Ghana
+  - value: Hawai
+    label: Hawai
+  - value: India
+    label: India
+  - value: Indonesia
+    label: Indonesia
+  - value: Japan
+    label: Japan
+  - value: Lao PDR
+    label: Lao PDR
+  - value: Malaysia
+    label: Malaysia
+  - value: Myanmar
+    label: Myanmar
+  - value: Pakistan
+    label: Pakistan
+  - value: Philippines
+    label: Philippines
+  - value: Singapore
+    label: Singapore
+  - value: Thailand
+    label: Thailand
+  - value: Timor Leste
+    label: Timor Leste
+  - value: Uganda
+    label: Uganda
+  - value: Vietnam
+    label: Vietnam
+  - value: USA
+    label: USA
+  - value: Others
+    label: Others
+
+- field_name: adl1
+  label: 
+    en: Administrative Level 1
+    vi: Cấp hành chính 1
+    km: កម្រិតរដ្ឋបាល ១
+    my_MM: အုပ်ချုပ်ရေးအဆင့် ၁
+    lo: ລະດັບບໍລິຫານ 1
+  form_snippet: adl1.html
+
+- field_name: adl2
+  label: 
+    en: Administrative Level 2
+    vi: Cấp hành chính 2
+    km: កម្រិតរដ្ឋបាល ២
+    my_MM: အုပ်ချုပ်ရေးအဆင့် ၂
+    lo: ລະດັບບໍລິຫານ 2
+  form_snippet: adl2.html
+
+- field_name: url
+  label: Web Link
+  form_placeholder: http://example.com/dataset.json
+  display_property: foaf:homepage
+  display_snippet: link.html
+
+- field_name: license_id
+  label: License
+  form_snippet: license.html
+  help_text: License definitions and additional information can be found at http://opendefinition.org/
+
+resource_fields:
+
+- field_name: url
+  label: URL
+  preset: resource_url_upload
+
+- field_name: name_translated 
+  label: 
+    en: Name
+    vi: Tên
+    km:  ឈ្មោះ
+    my_MM: နာမည်
+    lo: ຊື່
+  form_placeholder: eg. January 2011 Gold Prices
+  preset: fluent_core_translated
+
+- field_name: resource_description
+  label: 
+    en: Description
+    vi: Sự miêu tả
+    km:  ការពិពណ៌នា
+    my_MM: ဖော်ပြချက်
+    lo: ຄຳອະທິບາຍ
+  preset: fluent_markdown
+
+- field_name: format
+  label: Format
+  preset: resource_format_autocomplete
+  
