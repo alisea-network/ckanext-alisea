@@ -8918,7 +8918,7 @@ msgstr "សួនសត្វ​"
 
 #: ckanext/alisea/templates/scheming/form_snippets/agroecology_keyword.html:36
 msgid "Input reduction and recycling"
-msgstr "ការកាត់បន្ថយធាតុចូល និងការកែច្នៃឡើងវិញ​"
+msgstr "កាត់បន្ថយធាតុចូល និងការកៃច្នៃឡើងវិញ"
 
 #: ckanext/alisea/templates/scheming/form_snippets/agroecology_keyword.html:37
 msgid "Allelopathy"
@@ -9817,3 +9817,75 @@ msgstr "ទម្រង់"
 #: ckan/templates/snippets/facet_list.html:76
 msgid "Show More {facet_type}"
 msgstr "បង្ហាញច្រើនទៀត {facet_type}"
+
+msgid "Global"
+msgstr "សកល"
+
+msgid "Mekong Region"
+msgstr "តំបន់មេគង្គ"
+
+msgid "Asia"
+msgstr "អាស៊ី"
+
+msgid "Southeast Asia"
+msgstr "អាស៊ីអាគ្នេយ៍"
+
+msgid "ASEAN"
+msgstr "អាស៊ាន"
+
+msgid "China"
+msgstr "ចិន"
+
+msgid "India"
+msgstr "ឥណ្ឌា"
+
+msgid "Bangladesh"
+msgstr "បង់ក្លាដែស"
+
+msgid "Europe"
+msgstr "អឺរ៉ុប"
+
+msgid "Latin America"
+msgstr "អាមេរិក​ឡាទីន"
+
+msgid "Indonesia"
+msgstr "ឥណ្ឌូនេស៊ី"
+
+msgid "Bhutan"
+msgstr "ប៊ូតាន"
+
+msgid "Germany"
+msgstr "អាល្លឺម៉ង់"
+
+msgid "Ghana"
+msgstr "ហ្គាណា"
+
+msgid "Hawai"
+msgstr "ហាវ៉ៃ"
+
+msgid "Pakistan"
+msgstr "ប៉ាគីស្ថាន"
+
+msgid "Timor Leste"
+msgstr "ទីម័រ ឡេស្តេ"
+
+msgid "Uganda"
+msgstr "អ៊ូហ្គង់ដា"
+
+msgid "USA"
+msgstr "សហរដ្ឋអាមេរិក"
+
+msgid "West Africa"
+msgstr "អាហ្វ្រិកខាងលិច"
+
+msgid "English"
+msgstr "ភាសាអង់គ្លេស"
+
+msgid "Lao"
+msgstr "ឡាវ"
+
+msgid "Vietnamese"
+msgstr "វៀតណាម"
+
+msgid "Khmer"
+msgstr "ខ្មែរ"

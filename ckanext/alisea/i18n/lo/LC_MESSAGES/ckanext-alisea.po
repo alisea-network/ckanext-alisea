@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ckanext-alisea 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-16 10:33+0200\n"
-"PO-Revision-Date: 2024-10-07 15:26+0700\n"
+"PO-Revision-Date: 2025-09-15 09:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: lo <LL@li.org>\n"
 "Language: lo\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.10.3\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
 #: ckanext/alisea/templates/footer.html:15 ckan/templates/footer.html:24
 msgid "<strong>Powered by</strong> <a class=\"hide-text ckan-footer-logo\" href=\"http://ckan.org\">CKAN</a>"
@@ -9647,8 +9647,7 @@ msgstr "ອົງການຈັດຕັ້ງ"
 msgid "group"
 msgstr "ກຸ່ມ"
 
-#: ckan/lib/navl/dictization_functions.py:18 ckan/lib/navl/dictization_functions.py:21 ckan/lib/navl/dictization_functions.py:24 ckan/lib/navl/dictization_functions.py:27 ckan/lib/navl/dictization_functions.py:30 ckan/lib/navl/dictization_functions.py:33 ckan/lib/navl/dictization_functions.py:36 ckan/lib/navl/dictization_functions.py:39 ckan/lib/navl/validators.py:52 ckan/lib/navl/validators.py:76 ckan/lib/navl/validators.py:131 ckan/logic/action/get.py:2112 ckan/logic/action/update.py:265
-#: ckan/logic/action/update.py:475 ckan/logic/validators.py:687
+#: ckan/lib/navl/dictization_functions.py:18 ckan/lib/navl/dictization_functions.py:21 ckan/lib/navl/dictization_functions.py:24 ckan/lib/navl/dictization_functions.py:27 ckan/lib/navl/dictization_functions.py:30 ckan/lib/navl/dictization_functions.py:33 ckan/lib/navl/dictization_functions.py:36 ckan/lib/navl/dictization_functions.py:39 ckan/lib/navl/validators.py:52 ckan/lib/navl/validators.py:76 ckan/lib/navl/validators.py:131 ckan/logic/action/get.py:2112 ckan/logic/action/update.py:265 ckan/logic/action/update.py:475 ckan/logic/validators.py:687
 msgid "Missing value"
 msgstr "ບໍ່ມີຄ່າ"
 
@@ -9978,8 +9977,7 @@ msgstr "ບໍ່ມີຄ່າ"
 msgid "Role must be one of \"{}\""
 msgstr "ພາລະບົດບາດຕ້ອງເປັນຫນຶ່ງໃນ \"{}\""
 
-#: ckan/logic/action/create.py:702 ckan/views/dataset.py:406 ckan/views/dataset.py:417 ckan/views/dataset.py:615 ckan/views/dataset.py:754 ckan/views/dataset.py:791 ckan/views/dataset.py:881 ckan/views/dataset.py:896 ckan/views/dataset.py:998 ckan/views/dataset.py:1031 ckan/views/dataset.py:1111 ckan/views/resource.py:69 ckan/views/resource.py:83 ckan/views/resource.py:542 ckan/views/resource.py:596 ckan/views/resource.py:648 ckanext/activity/views.py:113 ckanext/activity/views.py:123
-#: ckanext/activity/views.py:219 ckanext/activity/views.py:251 ckanext/activity/views.py:332
+#: ckan/logic/action/create.py:702 ckan/views/dataset.py:406 ckan/views/dataset.py:417 ckan/views/dataset.py:615 ckan/views/dataset.py:754 ckan/views/dataset.py:791 ckan/views/dataset.py:881 ckan/views/dataset.py:896 ckan/views/dataset.py:998 ckan/views/dataset.py:1031 ckan/views/dataset.py:1111 ckan/views/resource.py:69 ckan/views/resource.py:83 ckan/views/resource.py:542 ckan/views/resource.py:596 ckan/views/resource.py:648 ckanext/activity/views.py:113 ckanext/activity/views.py:123 ckanext/activity/views.py:219 ckanext/activity/views.py:251 ckanext/activity/views.py:332
 msgid "Dataset not found"
 msgstr "ບໍ່ພົບຊຸດຂໍ້ມູນ"
 
@@ -10425,8 +10423,8 @@ msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການດໍ
 msgid "Confirm"
 msgstr "ຢືນຢັນ"
 
-#: ckan/public-bs3/base/javascript/modules/confirm-action.js:132 ckan/public-bs3/base/javascript/modules/resource-reorder.js:68 ckan/public-bs3/base/javascript/modules/resource-view-reorder.js:57 ckan/public/base/javascript/modules/confirm-action.js:132 ckan/public/base/javascript/modules/resource-reorder.js:68 ckan/public/base/javascript/modules/resource-view-reorder.js:57 ckan/templates/admin/confirm_reset.html:10 ckan/templates/group/confirm_delete.html:15
-#: ckan/templates/group/confirm_delete_member.html:16 ckan/templates/organization/confirm_delete.html:15 ckan/templates/organization/confirm_delete_member.html:16 ckan/templates/package/collaborators/confirm_delete.html:15 ckan/templates/package/confirm_delete.html:16 ckan/templates/package/confirm_delete_resource.html:15 ckan/templates/user/confirm_delete.html:15
+#: ckan/public-bs3/base/javascript/modules/confirm-action.js:132 ckan/public-bs3/base/javascript/modules/resource-reorder.js:68 ckan/public-bs3/base/javascript/modules/resource-view-reorder.js:57 ckan/public/base/javascript/modules/confirm-action.js:132 ckan/public/base/javascript/modules/resource-reorder.js:68 ckan/public/base/javascript/modules/resource-view-reorder.js:57 ckan/templates/admin/confirm_reset.html:10 ckan/templates/group/confirm_delete.html:15 ckan/templates/group/confirm_delete_member.html:16 ckan/templates/organization/confirm_delete.html:15
+#: ckan/templates/organization/confirm_delete_member.html:16 ckan/templates/package/collaborators/confirm_delete.html:15 ckan/templates/package/confirm_delete.html:16 ckan/templates/package/confirm_delete_resource.html:15 ckan/templates/user/confirm_delete.html:15
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
@@ -10466,8 +10464,8 @@ msgstr "ຮູບພາບ"
 msgid "Upload a file on your computer"
 msgstr "ອັບໂຫຼດໄຟລ໌ໃນຄອມພິວເຕີຂອງທ່ານ"
 
-#: ckan/public-bs3/base/javascript/modules/image-upload.js:117 ckan/public-bs3/base/javascript/modules/image-upload.js:185 ckan/public-bs3/base/javascript/modules/slug-preview.js:56 ckan/public/base/javascript/modules/image-upload.js:117 ckan/public/base/javascript/modules/image-upload.js:185 ckan/public/base/javascript/modules/slug-preview.js:56 ckan/templates/group/snippets/group_form.html:20 ckan/templates/organization/snippets/organization_form.html:20
-#: ckan/templates/package/snippets/package_basic_fields.html:15 ckan/templates/package/snippets/resource_form.html:30 ckan/templates/package/snippets/resource_upload_field.html:104
+#: ckan/public-bs3/base/javascript/modules/image-upload.js:117 ckan/public-bs3/base/javascript/modules/image-upload.js:185 ckan/public-bs3/base/javascript/modules/slug-preview.js:56 ckan/public/base/javascript/modules/image-upload.js:117 ckan/public/base/javascript/modules/image-upload.js:185 ckan/public/base/javascript/modules/slug-preview.js:56 ckan/templates/group/snippets/group_form.html:20 ckan/templates/organization/snippets/organization_form.html:20 ckan/templates/package/snippets/package_basic_fields.html:15 ckan/templates/package/snippets/resource_form.html:30
+#: ckan/templates/package/snippets/resource_upload_field.html:104
 msgid "URL"
 msgstr "URL"
 
@@ -10503,8 +10501,8 @@ msgstr "ເລືອກຊ່ອງຂໍ້ມູນ"
 msgid "Reorder resource view"
 msgstr "ຮຽງການເບີ່ງແຫຼ໋ງທີ່ມາຄືນໃໝ່"
 
-#: ckan/public-bs3/base/javascript/modules/slug-preview.js:57 ckan/public/base/javascript/modules/slug-preview.js:57 ckan/templates/group/edit_base.html:13 ckan/templates/group/members.html:28 ckan/templates/organization/bulk_process.html:76 ckan/templates/organization/edit.html:3 ckan/templates/organization/edit_base.html:15 ckan/templates/organization/members.html:33 ckan/templates/package/collaborators/collaborators.html:33 ckan/templates/package/edit_base.html:8
-#: ckan/templates/package/resource_edit.html:3 ckan/templates/package/resource_edit_base.html:12 ckan/templates/package/snippets/resource_item.html:73
+#: ckan/public-bs3/base/javascript/modules/slug-preview.js:57 ckan/public/base/javascript/modules/slug-preview.js:57 ckan/templates/group/edit_base.html:13 ckan/templates/group/members.html:28 ckan/templates/organization/bulk_process.html:76 ckan/templates/organization/edit.html:3 ckan/templates/organization/edit_base.html:15 ckan/templates/organization/members.html:33 ckan/templates/package/collaborators/collaborators.html:33 ckan/templates/package/edit_base.html:8 ckan/templates/package/resource_edit.html:3 ckan/templates/package/resource_edit_base.html:12
+#: ckan/templates/package/snippets/resource_item.html:73
 msgid "Edit"
 msgstr "ແກ້ໄຂ"
 
@@ -10581,8 +10579,7 @@ msgstr "ລົງທະບຽນ"
 msgid "Toggle navigation"
 msgstr "ສະຫຼັບການນຳທາງ"
 
-#: ckan/templates/group/read_base.html:18 ckan/templates/group/snippets/info.html:40 ckan/templates/header.html:102 ckan/templates/organization/bulk_process.html:22 ckan/templates/organization/edit_base.html:16 ckan/templates/organization/read_base.html:18 ckan/templates/package/snippets/new_package_breadcrumb.html:1 ckan/templates/snippets/context/group.html:19 ckan/templates/snippets/context/user.html:21 ckan/templates/snippets/organization.html:59 ckan/templates/user/read.html:11
-#: ckan/templates/user/read_base.html:20 ckan/templates/user/read_base.html:56
+#: ckan/templates/group/read_base.html:18 ckan/templates/group/snippets/info.html:40 ckan/templates/header.html:102 ckan/templates/organization/bulk_process.html:22 ckan/templates/organization/edit_base.html:16 ckan/templates/organization/read_base.html:18 ckan/templates/package/snippets/new_package_breadcrumb.html:1 ckan/templates/snippets/context/group.html:19 ckan/templates/snippets/context/user.html:21 ckan/templates/snippets/organization.html:59 ckan/templates/user/read.html:11 ckan/templates/user/read_base.html:20 ckan/templates/user/read_base.html:56
 msgid "Datasets"
 msgstr "ຊຸດຂໍ້ມູນ"
 
@@ -10590,8 +10587,7 @@ msgstr "ຊຸດຂໍ້ມູນ"
 msgid "Organizations"
 msgstr "ອົງການຈັດຕັ້ງ"
 
-#: ckan/templates/group/edit.html:4 ckan/templates/group/edit_base.html:4 ckan/templates/group/index.html:4 ckan/templates/group/index.html:7 ckan/templates/group/index.html:19 ckan/templates/group/members.html:3 ckan/templates/group/new.html:12 ckan/templates/group/read_base.html:4 ckan/templates/group/read_base.html:7 ckan/templates/header.html:106 ckan/templates/package/group_list.html:7 ckan/templates/package/read_base.html:22 ckan/views/dataset.py:295 ckan/views/group.py:304
-#: ckan/views/home.py:70
+#: ckan/templates/group/edit.html:4 ckan/templates/group/edit_base.html:4 ckan/templates/group/index.html:4 ckan/templates/group/index.html:7 ckan/templates/group/index.html:19 ckan/templates/group/members.html:3 ckan/templates/group/new.html:12 ckan/templates/group/read_base.html:4 ckan/templates/group/read_base.html:7 ckan/templates/header.html:106 ckan/templates/package/group_list.html:7 ckan/templates/package/read_base.html:22 ckan/views/dataset.py:295 ckan/views/group.py:304 ckan/views/home.py:70
 msgid "Groups"
 msgstr "ກຸ່ມ"
 
@@ -10698,12 +10694,11 @@ msgstr "ຕົວເລືອກການຕັ້ງຄ່າ CKAN"
 #: ckan/templates/admin/config.html:52
 #, python-format
 msgid ""
-"<p><strong>Site Title:</strong> This is the title of this CKAN instance It appears in various places throughout CKAN.</p> <p><strong>Custom Stylesheet:</strong> Define an alternative main CSS file.</p> <p><strong>Site Tag Logo:</strong> This is the logo that appears in the header of all the CKAN instance templates.</p> <p><strong>About:</strong> This text will appear on this CKAN instances <a href=\"%(about_url)s\">about page</a>.</p> <p><strong>Intro Text:</strong> This text will "
-"appear on this CKAN instances <a href=\"%(home_url)s\">home page</a> as a welcome to visitors.</p> <p><strong>Custom CSS:</strong> This is a block of CSS that appears in <code>&lt;head&gt;</code> tag of every page. If you wish to customize the templates more fully we recommend <a href=\"%(docs_url)s\" target=\"_blank\" rel=\"noreferrer\">reading the documentation</a>.</p> <p><strong>Homepage:</strong> This is for choosing a predefined layout for the modules that appear on your homepage."
-"</p>"
+"<p><strong>Site Title:</strong> This is the title of this CKAN instance It appears in various places throughout CKAN.</p> <p><strong>Custom Stylesheet:</strong> Define an alternative main CSS file.</p> <p><strong>Site Tag Logo:</strong> This is the logo that appears in the header of all the CKAN instance templates.</p> <p><strong>About:</strong> This text will appear on this CKAN instances <a href=\"%(about_url)s\">about page</a>.</p> <p><strong>Intro Text:</strong> This text will appear on this CKAN instances <a href=\"%(home_url)s\">home page</a> as a welcome to visitors.</p> <p><strong>Custom CSS:</"
+"strong> This is a block of CSS that appears in <code>&lt;head&gt;</code> tag of every page. If you wish to customize the templates more fully we recommend <a href=\"%(docs_url)s\" target=\"_blank\" rel=\"noreferrer\">reading the documentation</a>.</p> <p><strong>Homepage:</strong> This is for choosing a predefined layout for the modules that appear on your homepage.</p>"
 msgstr ""
-"<p><strong>ຊື່ເວັບໄຊ້:</strong> ນີ້ແມ່ນຫົວຂໍ້ຂອງຕົວຢ່າງ CKAN ນີ້ມັນປາກົດຢູ່ໃນສະຖານທີ່ຕ່າງໆຜ່ານທາງ CKAN.</p> <p><strong>ກຳນົດຮູບແບບໜ້າເຈ້ຍ:</strong> ກຳນົດໄຟລ໌ທາງເລືອກຫຼັກ CSS.</p> <p><strong>ກາໝາຍເວັບໄຊ້:</strong> ນີ້ແມ່ນກາໝາຍທີ່ປາກົດຢູ່ໃນສ່ວນຫົວຂອງແມ່ແບບຕົວຢ່າງ CKAN ທັງໝົດ.</p> <p><strong>ກ່ຽວກັບ:</strong> ຂໍ້ຄວາມນີ້ຈະປາກົດຢູ່ໃນຕົວຢ່າງ CKAN ນີ້<a href=\"%(about_url)s\">ກ່ຽວກັບໜ້າ</a>.</p> <p><strong>ເນື້ອໃນບົດນຳ:</strong> ຂໍ້ຄວາມນີ້ຈະປາກົດຢູ່ໃນຕົວຢ່າງ CKAN ນີ້ <a href=\"%(home_url)s\">ໜ້າຫຼັກ</a> .</p> <p><strong>ກຳນົດ CSS:</strong> ນີ້ແມ່ນບລັອກຂອງ CSS "
-"ທີ່ປາກົດຢູ່ໃນການຕ້ອນຮັບຜູ້ເຂົ້າເບີ່ງ<code>&lt;head&gt;</code> ປ້າຍຂອງທຸກໆໜ້າ. ຖ້າທ່ານຕ້ອງການປັບແຕ່ງແມ່ແບບຢ່າງເຕັມສ່ວນ, ພວກເຮົາແນະນໍາໃຫ້ <a href=\"%(docs_url)s\" target=\"_blank\" rel=\"noreferrer\">ອ່ານເອກະສານ</a>.</p> <p><strong>ໜ້າຫຼັກ:</strong> ນີ້ແມ່ນສໍາລັບການເລືອກຮູບແບບທີ່ກໍານົດໄວ້ລ່ວງຫນ້າສໍາລັບໂມດູນທີ່ປາກົດຢູ່ໃນຫນ້າທໍາອິດຂອງທ່ານ.</p>"
+"<p><strong>ຊື່ເວັບໄຊ້:</strong> ນີ້ແມ່ນຫົວຂໍ້ຂອງຕົວຢ່າງ CKAN ນີ້ມັນປາກົດຢູ່ໃນສະຖານທີ່ຕ່າງໆຜ່ານທາງ CKAN.</p> <p><strong>ກຳນົດຮູບແບບໜ້າເຈ້ຍ:</strong> ກຳນົດໄຟລ໌ທາງເລືອກຫຼັກ CSS.</p> <p><strong>ກາໝາຍເວັບໄຊ້:</strong> ນີ້ແມ່ນກາໝາຍທີ່ປາກົດຢູ່ໃນສ່ວນຫົວຂອງແມ່ແບບຕົວຢ່າງ CKAN ທັງໝົດ.</p> <p><strong>ກ່ຽວກັບ:</strong> ຂໍ້ຄວາມນີ້ຈະປາກົດຢູ່ໃນຕົວຢ່າງ CKAN ນີ້<a href=\"%(about_url)s\">ກ່ຽວກັບໜ້າ</a>.</p> <p><strong>ເນື້ອໃນບົດນຳ:</strong> ຂໍ້ຄວາມນີ້ຈະປາກົດຢູ່ໃນຕົວຢ່າງ CKAN ນີ້ <a href=\"%(home_url)s\">ໜ້າຫຼັກ</a> .</p> <p><strong>ກຳນົດ CSS:</strong> ນີ້ແມ່ນບລັອກຂອງ CSS ທີ່ປາກົດຢູ່ໃນການຕ້ອນຮັບຜູ້ເຂົ້າເບີ່ງ<code>&lt;head&gt;</code> ປ້າຍຂອງທຸກໆໜ້າ. ຖ້າທ່ານຕ້ອງການປັບແຕ່ງແມ່ແບບຢ່າງເຕັມສ່ວນ, ພວກເຮົາແນະນໍາໃຫ້ <a href=\"%(docs_url)s\" "
+"target=\"_blank\" rel=\"noreferrer\">ອ່ານເອກະສານ</a>.</p> <p><strong>ໜ້າຫຼັກ:</strong> ນີ້ແມ່ນສໍາລັບການເລືອກຮູບແບບທີ່ກໍານົດໄວ້ລ່ວງຫນ້າສໍາລັບໂມດູນທີ່ປາກົດຢູ່ໃນຫນ້າທໍາອິດຂອງທ່ານ.</p>"
 
 #: ckan/templates/admin/confirm_reset.html:3 ckan/templates/admin/confirm_reset.html:11
 msgid "Confirm Reset"
@@ -10746,8 +10741,8 @@ msgstr "ລຶບທັງໝົດ"
 msgid "Purge deleted datasets, organizations or groups forever and irreversibly."
 msgstr "ລຶບຊຸດຂໍ້ມູນ, ອົງການຈັດຕັ້ງ ຫຼືກຸ່ມທີ່ຖືກລຶບຖິ້ມຕະຫຼອດໄປ ແລະ ປະຕິເສດບໍ່ໄດ້"
 
-#: ckan/templates/admin/snippets/confirm_delete.html:3 ckan/templates/admin/snippets/confirm_delete.html:18 ckan/templates/group/confirm_delete.html:3 ckan/templates/group/confirm_delete.html:16 ckan/templates/group/confirm_delete_member.html:3 ckan/templates/group/confirm_delete_member.html:17 ckan/templates/organization/confirm_delete.html:3 ckan/templates/organization/confirm_delete.html:16 ckan/templates/organization/confirm_delete_member.html:3
-#: ckan/templates/organization/confirm_delete_member.html:17 ckan/templates/package/collaborators/confirm_delete.html:3 ckan/templates/package/collaborators/confirm_delete.html:16 ckan/templates/package/confirm_delete.html:3 ckan/templates/package/confirm_delete.html:17 ckan/templates/package/confirm_delete_resource.html:3 ckan/templates/package/confirm_delete_resource.html:16 ckan/templates/user/confirm_delete.html:3 ckan/templates/user/confirm_delete.html:16
+#: ckan/templates/admin/snippets/confirm_delete.html:3 ckan/templates/admin/snippets/confirm_delete.html:18 ckan/templates/group/confirm_delete.html:3 ckan/templates/group/confirm_delete.html:16 ckan/templates/group/confirm_delete_member.html:3 ckan/templates/group/confirm_delete_member.html:17 ckan/templates/organization/confirm_delete.html:3 ckan/templates/organization/confirm_delete.html:16 ckan/templates/organization/confirm_delete_member.html:3 ckan/templates/organization/confirm_delete_member.html:17 ckan/templates/package/collaborators/confirm_delete.html:3
+#: ckan/templates/package/collaborators/confirm_delete.html:16 ckan/templates/package/confirm_delete.html:3 ckan/templates/package/confirm_delete.html:17 ckan/templates/package/confirm_delete_resource.html:3 ckan/templates/package/confirm_delete_resource.html:16 ckan/templates/user/confirm_delete.html:3 ckan/templates/user/confirm_delete.html:16
 msgid "Confirm Delete"
 msgstr "ຢືນຢັນການລຶບ"
 
@@ -10875,8 +10870,7 @@ msgstr "ແກ້ໄຂກຸ່ມ"
 msgid "Members"
 msgstr "ສະມາຊິກ"
 
-#: ckan/templates/group/followers.html:3 ckan/templates/group/followers.html:6 ckan/templates/group/snippets/info.html:36 ckan/templates/package/followers.html:3 ckan/templates/package/followers.html:6 ckan/templates/package/snippets/info.html:24 ckan/templates/snippets/context/group.html:15 ckan/templates/snippets/context/user.html:17 ckan/templates/snippets/organization.html:55 ckan/templates/user/followers.html:3 ckan/templates/user/followers.html:7 ckan/templates/user/read_base.html:52
-#: ckanext/example_theme_docs/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:12
+#: ckan/templates/group/followers.html:3 ckan/templates/group/followers.html:6 ckan/templates/group/snippets/info.html:36 ckan/templates/package/followers.html:3 ckan/templates/package/followers.html:6 ckan/templates/package/snippets/info.html:24 ckan/templates/snippets/context/group.html:15 ckan/templates/snippets/context/user.html:17 ckan/templates/snippets/organization.html:55 ckan/templates/user/followers.html:3 ckan/templates/user/followers.html:7 ckan/templates/user/read_base.html:52 ckanext/example_theme_docs/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:12
 msgid "Followers"
 msgstr "ຜູ້ຕິດຕາມ"
 
@@ -10944,8 +10938,8 @@ msgstr "ບົດບາດ"
 msgid "Are you sure you want to delete this member?"
 msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບສະມາຊິກນີ້?"
 
-#: ckan/templates/group/member_new.html:72 ckan/templates/group/members.html:31 ckan/templates/group/snippets/group_form.html:40 ckan/templates/organization/bulk_process.html:60 ckan/templates/organization/member_new.html:74 ckan/templates/organization/members.html:36 ckan/templates/organization/snippets/organization_form.html:40 ckan/templates/package/collaborators/collaborator_new.html:45 ckan/templates/package/collaborators/collaborators.html:36 ckan/templates/package/edit_view.html:20
-#: ckan/templates/package/snippets/package_form.html:40 ckan/templates/package/snippets/resource_form.html:73 ckan/templates/user/edit_user_form.html:87
+#: ckan/templates/group/member_new.html:72 ckan/templates/group/members.html:31 ckan/templates/group/snippets/group_form.html:40 ckan/templates/organization/bulk_process.html:60 ckan/templates/organization/member_new.html:74 ckan/templates/organization/members.html:36 ckan/templates/organization/snippets/organization_form.html:40 ckan/templates/package/collaborators/collaborator_new.html:45 ckan/templates/package/collaborators/collaborators.html:36 ckan/templates/package/edit_view.html:20 ckan/templates/package/snippets/package_form.html:40 ckan/templates/package/snippets/resource_form.html:73
+#: ckan/templates/user/edit_user_form.html:87
 msgid "Delete"
 msgstr "ລຶບ"
 
@@ -10997,8 +10991,7 @@ msgstr "ຊື່"
 msgid "My Group"
 msgstr "ກຸ່ມຂອງຂ້ອຍ"
 
-#: ckan/templates/group/snippets/group_form.html:22 ckan/templates/organization/snippets/organization_form.html:22 ckan/templates/package/snippets/package_basic_fields.html:21 ckan/templates/package/snippets/resource_form.html:40 ckan/templates/package/snippets/view_form.html:9 ckanext/datastore/templates-bs3/datastore/snippets/dictionary_form.html:24 ckanext/datastore/templates-bs3/package/resource_read.html:22 ckanext/datastore/templates/datastore/snippets/dictionary_form.html:24
-#: ckanext/datastore/templates/package/resource_read.html:22
+#: ckan/templates/group/snippets/group_form.html:22 ckan/templates/organization/snippets/organization_form.html:22 ckan/templates/package/snippets/package_basic_fields.html:21 ckan/templates/package/snippets/resource_form.html:40 ckan/templates/package/snippets/view_form.html:9 ckanext/datastore/templates-bs3/datastore/snippets/dictionary_form.html:24 ckanext/datastore/templates-bs3/package/resource_read.html:22 ckanext/datastore/templates/datastore/snippets/dictionary_form.html:24 ckanext/datastore/templates/package/resource_read.html:22
 msgid "Description"
 msgstr "ຄຳອະທິບາຍ"
 
@@ -11053,13 +11046,12 @@ msgstr "ຍິນດີຕ້ອນຮັບ"
 
 #: ckan/templates/home/snippets/about_text.html:1
 msgid ""
-"<p>CKAN is the world’s leading open-source data portal platform.</p> <p>CKAN is a complete out-of-the-box software solution that makes data accessible and usable – by providing tools to streamline publishing, sharing, finding and using data (including storage of data and provision of robust data APIs). CKAN is aimed at data publishers (national and regional governments, companies and organizations) wanting to make their data open and available.</p> <p>CKAN is used by governments and "
-"user groups worldwide and powers a variety of official and community data portals including portals for local, national and international government, such as the UK’s <a href=\"https://data.gov.uk\">data.gov.uk</a> and the United States <a href=\"https://catalog.data.gov/\">catalog.data.gov</a>, the Brazilian <a href=\"https://dados.gov.br/\">dados.gov.br</a>, Dutch and Netherland government portals, as well as city and municipal sites in the US, UK, Argentina, Finland and elsewhere.</"
-"p> <p>CKAN: <a href=\"https://ckan.org/\">https://ckan.org/</a><br /> CKAN Showcases: <a href=\"https://ckan.org/showcase\">https://ckan.org/showcase</a><br /> Features overview: <a href=\"https://ckan.org/features/\">https://ckan.org/features/</a></p>"
+"<p>CKAN is the world’s leading open-source data portal platform.</p> <p>CKAN is a complete out-of-the-box software solution that makes data accessible and usable – by providing tools to streamline publishing, sharing, finding and using data (including storage of data and provision of robust data APIs). CKAN is aimed at data publishers (national and regional governments, companies and organizations) wanting to make their data open and available.</p> <p>CKAN is used by governments and user groups worldwide and powers a variety of official and community data portals including portals for local, national and "
+"international government, such as the UK’s <a href=\"https://data.gov.uk\">data.gov.uk</a> and the United States <a href=\"https://catalog.data.gov/\">catalog.data.gov</a>, the Brazilian <a href=\"https://dados.gov.br/\">dados.gov.br</a>, Dutch and Netherland government portals, as well as city and municipal sites in the US, UK, Argentina, Finland and elsewhere.</p> <p>CKAN: <a href=\"https://ckan.org/\">https://ckan.org/</a><br /> CKAN Showcases: <a href=\"https://ckan.org/showcase\">https://ckan.org/showcase</a><br /> Features overview: <a href=\"https://ckan.org/features/\">https://ckan.org/features/</"
+"a></p>"
 msgstr ""
-"<p>CKAN ເປັນແພລດຕະຟອມເປີດແຫຼ່ງຂໍ້ມູນຊັ້ນນໍາຂອງໂລກ.</p> <p>CKAN ເປັນຊອບແວແກ້ໄຂບັນຫາທີ່ສົມບູນແບບທີ່ເຮັດໃຫ້ຂໍ້ມູນສາມາດເຂົ້າເຖິງໄດ້ ແລະ ສາມາດໃຊ້ໄດ້ – ໂດຍການສະຫນອງເຄື່ອງມືເພື່ອປັບປຸງການເຜີຍແຜ່, ການແບ່ງປັນ. , ການຊອກຫາ ແລະ ການນໍາໃຊ້ຂໍ້ມູນ (ລວມທັງການເກັບຮັກສາຂໍ້ມູນ ແລະ ການສະຫນອງ APIs ຂໍ້ມູນທີ່ເຂັ້ມແຂງ). CKAN ແມ່ນແນໃສ່ຜູ້ເຜີຍແຜ່ຂໍ້ມູນ (ລັດຖະບານ, ບໍລິສັດ ແລະ ອົງການຈັດຕັ້ງລະດັບຊາດ ແລະ ພາກພື້ນ) ຕ້ອງການໃຫ້ຂໍ້ມູນຂອງເຂົາເຈົ້າເປີດເຜີຍ ແລະ ສາມາດໃຊ້ໄດ້.</p> <p>CKAN ຖືກໃຊ້ໂດຍລັດຖະບານ ແລະ ກຸ່ມຜູ້ໃຊ້ທົ່ວໂລກ ແລະໃຫ້ຂໍ້ມູນແກ່ທາງການ ແລະ ຊຸມຊົນຕ່າງໆ portal ຂໍ້ມູນລວມເຖິງ portal ທ້ອງຖິ່ນ, ແຫ່ງຊາດ ແລະ ສາກົນ, ເຊັ່ນ: <a href=\"https://"
-"data.gov.uk\">data.gov.uk</a> ຂອງອັງກິດ ແລະ ສະຫະລັດ <a href=\"https. http://catalog.data.gov/\">catalog.data.gov</a>, the Brazilian <a href=\"https://dados.gov.br/\">dados.gov.br</a>, ປະຕູລັດຖະບານໂຮນລັງ ແລະ ເນເທີແລນ, ເຊັ່ນດຽວກັນກັບສະຖານທີ່ເມືອງ ແລະ ເທດສະບານໃນສະຫະລັດ, ອັງກິດ, ອາເຈນຕິນາ, ຟິນແລນ ແລະບ່ອນອື່ນໆ.</p> <p>CKAN: <a href=\"https://ckan.org/\">https http://ckan.org/</a><br /> CKAN Showcases: <a href=\"https://ckan.org/showcase\">https://ckan.org/showcase</a><br/ > ພາບລວມຄຸນສົມບັດ: <a href=\"https://ckan."
-"org/features/\">https://ckan.org/features/</a></p>"
+"<p>CKAN ເປັນແພລດຕະຟອມເປີດແຫຼ່ງຂໍ້ມູນຊັ້ນນໍາຂອງໂລກ.</p> <p>CKAN ເປັນຊອບແວແກ້ໄຂບັນຫາທີ່ສົມບູນແບບທີ່ເຮັດໃຫ້ຂໍ້ມູນສາມາດເຂົ້າເຖິງໄດ້ ແລະ ສາມາດໃຊ້ໄດ້ – ໂດຍການສະຫນອງເຄື່ອງມືເພື່ອປັບປຸງການເຜີຍແຜ່, ການແບ່ງປັນ. , ການຊອກຫາ ແລະ ການນໍາໃຊ້ຂໍ້ມູນ (ລວມທັງການເກັບຮັກສາຂໍ້ມູນ ແລະ ການສະຫນອງ APIs ຂໍ້ມູນທີ່ເຂັ້ມແຂງ). CKAN ແມ່ນແນໃສ່ຜູ້ເຜີຍແຜ່ຂໍ້ມູນ (ລັດຖະບານ, ບໍລິສັດ ແລະ ອົງການຈັດຕັ້ງລະດັບຊາດ ແລະ ພາກພື້ນ) ຕ້ອງການໃຫ້ຂໍ້ມູນຂອງເຂົາເຈົ້າເປີດເຜີຍ ແລະ ສາມາດໃຊ້ໄດ້.</p> <p>CKAN ຖືກໃຊ້ໂດຍລັດຖະບານ ແລະ ກຸ່ມຜູ້ໃຊ້ທົ່ວໂລກ ແລະໃຫ້ຂໍ້ມູນແກ່ທາງການ ແລະ ຊຸມຊົນຕ່າງໆ portal ຂໍ້ມູນລວມເຖິງ portal ທ້ອງຖິ່ນ, ແຫ່ງຊາດ ແລະ ສາກົນ, ເຊັ່ນ: <a href=\"https://data.gov.uk\">data.gov.uk</a> ຂອງອັງກິດ ແລະ ສະຫະລັດ <a href=\"https. http://catalog.data.gov/\">catalog.data.gov</a>, the "
+"Brazilian <a href=\"https://dados.gov.br/\">dados.gov.br</a>, ປະຕູລັດຖະບານໂຮນລັງ ແລະ ເນເທີແລນ, ເຊັ່ນດຽວກັນກັບສະຖານທີ່ເມືອງ ແລະ ເທດສະບານໃນສະຫະລັດ, ອັງກິດ, ອາເຈນຕິນາ, ຟິນແລນ ແລະບ່ອນອື່ນໆ.</p> <p>CKAN: <a href=\"https://ckan.org/\">https http://ckan.org/</a><br /> CKAN Showcases: <a href=\"https://ckan.org/showcase\">https://ckan.org/showcase</a><br/ > ພາບລວມຄຸນສົມບັດ: <a href=\"https://ckan.org/features/\">https://ckan.org/features/</a></p>"
 
 #: ckan/templates/home/snippets/promoted.html:8
 msgid "Welcome to CKAN"
@@ -11970,8 +11962,8 @@ msgstr "ບໍ່ພົບອົງການຈັດຕັ້ງ"
 msgid "Social"
 msgstr "ສັງຄົມ"
 
-#: ckan/templates/tests/mock_json_resource_preview_template.html:7 ckan/templates/tests/mock_resource_preview_template.html:7 ckanext/datastore/templates-bs3/package/snippets/data_api_button.html:7 ckanext/datastore/templates/package/snippets/data_api_button.html:7 ckanext/example_theme_docs/v18_snippet_api/assets/example_theme_popover.js:21 ckanext/example_theme_docs/v19_01_error/assets/example_theme_popover.js:21
-#: ckanext/example_theme_docs/v19_02_error_handling/assets/example_theme_popover.js:8 ckanext/example_theme_docs/v20_pubsub/assets/example_theme_popover.js:8 ckanext/example_theme_docs/v21_custom_jquery_plugin/assets/example_theme_popover.js:8 ckanext/reclineview/theme/templates/recline_view.html:15 ckanext/textview/theme/templates/text_view.html:9
+#: ckan/templates/tests/mock_json_resource_preview_template.html:7 ckan/templates/tests/mock_resource_preview_template.html:7 ckanext/datastore/templates-bs3/package/snippets/data_api_button.html:7 ckanext/datastore/templates/package/snippets/data_api_button.html:7 ckanext/example_theme_docs/v18_snippet_api/assets/example_theme_popover.js:21 ckanext/example_theme_docs/v19_01_error/assets/example_theme_popover.js:21 ckanext/example_theme_docs/v19_02_error_handling/assets/example_theme_popover.js:8 ckanext/example_theme_docs/v20_pubsub/assets/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v21_custom_jquery_plugin/assets/example_theme_popover.js:8 ckanext/reclineview/theme/templates/recline_view.html:15 ckanext/textview/theme/templates/text_view.html:9
 msgid "Loading..."
 msgstr "ກຳລັງໂຫຼດ"
 
@@ -12790,13 +12782,11 @@ msgid "Dashboard (%(num)d new item)"
 msgid_plural "Dashboard (%(num)d new items)"
 msgstr[0] "ໜ້າຕ່າງ (%(num)d new item)"
 
-#: ckanext/activity/templates/group/activity_stream.html:3 ckanext/activity/templates/group/read_base.html:5 ckanext/activity/templates/organization/activity_stream.html:3 ckanext/activity/templates/organization/read_base.html:5 ckanext/activity/templates/package/activity_stream.html:3 ckanext/activity/templates/package/read_base.html:5 ckanext/activity/templates/user/activity_stream.html:3 ckanext/activity/templates/user/activity_stream.html:8
-#: ckanext/activity/templates/user/read_base.html:5
+#: ckanext/activity/templates/group/activity_stream.html:3 ckanext/activity/templates/group/read_base.html:5 ckanext/activity/templates/organization/activity_stream.html:3 ckanext/activity/templates/organization/read_base.html:5 ckanext/activity/templates/package/activity_stream.html:3 ckanext/activity/templates/package/read_base.html:5 ckanext/activity/templates/user/activity_stream.html:3 ckanext/activity/templates/user/activity_stream.html:8 ckanext/activity/templates/user/read_base.html:5
 msgid "Activity Stream"
 msgstr "ກະແສການເຄື່ອນໄຫວ"
 
-#: ckanext/activity/templates/group/changes.html:9 ckanext/activity/templates/group/changes.html:17 ckanext/activity/templates/organization/changes.html:9 ckanext/activity/templates/organization/changes.html:17 ckanext/activity/templates/package/changes.html:9 ckanext/activity/templates/package/changes.html:17 ckanext/activity/templates/snippets/activities/changed_group.html:16 ckanext/activity/templates/snippets/activities/changed_organization.html:16
-#: ckanext/activity/templates/snippets/activities/changed_package.html:22
+#: ckanext/activity/templates/group/changes.html:9 ckanext/activity/templates/group/changes.html:17 ckanext/activity/templates/organization/changes.html:9 ckanext/activity/templates/organization/changes.html:17 ckanext/activity/templates/package/changes.html:9 ckanext/activity/templates/package/changes.html:17 ckanext/activity/templates/snippets/activities/changed_group.html:16 ckanext/activity/templates/snippets/activities/changed_organization.html:16 ckanext/activity/templates/snippets/activities/changed_package.html:22
 msgid "Changes"
 msgstr "ການປ່ຽນແປງ"
 
@@ -12926,9 +12916,9 @@ msgstr "ຕັ້ງຜູ້ຂຽນຂອງ {pkg_link} ເປັນ {new_aut
 msgid "Removed author from {pkg_link}"
 msgstr "ລຶບຜູ້ຂຽນອອກຈາກ {pkg_link}"
 
-#: ckanext/activity/templates/snippets/changes/author.html:26 ckanext/activity/templates/snippets/changes/author_email.html:43 ckanext/activity/templates/snippets/changes/extra_fields.html:81 ckanext/activity/templates/snippets/changes/maintainer.html:26 ckanext/activity/templates/snippets/changes/maintainer_email.html:43 ckanext/activity/templates/snippets/changes/no_change.html:3 ckanext/activity/templates/snippets/changes/notes.html:26
-#: ckanext/activity/templates/snippets/changes/org.html:26 ckanext/activity/templates/snippets/changes/resource_desc.html:35 ckanext/activity/templates/snippets/changes/resource_extras.html:108 ckanext/activity/templates/snippets/changes/resource_format.html:50 ckanext/activity/templates/snippets/changes/tags.html:55 ckanext/activity/templates/snippets/changes/url.html:42 ckanext/activity/templates/snippets/changes/version.html:26
-#: ckanext/activity/templates/snippets/group_changes/description.html:26 ckanext/activity/templates/snippets/group_changes/image_url.html:42 ckanext/activity/templates/snippets/group_changes/no_change.html:3 ckanext/activity/templates/snippets/organization_changes/description.html:26 ckanext/activity/templates/snippets/organization_changes/image_url.html:42 ckanext/activity/templates/snippets/organization_changes/no_change.html:3
+#: ckanext/activity/templates/snippets/changes/author.html:26 ckanext/activity/templates/snippets/changes/author_email.html:43 ckanext/activity/templates/snippets/changes/extra_fields.html:81 ckanext/activity/templates/snippets/changes/maintainer.html:26 ckanext/activity/templates/snippets/changes/maintainer_email.html:43 ckanext/activity/templates/snippets/changes/no_change.html:3 ckanext/activity/templates/snippets/changes/notes.html:26 ckanext/activity/templates/snippets/changes/org.html:26 ckanext/activity/templates/snippets/changes/resource_desc.html:35
+#: ckanext/activity/templates/snippets/changes/resource_extras.html:108 ckanext/activity/templates/snippets/changes/resource_format.html:50 ckanext/activity/templates/snippets/changes/tags.html:55 ckanext/activity/templates/snippets/changes/url.html:42 ckanext/activity/templates/snippets/changes/version.html:26 ckanext/activity/templates/snippets/group_changes/description.html:26 ckanext/activity/templates/snippets/group_changes/image_url.html:42 ckanext/activity/templates/snippets/group_changes/no_change.html:3 ckanext/activity/templates/snippets/organization_changes/description.html:26
+#: ckanext/activity/templates/snippets/organization_changes/image_url.html:42 ckanext/activity/templates/snippets/organization_changes/no_change.html:3
 msgid "No fields were updated. See the metadata diff for more details."
 msgstr "ບໍ່ມີການອັບເດດຊ່ອງຂໍ້ມູນ. ເບິ່ງຄວາມແຕກຕ່າງ metadata ສໍາລັບລາຍລະອຽດເພີ່ມເຕີມ."
 
@@ -12936,9 +12926,8 @@ msgstr "ບໍ່ມີການອັບເດດຊ່ອງຂໍ້ມູນ
 msgid "Set author email of "
 msgstr "ກໍານົດອີເມວຂອງຜູ້ຂຽນ "
 
-#: ckanext/activity/templates/snippets/changes/author_email.html:11 ckanext/activity/templates/snippets/changes/author_email.html:29 ckanext/activity/templates/snippets/changes/license.html:12 ckanext/activity/templates/snippets/changes/license.html:31 ckanext/activity/templates/snippets/changes/license.html:46 ckanext/activity/templates/snippets/changes/license.html:62 ckanext/activity/templates/snippets/changes/maintainer_email.html:11
-#: ckanext/activity/templates/snippets/changes/maintainer_email.html:29 ckanext/activity/templates/snippets/changes/name.html:16 ckanext/activity/templates/snippets/changes/resource_format.html:20 ckanext/activity/templates/snippets/changes/resource_format.html:37 ckanext/activity/templates/snippets/changes/url.html:16 ckanext/activity/templates/snippets/changes/url.html:35 ckanext/activity/templates/snippets/group_changes/image_url.html:16
-#: ckanext/activity/templates/snippets/group_changes/image_url.html:35 ckanext/activity/templates/snippets/organization_changes/image_url.html:16 ckanext/activity/templates/snippets/organization_changes/image_url.html:35
+#: ckanext/activity/templates/snippets/changes/author_email.html:11 ckanext/activity/templates/snippets/changes/author_email.html:29 ckanext/activity/templates/snippets/changes/license.html:12 ckanext/activity/templates/snippets/changes/license.html:31 ckanext/activity/templates/snippets/changes/license.html:46 ckanext/activity/templates/snippets/changes/license.html:62 ckanext/activity/templates/snippets/changes/maintainer_email.html:11 ckanext/activity/templates/snippets/changes/maintainer_email.html:29 ckanext/activity/templates/snippets/changes/name.html:16
+#: ckanext/activity/templates/snippets/changes/resource_format.html:20 ckanext/activity/templates/snippets/changes/resource_format.html:37 ckanext/activity/templates/snippets/changes/url.html:16 ckanext/activity/templates/snippets/changes/url.html:35 ckanext/activity/templates/snippets/group_changes/image_url.html:16 ckanext/activity/templates/snippets/group_changes/image_url.html:35 ckanext/activity/templates/snippets/organization_changes/image_url.html:16 ckanext/activity/templates/snippets/organization_changes/image_url.html:35
 msgid "to"
 msgstr "ເຖິງ"
 
@@ -13841,11 +13830,9 @@ msgstr "ຖານຂໍ້ມູນ"
 msgid "Experts"
 msgstr "ຜູ້ຊ່ຽວຊານ"
 
-#: ckanext-alisea/ckanext/alisea/templates/header.html:123
-msgid "About"
-msgstr "ກ່ຽວກັບ"
-
-#: ckanext-alisea/ckanext/alisea/templates/header.html:110
+# msgid "About"
+# msgstr "ກ່ຽວກັບ"
+#: ckanext-alisea/ckanext/alisea/templates/header.html:123 ckanext-alisea/ckanext/alisea/templates/header.html:110
 msgid "Library"
 msgstr "ຫໍສະໝຸດ"
 
@@ -13910,6 +13897,74 @@ msgid "Agroecology Category"
 msgstr "ໝວດນິເວດວິທະຍາ"
 
 #: ckanext-alisea/ckanext/alisea/plugin.py:58
-msgid "Format"
-msgstr "ຮູບແບບ"
+msgid "Global"
+msgstr "ທົ່ວໂລກ"
 
+msgid "Mekong Region"
+msgstr "ພາກພື້ນແມ່ນໍ້າຂອງ"
+
+msgid "Asia"
+msgstr "ອາຊີ"
+
+msgid "Southeast Asia"
+msgstr "ອາຊີຕາເວັນອອກສ່ຽງໃຕ້"
+
+msgid "ASEAN"
+msgstr "ອາຊຽນ"
+
+msgid "China"
+msgstr "ຈີນ"
+
+msgid "India"
+msgstr "ອິນເດຍ"
+
+msgid "Bangladesh"
+msgstr "ບັງກະລາເທດ"
+
+msgid "Europe"
+msgstr "ເອີຣົບ"
+
+msgid "Latin America"
+msgstr "ອາເມລິກາລາຕິນ"
+
+msgid "Indonesia"
+msgstr "ນໂດເນເຊຍ"
+
+msgid "Bhutan"
+msgstr "ພູຖານ"
+
+msgid "Germany"
+msgstr "ເຢຍລະມັນ"
+
+msgid "Ghana"
+msgstr "ການາ"
+
+msgid "Hawai"
+msgstr "ຮາວາຍ"
+
+msgid "Pakistan"
+msgstr "ປາກີສະຖານ"
+
+msgid "Timor Leste"
+msgstr "ຕີມໍ ເລສເຕ"
+
+msgid "Uganda"
+msgstr "ອູການດາ"
+
+msgid "USA"
+msgstr "ສະຫະລັດ"
+
+msgid "West Africa"
+msgstr "ອາຟຣິກາຕາເວັນຕົກ"
+
+msgid "English"
+msgstr "ພາສາອັງກິດ"
+
+msgid "Lao"
+msgstr "ພາສາລາວ"
+
+msgid "Vietnamese"
+msgstr "ຫວຽດນາມ"
+
+msgid "Khmer"
+msgstr "ຂະເໝນ"

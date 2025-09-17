@@ -9793,3 +9793,75 @@ msgstr "စိုက်ပျိုးရေးဆိုင်ရာ သော�
 #: ckanext-alisea/ckanext/alisea/plugin.py:58
 msgid "Format"
 msgstr "ပုံစံ"
+
+msgid "Global"
+msgstr "ကမ္ဘာလုံးဆိုင်ရာ"
+
+msgid "Mekong Region"
+msgstr "မဲခေါင်ဒေသ"
+
+msgid "Asia"
+msgstr "အာရှ"
+
+msgid "Southeast Asia"
+msgstr "အရှေ့တောင်အာရှ"
+
+msgid "ASEAN"
+msgstr "အာဆီယံ"
+
+msgid "China"
+msgstr "တရုတ်"
+
+msgid "India"
+msgstr "အိန္ဒိယ"
+
+msgid "Bangladesh"
+msgstr "ဘင်္ဂလားဒေ့ရှ်"
+
+msgid "Europe"
+msgstr "ဥရောပ"
+
+msgid "Latin America"
+msgstr "လက်တင်အမေရိက"
+
+msgid "Indonesia"
+msgstr "အင်ဒိုနီးရှား"
+
+msgid "Bhutan"
+msgstr "ဘူတန်"
+
+msgid "Germany"
+msgstr "ဂျာမနီ"
+
+msgid "Ghana"
+msgstr "ဂါနာ"
+
+msgid "Hawai"
+msgstr "ဟာဝိုင်"
+
+msgid "Pakistan"
+msgstr "ပါကစ္စတန်"
+
+msgid "Timor Leste"
+msgstr "တီမောလက်စ်တေ"
+
+msgid "Uganda"
+msgstr "ယူဂန်ဒါ"
+
+msgid "USA"
+msgstr "အမေရိကန်"
+
+msgid "West Africa"
+msgstr "အနောက်အာဖရိက"
+
+msgid "English"
+msgstr "အင်္ဂလိပ်စာ"
+
+msgid "Lao"
+msgstr "လာအို"
+
+msgid "Vietnamese"
+msgstr "ဗီယက်နမ်"
+
+msgid "Khmer"
+msgstr "ခမာ"
