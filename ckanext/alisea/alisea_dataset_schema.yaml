@@ -1867,125 +1867,76 @@ dataset_fields:
       km: Scientific & Research
       my_MM: Scientific & Research
       lo: Scientific & Research
-  - value: Discussion Paper
-    label: 
-      en: Discussion Paper
-      vi: Tài liệu thảo luận
-      km: ក្រដាសពិភាក្សា
-      my_MM: ဆွေးနွေးမှုစာတမ်း
-      lo: ບົດວິພາກ
-  - value: Theses
-    label: 
-      en: Theses
-      vi: Luận văn
-      km: ទាំងនេះ
-      my_MM: ကျမ်းများ
-      lo: ວິທະຍານິພົນ
-  - value: Briefs and Memos
-    label: 
-      en: Briefs and Memos
-      vi: Tóm tắt và ghi nhớ
-      km: សង្ខេប និងអនុស្សរណៈ
-      my_MM: အကျဉ်းချုပ်များနှင့် မှတ်စုတိုများ
-      lo: ບົດສະຫຼຸບ ແລະ ຄັດຫຍໍ້
   - value: Brochure
     label: 
-      en: Brochure
-      vi: Tờ rơi
-      km: ខិត្តប័ណ្ណ
-      my_MM: လက်ကမ်းစာစောင်
-      lo: ແຜ່ນພັບ
+      en: Institutional & project documents
+      vi: Institutional & project documents
+      km: Institutional & project documents
+      my_MM: Institutional & project documents
+      lo: Institutional & project documents
   - value: Brief
     label: 
-      en: Brief
-      vi: Tóm tắt
-      km: សង្ខេប
-      my_MM: အကျဉ်းချုပ်
-      lo: ຄັດຫຍໍ້
+      en: Policy guidance
+      vi: Policy guidance
+      km: Policy guidance
+      my_MM: Policy guidance
+      lo: Policy guidance
   - value: Factsheet
     label: 
-      en: Factsheet
-      vi: Bảng dữ kiện (là một tờ hay tệp thông tin liệt kê tất cả các thông tin chính, số liệu, sự kiện)
-      km: ឯកសារផ្សព្វផ្សាយ
-      my_MM: အချက်အလက်စာရွက်
-      lo: ບົດສັງລວມ
-  - value: Other Text Documents
-    label: 
-      en: Other Text Documents
-      vi: Các tài liệu văn bản khác
-      km: ឯកសារអត្ថបទផ្សេងៗ
-      my_MM: အခြားမှတ်တမ်းများ
-      lo: ເອກະສານຂໍ້ຄວາມອື່ນໆ
-  - value: Guideline
-    label: 
-      en: Guideline
-      vi: Hướng dẫn
-      km: ការណែនាំ
-      my_MM: လမ်းညွှန်ချက်
-      lo: ຄຳແນະນຳ
-  - value: Handbook or Manual
-    label: 
-      en: Handbook or Manual
-      vi: Sổ tay hoặc Sách hướng dẫn
-      km: សៀវភៅណែនាំ
-      my_MM: လက်စွဲစာအုပ်
-      lo: ປຶ້ມຄູ່ມື
-  - value: Audio Files
-    label: 
-      en: Audio files
-      vi: Tệp âm thanh
-      km: ឯកសារសំលេង
-      my_MM: အသံဖိုင်များ
-      lo: ຟາຍສຽງ
+      en: Practical how-to
+      vi: Practical how-to
+      km: Practical how-to
+      my_MM: Practical how-to
+      lo: Practical how-to
   - value: Presentation
     label: 
-      en: Presentation
-      vi: Trình bày
-      km: បទបង្ហាញ
-      my_MM: ဖော်ပြချက်
-      lo: ບົດນຳສະເໜີ
-  - value: Event proceedings and reports
-    label: 
-      en: Event proceedings and reports
-      vi: Kỷ yếu sự kiện và báo cáo
-      km: ដំណើរការកម្មវិធី និងរបាយការណ៍
-      my_MM: စာတမ်းဖတ်ပွဲစာစောင်များနှင့် အစီရင်ခံစာများ
-      lo: ການດຳເນີນງານ ແລະ ລາຍງານເຫດການ
+      en: Presentations & events
+      vi: Presentations & events
+      km: Presentations & events
+      my_MM: Presentations & events
+      lo: Presentations & events
   - value: Poster or Illustration
     label: 
-      en: Poster or Illustration
-      vi: Áp phích hoặc minh họa
-      km: ផ្ទាំងរូបភាព
-      my_MM: ပိုစတာ (သို့မဟုတ်)ရုပ်ပုံ
-      lo: ໂປສເຕີ ຫຼື ຮູບປະກອບ
-  - value: Legal Document
-    label: 
-      en: Legal Document
-      vi: Văn bản pháp lý
-      km: ឯកសារផ្លូវច្បាប់
-      my_MM: တရားဝင်မှတ်တမ်း
-      lo: ເອກະສານທາງກົດໝາຍ
-  - value: Strategy
-    label: 
-      en: Strategy
-      vi: Chiến lược
-      km: យុទ្ធសាស្ត្រ
-      my_MM: မဟာဗျူဟာ
-      lo: ຍຸດທະສາດ
+      en: Outreach & communication
+      vi: Outreach & communication
+      km: Outreach & communication
+      my_MM: Outreach & communication
+      lo: Outreach & communication
   - value: Case Study Report
     label: 
-      en: Case Study Report
-      vi: Báo cáo nghiên cứu điển hình
-      km: របាយការណ៍ករណីសិក្សា
-      my_MM: ဖြစ်ရပ်မှန်လေ့လာမှုအစီရင်ခံစာ
-      lo: ບົດລາຍງານກໍລະນີສຶກສາ
+      en: Success stories & cases
+      vi: Success stories & cases
+      km: Success stories & cases
+      my_MM: Success stories & cases
+      lo: Success stories & cases
   - value: Report
     label: 
-      en: Report
-      vi: Báo cáo
-      km: របាយការណ៍
-      my_MM: အစီရင်ခံစာ
-      lo: ບົດລາຍງານ
+      en: Studies
+      vi: Studies
+      km: Studies
+      my_MM: Studies
+      lo: Studies
+  - value: Training & education
+    label: 
+      en: Training & education
+      vi: Training & education
+      km: Training & education
+      my_MM: Training & education
+      lo: Training & education
+  - value: Data & tools
+    label: 
+      en: Data & tools
+      vi: Data & tools
+      km: Data & tools
+      my_MM: Data & tools
+      lo: Data & tools
+  - value: Other Text Documents
+    label: 
+      en: Other documents
+      vi: Other documents
+      km: Other documents
+      my_MM: Other documents
+      lo: Other documents
 
 - field_name: language
   label: Language

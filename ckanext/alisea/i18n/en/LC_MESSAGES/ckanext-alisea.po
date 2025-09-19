@@ -1,0 +1,55 @@
+# Lao translations for ckanext-alisea.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the ckanext-alisea
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-alisea 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-09-16 10:33+0200\n"
+"PO-Revision-Date: 2025-09-19 10:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: lo <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.7\n"
+
+
+msgid "Research article"
+msgstr "Scientific & Research"
+
+msgid "Brochure"
+msgstr "Institutional & project documents"
+
+msgid "Brief"
+msgstr "Policy guidance"
+
+msgid "Factsheet"
+msgstr "Practical how-to"
+
+msgid "Presentation"
+msgstr "Presentations & events"
+
+msgid "Poster or Illustration"
+msgstr "Outreach & communication"
+
+msgid "Case Study Report"
+msgstr "Success stories & cases"
+
+msgid "Report"
+msgstr "Studies"
+
+msgid "Training & education"
+msgstr "Training & education"
+
+msgid "Data & tools"
+msgstr "Data & tools"
+
+msgid "Other Text Documents"
+msgstr "Other documents"
