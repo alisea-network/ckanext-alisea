@@ -9803,9 +9803,6 @@ msgstr "Trung tâm kiến thức"
 msgid "Contact"
 msgstr "Liên hệ"
 
-msgid "Factsheet"
-msgstr "Bảng thông tin"
-
 msgid "Global"
 msgstr "Toàn cầu"
 
@@ -9910,3 +9907,6 @@ msgstr "Data & tools"
 
 msgid "Other Text Documents"
 msgstr "Other documents"
+
+msgid "Books & reference works"
+msgstr "Books & reference works"

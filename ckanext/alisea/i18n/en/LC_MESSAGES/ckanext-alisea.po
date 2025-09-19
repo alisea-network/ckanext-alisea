@@ -53,3 +53,6 @@ msgstr "Data & tools"
 
 msgid "Other Text Documents"
 msgstr "Other documents"
+
+msgid "Books & reference works"
+msgstr "Books & reference works"

@@ -1867,6 +1867,13 @@ dataset_fields:
       km: Scientific & Research
       my_MM: Scientific & Research
       lo: Scientific & Research
+  - value: Books & reference works
+    label: 
+      en: Books & reference works
+      vi: Books & reference works
+      km: Books & reference works
+      my_MM: Books & reference works
+      lo: Books & reference works
   - value: Brochure
     label: 
       en: Institutional & project documents
