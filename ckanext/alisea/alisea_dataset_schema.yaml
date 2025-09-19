@@ -1862,11 +1862,11 @@ dataset_fields:
   choices:
   - value: Research article
     label: 
-      en: Research articles
-      vi: Bài báo nghiên cứu
-      km: អត្ថបទស្រាវជ្រាវ
-      my_MM: သုတေသနစာတမ်းများ
-      lo: ບົດຄວາມການຄົ້ນຄວ້າ
+      en: Scientific & Research
+      vi: Scientific & Research
+      km: Scientific & Research
+      my_MM: Scientific & Research
+      lo: Scientific & Research
   - value: Discussion Paper
     label: 
       en: Discussion Paper
