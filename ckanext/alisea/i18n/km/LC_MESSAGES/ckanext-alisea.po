@@ -9889,3 +9889,36 @@ msgstr "វៀតណាម"
 
 msgid "Khmer"
 msgstr "ខ្មែរ"
+
+msgid "Research article"
+msgstr "Scientific & Research"
+
+msgid "Brochure"
+msgstr "Institutional & project documents"
+
+msgid "Brief"
+msgstr "Policy guidance"
+
+msgid "Factsheet"
+msgstr "Practical how-to"
+
+msgid "Presentation"
+msgstr "Presentations & events"
+
+msgid "Poster or Illustration"
+msgstr "Outreach & communication"
+
+msgid "Case Study Report"
+msgstr "Success stories & cases"
+
+msgid "Report"
+msgstr "Studies"
+
+msgid "Training & education"
+msgstr "Training & education"
+
+msgid "Data & tools"
+msgstr "Data & tools"
+
+msgid "Other Text Documents"
+msgstr "Other documents"
