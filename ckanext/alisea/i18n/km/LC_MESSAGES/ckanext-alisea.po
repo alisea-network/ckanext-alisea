@@ -9925,3 +9925,6 @@ msgstr "Other documents"
 
 msgid "Books & reference works"
 msgstr "Books & reference works"
+
+msgid "Book or Book Chapter"
+msgstr "Books & reference works"
