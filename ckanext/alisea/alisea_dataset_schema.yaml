@@ -1993,6 +1993,7 @@ dataset_fields:
     my_MM: Spatial အချက်အလက်
     lo: ຂໍ້ມູນພື້ນທີ່
   form_placeholder : valid geojson data format
+  display_snippet: null
 
 - field_name: country
   label: 

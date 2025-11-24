@@ -40,3 +40,12 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+ckanext/.DS_Store
+config/.DS_Store
+ckanext/alisea/i18n/vi/.DS_Store
+ckanext/alisea/i18n/my_MM/.DS_Store
+ckanext/alisea/i18n/lo/.DS_Store
+ckanext/alisea/i18n/km/.DS_Store
+ckanext/alisea/i18n/en/LC_MESSAGES/.DS_Store
+ckanext/alisea/.DS_Store
+ckanext/alisea/i18n/en/.DS_Store
