@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ckanext-alisea 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-16 10:33+0200\n"
-"PO-Revision-Date: 2025-09-15 09:43+0200\n"
+"PO-Revision-Date: 2026-03-24 05:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: vi <LL@li.org>\n"
 "Language: vi\n"
@@ -8891,7 +8891,7 @@ msgstr "Nuôi trồng thủy sản quảng canh"
 
 #: ckanext/alisea/templates/scheming/form_snippets/agroecology_keyword.html:30
 msgid "Free range"
-msgstr "chăn thả tự do"
+msgstr "Chăn thả tự do"
 
 #: ckanext/alisea/templates/scheming/form_snippets/agroecology_keyword.html:31
 msgid "Integrated animal health"
@@ -9577,7 +9577,7 @@ msgstr "Sự công bằng"
 
 #: ckanext/alisea/templates/scheming/form_snippets/agroecology_keyword.html:218
 msgid "Farmers autonomy"
-msgstr "sự tự chủ của nông dân"
+msgstr "Sự tự chủ của nông dân"
 
 #: ckanext/alisea/templates/scheming/form_snippets/agroecology_keyword.html:219
 msgid "Food access"
@@ -9745,7 +9745,7 @@ msgstr "Thư viện"
 
 #: ckanext-alisea/ckanext/alisea/templates/header.html:102
 msgid "Insights"
-msgstr "Thông tin chi tiết"
+msgstr "Thông tin chuyên sâu"
 
 #: facet translate
 msgid "Country"
@@ -9831,10 +9831,10 @@ msgid "Europe"
 msgstr "Châu Âu"
 
 msgid "Latin America"
-msgstr "Mỹ Latinh"
+msgstr "Mỹ Latin"
 
 msgid "Indonesia"
-msgstr "nước Nam dương"
+msgstr "Nước Nam dương"
 
 msgid "Bhutan"
 msgstr "Bhutan"
@@ -9848,8 +9848,11 @@ msgstr "Ghana"
 msgid "Hawai"
 msgstr "Hawai"
 
+msgid "Others"
+msgstr "Khác"
+
 msgid "Pakistan"
-msgstr "nước Pakistan"
+msgstr "Nước Pakistan"
 
 msgid "Timor Leste"
 msgstr "Đông Timor"
