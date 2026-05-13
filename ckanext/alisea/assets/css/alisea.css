@@ -376,7 +376,7 @@ a.tag:hover {
 }
 
 .format-label[data-format="mp4"] {
-    background: url("../img/ckan-video.png") no-repeat center !important;
+    background: url("/images/ckan-video.png") no-repeat center !important;
     background-size: contain;
     text-indent: -900em;
     width: 32px; /* Ajustez selon votre besoin */
@@ -386,7 +386,7 @@ a.tag:hover {
 }
 
 .format-label[data-format="website"] {
-    background: url("../img/ckan-website.png") no-repeat center !important;
+    background: url("/images/ckan-website.png") no-repeat center !important;
     background-size: contain;
     text-indent: -900em;
     width: 32px; /* Ajustez selon votre besoin */
