@@ -160,19 +160,3 @@ class AliseaPlugin(plugins.SingletonPlugin, DefaultTranslation):
         data_dict['agroecology_keyword'] = json.loads(json.dumps(data_dict.get('agroecology_keyword', '[]')))
 
         return data_dict
-
-	def after_resource_create(self, context, resource):
-	    # On vérifie si c'est un lien YouTube
-    	url = resource.get('url', '')
-    	if 'youtube.com' in url or 'youtu.be' in url:
-        	# On vérifie si une vue existe déjà
-        	existing_views = toolkit.get_action('resource_view_list')(context, {'id': resource['id']})
-        	if not any(v['view_type'] == 'video_view' for v in existing_views):
-            	# On crée la vue Embedded automatiquement
-            	view_data = {
-                	'resource_id': resource['id'],
-	                'view_type': 'video_view',
-    	            'title': 'YouTube Video',
-        	        'description': 'Automatic video view'
-	            }
-    	        toolkit.get_action('resource_view_create')(context, view_data)
