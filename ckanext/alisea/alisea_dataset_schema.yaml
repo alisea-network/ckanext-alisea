@@ -2125,5 +2125,20 @@ resource_fields:
 
 - field_name: format
   label: Format
-  preset: resource_format_autocomplete
-  
+  preset: select
+  choices:
+  - value: PDF
+    label: PDF
+  - value: Website
+    label: Website
+  - value: MP4
+    label: MP4
+  - value: JPEG
+    label: JPEG
+  - value: GeoJSON
+    label: GeoJSON
+  - value: EPUB
+    label: EPUB
+  - value: Webpage
+    label: Webpage
+  validators: if_empty_guess_format ignore_missing
