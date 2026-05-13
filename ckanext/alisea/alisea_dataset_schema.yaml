@@ -2132,7 +2132,7 @@ resource_fields:
   - value: Website
     label: Website
   - value: MP4
-    label: MP4
+    label: Video
   - value: JPEG
     label: JPEG
   - value: GeoJSON
