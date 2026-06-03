@@ -1,0 +1,13 @@
+{% import 'macros/form.html' as form %}
+
+<p class="text-muted">
+  {{ _('Visitors are redirected to the resource URL when they open this view.') }}
+</p>
+
+{{ form.input(
+  'page_url',
+  label=_('Website URL'),
+  value=data.page_url or resource.url,
+  classes=['control-full'],
+  is_required=true
+) }}

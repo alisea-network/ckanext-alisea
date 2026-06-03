@@ -1,0 +1,24 @@
+{# Redirect the full browser window to the external site (not an iframe preview). #}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0;url={{ target_url }}">
+    <title>{{ _('Redirecting…') }}</title>
+    <script>
+      (function () {
+        var url = {{ target_url|tojson }};
+        if (window.top && window.top !== window.self) {
+          window.top.location.replace(url);
+        } else {
+          window.location.replace(url);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      <a href="{{ target_url }}">{{ _('Continue to website') }}</a>
+    </p>
+  </body>
+</html>
