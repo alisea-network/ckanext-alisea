@@ -3,6 +3,7 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
 from collections import OrderedDict
 from ckanext.alisea import helpers as h
+from ckanext.alisea import views as alisea_views
 import json
 import ast
 import logging
@@ -16,6 +17,7 @@ class AliseaPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IFacets)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IResourceController, inherit=True)
     
 
     # IConfigurer
@@ -23,6 +25,7 @@ class AliseaPlugin(plugins.SingletonPlugin, DefaultTranslation):
         toolkit.add_template_directory(config_, "templates")
         toolkit.add_public_directory(config_, "public")
         toolkit.add_resource("assets", "alisea")
+        alisea_views.patch_webpage_view_can_view()
 
 
     # ITemplateHelpers
@@ -160,3 +163,13 @@ class AliseaPlugin(plugins.SingletonPlugin, DefaultTranslation):
         data_dict['agroecology_keyword'] = json.loads(json.dumps(data_dict.get('agroecology_keyword', '[]')))
 
         return data_dict
+
+    def after_create(self, context, data_dict):
+        return alisea_views.add_website_resource_views(context, data_dict)
+
+    def after_update(self, context, data_dict):
+        return alisea_views.add_website_resource_views(context, data_dict)
+
+    def after_resource_create(self, context, resource):
+        alisea_views.create_webpage_view_if_needed(context, resource)
+        return resource
