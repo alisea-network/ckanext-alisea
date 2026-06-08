@@ -172,5 +172,5 @@ class AliseaPlugin(AliseaWebsiteViewMixin, plugins.SingletonPlugin, DefaultTrans
         return alisea_views.add_website_resource_views(context, data_dict)
 
     def after_resource_create(self, context, resource):
-        alisea_views.create_website_view_if_needed(context, resource)
+        alisea_views.ensure_resource_views(context, resource)
         return resource

@@ -11,14 +11,24 @@ import ckan.plugins.toolkit as toolkit
 log = logging.getLogger(__name__)
 
 WEBSITE_FORMATS = frozenset({"website", "webpage"})
+VIDEO_FORMATS = frozenset({"mp4", "mpeg", "webm", "avi", "mov", "mkv"})
 WEBSITE_VIEW_TYPE = "alisea_website_view"
+VIDEO_VIEW_TYPE = "video"
 LEGACY_WEBPAGE_VIEW_TYPE = "webpage_view"
+DEFAULT_VIDEO_WIDTH = 480
+DEFAULT_VIDEO_HEIGHT = 390
 
 
 def is_website_resource(resource: dict[str, Any]) -> bool:
     """True when the resource is an external site (ALiSEA Website/Webpage format)."""
     fmt = (resource.get("format") or "").strip().lower()
     return fmt in WEBSITE_FORMATS and bool(resource.get("url"))
+
+
+def is_video_resource(resource: dict[str, Any]) -> bool:
+    """True when the resource format is a supported embedded video type."""
+    fmt = (resource.get("format") or "").strip().lower()
+    return fmt in VIDEO_FORMATS and bool(resource.get("url"))
 
 
 def get_website_target_url(
@@ -109,8 +119,56 @@ def create_website_view_if_needed(context, resource):
         )
 
 
+def create_video_view_if_needed(context, resource):
+    """Create an embedded video view for MP4 and other video resources."""
+    if not is_video_resource(resource):
+        return
+
+    resource_id = resource.get("id")
+    if not resource_id:
+        return
+
+    existing_views = toolkit.get_action("resource_view_list")(
+        context, {"id": resource_id}
+    )
+    if any(v["view_type"] == VIDEO_VIEW_TYPE for v in existing_views):
+        return
+
+    view = {
+        "resource_id": resource_id,
+        "view_type": VIDEO_VIEW_TYPE,
+        "title": toolkit._("Embedded video"),
+        "width": DEFAULT_VIDEO_WIDTH,
+        "height": DEFAULT_VIDEO_HEIGHT,
+    }
+    try:
+        toolkit.get_action("resource_view_create")(
+            {**context, "defer_commit": True},
+            view,
+        )
+    except toolkit.ValidationError as err:
+        log.warning(
+            "Could not create %s for resource %s: %s",
+            VIDEO_VIEW_TYPE,
+            resource_id,
+            err,
+        )
+    except toolkit.NotAuthorized:
+        log.warning(
+            "Not authorized to create %s for resource %s",
+            VIDEO_VIEW_TYPE,
+            resource_id,
+        )
+
+
+def ensure_resource_views(context, resource):
+    """Create ALiSEA-specific resource views when applicable."""
+    create_website_view_if_needed(context, resource)
+    create_video_view_if_needed(context, resource)
+
+
 def add_website_resource_views(context, data_dict):
-    """Create redirect views for resources with Website/Webpage format."""
+    """Create default resource views for Website/Webpage and video resources."""
     package_id = data_dict.get("id")
     if not package_id:
         return data_dict
@@ -124,6 +182,6 @@ def add_website_resource_views(context, data_dict):
         return data_dict
 
     for resource in package.get("resources", []):
-        create_website_view_if_needed(context, resource)
+        ensure_resource_views(context, resource)
 
     return data_dict
