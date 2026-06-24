@@ -54,37 +54,46 @@ def _normalize_language_list(value):
     return []
 
 
+def _pkg_get(package, key, default=None):
+    """Read a field from CKAN package dicts or dict-like search results."""
+    if package is None:
+        return default
+    getter = getattr(package, 'get', None)
+    if callable(getter):
+        try:
+            value = getter(key)
+            if value is not None:
+                return value
+        except (AttributeError, KeyError, TypeError):
+            pass
+    try:
+        return package[key]
+    except (KeyError, TypeError):
+        pass
+    return getattr(package, key, default)
+
+
 def get_dataset_formats(package):
     """
     Return unique resource format labels for a dataset (search or detail view).
-    Uses resources[].format when present, otherwise Solr res_format field.
     """
-    if isinstance(package, dict):
-        resources = package.get('resources') or []
-        res_format = package.get('res_format')
-    else:
-        resources = getattr(package, 'resources', None) or []
-        res_format = getattr(package, 'res_format', None)
+    from ckan.lib.helpers import dict_list_reduce
 
-    formats = []
-    seen = set()
+    resources = _pkg_get(package, 'resources') or []
+    if isinstance(resources, str):
+        try:
+            resources = json.loads(resources)
+        except (ValueError, TypeError):
+            resources = []
 
-    for resource in resources:
-        fmt = resource.get('format') if isinstance(resource, dict) else None
-        if fmt:
-            key = str(fmt).strip().upper()
-            if key and key not in seen:
-                seen.add(key)
-                formats.append(str(fmt).strip())
+    if resources:
+        return dict_list_reduce(resources, 'format')
 
-    if not formats and res_format:
-        for fmt in _normalize_language_list(res_format):
-            key = fmt.upper()
-            if key and key not in seen:
-                seen.add(key)
-                formats.append(fmt)
+    res_format = _pkg_get(package, 'res_format')
+    if res_format:
+        return _normalize_language_list(res_format)
 
-    return formats
+    return []
 
 
 def get_dataset_language_flags(package):
@@ -92,10 +101,7 @@ def get_dataset_language_flags(package):
     Return flag dicts for dataset Language metadata (Additional Info).
     Each item: {code, url, label}.
     """
-    if isinstance(package, dict):
-        raw = package.get('language')
-    else:
-        raw = getattr(package, 'language', None)
+    raw = _pkg_get(package, 'language')
 
     flags = []
     seen = set()

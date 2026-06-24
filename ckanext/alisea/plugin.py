@@ -159,6 +159,22 @@ class AliseaPlugin(AliseaWebsiteViewMixin, plugins.SingletonPlugin, DefaultTrans
         return data_dict
 
 
+    def before_dataset_view(self, package_dict):
+        resources = package_dict.get('resources')
+        if isinstance(resources, str):
+            try:
+                package_dict['resources'] = json.loads(resources)
+            except (ValueError, TypeError):
+                package_dict['resources'] = []
+        return package_dict
+
+    def after_dataset_search(self, search_results, search_params):
+        for pkg in search_results.get('results', []):
+            formats = h.get_dataset_formats(pkg)
+            if formats:
+                pkg['_alisea_formats'] = formats
+        return search_results
+
     def before_dataset_index(self, data_dict):
         
         data_dict = self._before_index_dump_dicts(data_dict)
