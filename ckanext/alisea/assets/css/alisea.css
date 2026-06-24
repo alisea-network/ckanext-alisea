@@ -394,3 +394,27 @@ a.tag:hover {
     transform: none; /* On annule le scale du sprite si besoin */
     margin: 0;
 }
+
+.dataset-meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.dataset-language-flags {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 2px;
+}
+
+.dataset-language-flag {
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    vertical-align: middle;
+}
