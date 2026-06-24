@@ -1,7 +1,12 @@
-{# Adds dataset-extent map to dataset-page #}
+{# Adds dataset-extent map and language flags to dataset page #}
 {% ckan_extends %}
 {% block package_description %}
     {{ super() }}
+    {% if h.get_dataset_language_flags(pkg) %}
+    <div class="dataset-language-flags-detail">
+        {% snippet 'snippets/dataset_language_flags.html', package=pkg %}
+    </div>
+    {% endif %}
     {# We include a filed "spatial" through ckanext-scheming. It is not in "extras" #}
     {# AS set pkg = c.pkg_dict is in template this change is made: c.pkg_dict['spatial'] -> pkg.spatial #}
     {% set dataset_extent = pkg.spatial %}

@@ -418,3 +418,12 @@ a.tag:hover {
     border-radius: 2px;
     vertical-align: middle;
 }
+
+.dataset-language-flags-detail {
+    margin: 0.75rem 0 1rem;
+}
+
+.dataset-language-flags-detail .dataset-language-flag {
+    width: 24px;
+    height: 16px;
+}
