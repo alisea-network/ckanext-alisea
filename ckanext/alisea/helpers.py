@@ -53,15 +53,42 @@ def _normalize_language_list(value):
     return []
 
 
+def _pkg_get(package, key, default=None):
+    """Read a field from CKAN package dicts or dict-like search results."""
+    if package is None:
+        return default
+    getter = getattr(package, 'get', None)
+    if callable(getter):
+        try:
+            value = getter(key)
+            if value is not None:
+                return value
+        except (AttributeError, KeyError, TypeError):
+            pass
+    try:
+        return package[key]
+    except (KeyError, TypeError):
+        pass
+    return getattr(package, key, default)
+
+
 def get_dataset_language_flags(package):
     """
     Return flag dicts for dataset Language metadata (Additional Info).
     Each item: {code, url, label}.
     """
-    if isinstance(package, dict):
-        raw = package.get('language')
-    else:
-        raw = getattr(package, 'language', None)
+    raw = _pkg_get(package, '_language_flags')
+    if raw:
+        return raw
+
+    raw = _pkg_get(package, 'language')
+    if raw is None:
+        extras = _pkg_get(package, 'extras') or []
+        if isinstance(extras, list):
+            for extra in extras:
+                if isinstance(extra, dict) and extra.get('key') == 'language':
+                    raw = extra.get('value')
+                    break
 
     flags = []
     seen = set()

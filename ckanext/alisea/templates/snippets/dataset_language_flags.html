@@ -1,8 +1,9 @@
 {#
   Language flags from dataset "Language" field (Additional Info).
-  package - dataset dict
+  flags   - pre-computed list from helper (preferred in search lists)
+  package - dataset dict (used on detail page)
 #}
-{% set flags = h.get_dataset_language_flags(package) %}
+{% set flags = flags or h.get_dataset_language_flags(package) %}
 {% if flags %}
   <span class="dataset-language-flags" aria-label="{{ _('Languages') }}">
     {% for flag in flags %}

@@ -58,7 +58,7 @@ Example:
         {% endblock %}
       </div>
       {% block resources %}
-        {% set language_flags = h.get_dataset_language_flags(package) %}
+        {% set language_flags = package.get('_language_flags') or h.get_dataset_language_flags(package) %}
         {% if (package.resources and not hide_resources) or language_flags %}
           {% block resources_outer %}
             <ul class="dataset-resources list-unstyled">
@@ -72,7 +72,7 @@ Example:
                 {% endif %}
                 {% if language_flags %}
                 <li class="dataset-language-flags-item">
-                  {% snippet 'snippets/dataset_language_flags.html', package=package %}
+                  {% snippet 'snippets/dataset_language_flags.html', flags=language_flags %}
                 </li>
                 {% endif %}
               {% endblock %}

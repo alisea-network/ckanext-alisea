@@ -158,6 +158,14 @@ class AliseaPlugin(AliseaWebsiteViewMixin, plugins.SingletonPlugin, DefaultTrans
         return data_dict
 
 
+    def after_dataset_search(self, search_results, search_params):
+        """Pre-compute language flags for list templates (search results)."""
+        for pkg in search_results.get('results', []):
+            flags = h.get_dataset_language_flags(pkg)
+            if flags:
+                pkg['_language_flags'] = flags
+        return search_results
+
     def before_dataset_index(self, data_dict):
         
         data_dict = self._before_index_dump_dicts(data_dict)
