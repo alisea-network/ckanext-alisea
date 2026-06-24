@@ -58,17 +58,18 @@ Example:
         {% endblock %}
       </div>
       {% block resources %}
-        {% set format_list = [] if hide_resources else (package.get('_alisea_formats') or h.get_dataset_formats(package)) %}
         {% set language_flags = h.get_dataset_language_flags(package) %}
-        {% if format_list or language_flags %}
+        {% if (package.resources and not hide_resources) or language_flags %}
           {% block resources_outer %}
             <ul class="dataset-resources list-unstyled">
               {% block resources_inner %}
-                {% for resource in format_list %}
-                <li>
-                  <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="badge badge-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
-                </li>
-                {% endfor %}
+                {% if package.resources and not hide_resources %}
+                  {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+                  <li>
+                    <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="badge badge-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
+                  </li>
+                  {% endfor %}
+                {% endif %}
                 {% if language_flags %}
                 <li class="dataset-language-flags-item">
                   {% snippet 'snippets/dataset_language_flags.html', package=package %}

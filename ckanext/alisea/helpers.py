@@ -8,7 +8,6 @@ FLAG_BASE_URL = (
     'https://kh.ali-sea.org/wp-content/themes/alisea-wordpress-theme/assets/flags/'
 )
 
-# CKAN "Language" field values (multiple_select) → flag asset
 LANGUAGE_TO_FLAG = {
     'English': ('en', 'gb.png', 'English'),
     'Khmer': ('km', 'kh.png', 'Khmer'),
@@ -54,54 +53,15 @@ def _normalize_language_list(value):
     return []
 
 
-def _pkg_get(package, key, default=None):
-    """Read a field from CKAN package dicts or dict-like search results."""
-    if package is None:
-        return default
-    getter = getattr(package, 'get', None)
-    if callable(getter):
-        try:
-            value = getter(key)
-            if value is not None:
-                return value
-        except (AttributeError, KeyError, TypeError):
-            pass
-    try:
-        return package[key]
-    except (KeyError, TypeError):
-        pass
-    return getattr(package, key, default)
-
-
-def get_dataset_formats(package):
-    """
-    Return unique resource format labels for a dataset (search or detail view).
-    """
-    from ckan.lib.helpers import dict_list_reduce
-
-    resources = _pkg_get(package, 'resources') or []
-    if isinstance(resources, str):
-        try:
-            resources = json.loads(resources)
-        except (ValueError, TypeError):
-            resources = []
-
-    if resources:
-        return dict_list_reduce(resources, 'format')
-
-    res_format = _pkg_get(package, 'res_format')
-    if res_format:
-        return _normalize_language_list(res_format)
-
-    return []
-
-
 def get_dataset_language_flags(package):
     """
     Return flag dicts for dataset Language metadata (Additional Info).
     Each item: {code, url, label}.
     """
-    raw = _pkg_get(package, 'language')
+    if isinstance(package, dict):
+        raw = package.get('language')
+    else:
+        raw = getattr(package, 'language', None)
 
     flags = []
     seen = set()

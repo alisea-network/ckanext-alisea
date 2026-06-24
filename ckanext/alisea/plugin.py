@@ -36,7 +36,6 @@ class AliseaPlugin(AliseaWebsiteViewMixin, plugins.SingletonPlugin, DefaultTrans
             'lao_current_url': h.lao_current_url,
             'get_organization_structured_data': h.get_organization_structured_data,
             'get_dataset_language_flags': h.get_dataset_language_flags,
-            'get_dataset_formats': h.get_dataset_formats,
         }
 
     def update_config_schema(self, schema):
@@ -158,22 +157,6 @@ class AliseaPlugin(AliseaWebsiteViewMixin, plugins.SingletonPlugin, DefaultTrans
     
         return data_dict
 
-
-    def before_dataset_view(self, package_dict):
-        resources = package_dict.get('resources')
-        if isinstance(resources, str):
-            try:
-                package_dict['resources'] = json.loads(resources)
-            except (ValueError, TypeError):
-                package_dict['resources'] = []
-        return package_dict
-
-    def after_dataset_search(self, search_results, search_params):
-        for pkg in search_results.get('results', []):
-            formats = h.get_dataset_formats(pkg)
-            if formats:
-                pkg['_alisea_formats'] = formats
-        return search_results
 
     def before_dataset_index(self, data_dict):
         
