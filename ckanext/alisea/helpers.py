@@ -54,6 +54,39 @@ def _normalize_language_list(value):
     return []
 
 
+def get_dataset_formats(package):
+    """
+    Return unique resource format labels for a dataset (search or detail view).
+    Uses resources[].format when present, otherwise Solr res_format field.
+    """
+    if isinstance(package, dict):
+        resources = package.get('resources') or []
+        res_format = package.get('res_format')
+    else:
+        resources = getattr(package, 'resources', None) or []
+        res_format = getattr(package, 'res_format', None)
+
+    formats = []
+    seen = set()
+
+    for resource in resources:
+        fmt = resource.get('format') if isinstance(resource, dict) else None
+        if fmt:
+            key = str(fmt).strip().upper()
+            if key and key not in seen:
+                seen.add(key)
+                formats.append(str(fmt).strip())
+
+    if not formats and res_format:
+        for fmt in _normalize_language_list(res_format):
+            key = fmt.upper()
+            if key and key not in seen:
+                seen.add(key)
+                formats.append(fmt)
+
+    return formats
+
+
 def get_dataset_language_flags(package):
     """
     Return flag dicts for dataset Language metadata (Additional Info).

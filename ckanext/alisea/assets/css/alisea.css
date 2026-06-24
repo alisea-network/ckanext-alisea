@@ -395,18 +395,16 @@ a.tag:hover {
     margin: 0;
 }
 
-.dataset-meta-badges {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-}
-
 .dataset-language-flags {
     display: inline-flex;
     align-items: center;
     gap: 4px;
     margin-left: 2px;
+}
+
+.dataset-language-flags-item {
+    display: inline;
+    vertical-align: middle;
 }
 
 .dataset-language-flag {

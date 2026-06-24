@@ -58,17 +58,21 @@ Example:
         {% endblock %}
       </div>
       {% block resources %}
-        {% set formats = h.dict_list_reduce(package.resources, 'format') if package.resources and not hide_resources else [] %}
+        {% set formats = [] if hide_resources else h.get_dataset_formats(package) %}
         {% if formats or h.get_dataset_language_flags(package) %}
           {% block resources_outer %}
             <ul class="dataset-resources list-unstyled">
               {% block resources_inner %}
-                <li class="dataset-meta-badges">
-                  {% for resource in formats %}
-                    <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="badge badge-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
-                  {% endfor %}
+                {% for resource in formats %}
+                <li>
+                  <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="badge badge-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
+                </li>
+                {% endfor %}
+                {% if h.get_dataset_language_flags(package) %}
+                <li class="dataset-language-flags-item">
                   {% snippet 'snippets/dataset_language_flags.html', package=package %}
                 </li>
+                {% endif %}
               {% endblock %}
             </ul>
           {% endblock %}

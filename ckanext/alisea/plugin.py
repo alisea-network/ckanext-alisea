@@ -36,6 +36,7 @@ class AliseaPlugin(AliseaWebsiteViewMixin, plugins.SingletonPlugin, DefaultTrans
             'lao_current_url': h.lao_current_url,
             'get_organization_structured_data': h.get_organization_structured_data,
             'get_dataset_language_flags': h.get_dataset_language_flags,
+            'get_dataset_formats': h.get_dataset_formats,
         }
 
     def update_config_schema(self, schema):
