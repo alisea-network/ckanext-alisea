@@ -72,6 +72,43 @@ def _pkg_get(package, key, default=None):
     return getattr(package, key, default)
 
 
+def enrich_packages_language_from_db(packages):
+    """
+    Fill missing language on search results from package_extra.
+
+    package_search reads validated_data_dict from Solr, which may not include
+    language on older indexes even though the facet field is populated.
+    """
+    if not packages:
+        return
+
+    missing_ids = [
+        pkg['id'] for pkg in packages
+        if pkg.get('id') and not _pkg_get(pkg, 'language')
+    ]
+    if not missing_ids:
+        return
+
+    import ckan.model as model
+
+    extras = (
+        model.Session.query(model.PackageExtra)
+        .filter(
+            model.PackageExtra.package_id.in_(missing_ids),
+            model.PackageExtra.key == 'language',
+        )
+        .all()
+    )
+    languages_by_id = {
+        extra.package_id: _normalize_language_list(extra.value)
+        for extra in extras
+    }
+    for pkg in packages:
+        pkg_id = pkg.get('id')
+        if not _pkg_get(pkg, 'language') and pkg_id in languages_by_id:
+            pkg['language'] = languages_by_id[pkg_id]
+
+
 def get_dataset_language_flags(package):
     """
     Return flag dicts for dataset Language metadata (Additional Info).
