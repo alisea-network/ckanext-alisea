@@ -399,7 +399,19 @@ a.tag:hover {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    margin-left: 2px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.dataset-item-foot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dataset-item-foot .dataset-resources {
+    margin-bottom: 0;
 }
 
 .dataset-language-flags-item {

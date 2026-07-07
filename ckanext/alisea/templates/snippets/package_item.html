@@ -19,6 +19,7 @@ Example:
   {% set title = package.title_translated[current_lang] or package.name %}
   {% set notes = h.markdown_extract(package.notes_translated[current_lang], extract_length=180) %}
 {% endif %}
+{% set language_flags = h.get_dataset_language_flags(package) %}
 
 {% block package_item %}
   <li class="{{ item_class or "dataset-item" }}">
@@ -57,29 +58,40 @@ Example:
           {% endif %}
         {% endblock %}
       </div>
-      {% block resources %}
-        {% set language_flags = package.get('_language_flags') or h.get_dataset_language_flags(package) %}
-        {% if (package.resources and not hide_resources) or language_flags %}
-          {% block resources_outer %}
-            <ul class="dataset-resources list-unstyled">
-              {% block resources_inner %}
-                {% if package.resources and not hide_resources %}
-                  {% for resource in h.dict_list_reduce(package.resources, 'format') %}
-                  <li>
-                    <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="badge badge-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
-                  </li>
-                  {% endfor %}
-                {% endif %}
-                {% if language_flags %}
-                <li class="dataset-language-flags-item">
-                  {% snippet 'snippets/dataset_language_flags.html', flags=language_flags %}
-                </li>
-                {% endif %}
+      {% if language_flags or (package.resources and not hide_resources) %}
+        <div class="dataset-item-foot">
+          {% block resources %}
+            {% if package.resources and not hide_resources %}
+              {% block resources_outer %}
+                <ul class="dataset-resources list-unstyled">
+                  {% block resources_inner %}
+                    {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+                    <li>
+                      <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="badge badge-default" data-format="{{ resource.lower() }}">{{ resource }}</a>
+                    </li>
+                    {% endfor %}
+                  {% endblock %}
+                </ul>
               {% endblock %}
-            </ul>
+            {% endif %}
           {% endblock %}
-        {% endif %}
-      {% endblock %}
+          {% if language_flags %}
+            <span class="dataset-language-flags" aria-label="{{ _('Languages') }}">
+              {% for flag in language_flags %}
+                <img
+                  src="{{ flag.url }}"
+                  alt="{{ flag.label }}"
+                  title="{{ flag.label }}"
+                  class="dataset-language-flag"
+                  width="20"
+                  height="14"
+                  loading="lazy"
+                />
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
     {% endblock %}
   </li>
 {% endblock %}

@@ -16,6 +16,8 @@ LANGUAGE_TO_FLAG = {
     'Vietnamese': ('vi', 'vn.png', 'Vietnamese'),
 }
 
+log = logging.getLogger(__name__)
+
 
 def get_google_tag():
     gtag = tk.config.get('ckan.alisea.gtag')
@@ -72,9 +74,22 @@ def _pkg_get(package, key, default=None):
     return getattr(package, key, default)
 
 
-def enrich_packages_language_from_db(packages):
+def _action_context():
+    import ckan.model as model
+    return {
+        'model': model,
+        'session': model.Session,
+        'ignore_auth': True,
+    }
+
+
+def _package_has_language(package):
+    return bool(_normalize_language_list(_pkg_get(package, 'language')))
+
+
+def enrich_packages_language_from_db(packages, context=None):
     """
-    Fill missing language on search results from package_extra.
+    Fill missing language on search results.
 
     package_search reads validated_data_dict from Solr, which may not include
     language on older indexes even though the facet field is populated.
@@ -82,51 +97,51 @@ def enrich_packages_language_from_db(packages):
     if not packages:
         return
 
-    missing_ids = [
-        pkg['id'] for pkg in packages
-        if pkg.get('id') and not _pkg_get(pkg, 'language')
-    ]
-    if not missing_ids:
+    missing = [pkg for pkg in packages if not _package_has_language(pkg)]
+    if not missing:
         return
 
     import ckan.model as model
 
-    extras = (
-        model.Session.query(model.PackageExtra)
-        .filter(
-            model.PackageExtra.package_id.in_(missing_ids),
-            model.PackageExtra.key == 'language',
+    if context is None:
+        context = _action_context()
+
+    missing_ids = [pkg['id'] for pkg in missing if pkg.get('id')]
+    if missing_ids:
+        extras = (
+            model.Session.query(model.PackageExtra)
+            .filter(
+                model.PackageExtra.package_id.in_(missing_ids),
+                model.PackageExtra.key == 'language',
+            )
+            .all()
         )
-        .all()
-    )
-    languages_by_id = {
-        extra.package_id: _normalize_language_list(extra.value)
-        for extra in extras
-    }
-    for pkg in packages:
-        pkg_id = pkg.get('id')
-        if not _pkg_get(pkg, 'language') and pkg_id in languages_by_id:
-            pkg['language'] = languages_by_id[pkg_id]
+        languages_by_id = {
+            extra.package_id: _normalize_language_list(extra.value)
+            for extra in extras
+        }
+        for pkg in missing:
+            pkg_id = pkg.get('id')
+            if pkg_id in languages_by_id:
+                pkg['language'] = languages_by_id[pkg_id]
+
+    still_missing = [pkg for pkg in packages if not _package_has_language(pkg)]
+    for pkg in still_missing:
+        pkg_id = pkg.get('id') or pkg.get('name')
+        if not pkg_id:
+            continue
+        try:
+            full = tk.get_action('package_show')(context, {'id': pkg_id})
+            language = full.get('language')
+            if language:
+                pkg['language'] = language
+        except Exception as exc:
+            log.warning(
+                'Could not load language for %s: %s', pkg_id, exc
+            )
 
 
-def get_dataset_language_flags(package):
-    """
-    Return flag dicts for dataset Language metadata (Additional Info).
-    Each item: {code, url, label}.
-    """
-    raw = _pkg_get(package, '_language_flags')
-    if raw:
-        return raw
-
-    raw = _pkg_get(package, 'language')
-    if raw is None:
-        extras = _pkg_get(package, 'extras') or []
-        if isinstance(extras, list):
-            for extra in extras:
-                if isinstance(extra, dict) and extra.get('key') == 'language':
-                    raw = extra.get('value')
-                    break
-
+def _flags_from_languages(raw):
     flags = []
     seen = set()
     for lang in _normalize_language_list(raw):
@@ -141,6 +156,69 @@ def get_dataset_language_flags(package):
             'label': label,
         })
     return flags
+
+
+def _normalize_flags(flags):
+    """Accept only a list of flag dicts from cache/search results."""
+    if not flags:
+        return []
+    if isinstance(flags, str):
+        try:
+            flags = json.loads(flags)
+        except (ValueError, TypeError):
+            return []
+    if not isinstance(flags, list):
+        return []
+    return [
+        item for item in flags
+        if isinstance(item, dict) and item.get('url') and item.get('label')
+    ]
+
+
+def _language_raw_from_package(package):
+    """Read language value from a package dict (search or show)."""
+    raw = _pkg_get(package, 'language')
+    if raw is not None:
+        return raw
+
+    extras = _pkg_get(package, 'extras') or []
+    if isinstance(extras, list):
+        for extra in extras:
+            if isinstance(extra, dict) and extra.get('key') == 'language':
+                return extra.get('value')
+    return None
+
+
+def get_dataset_language_flags(package):
+    """
+    Return flag dicts for dataset Language metadata (Additional Info).
+    Each item: {code, url, label}.
+    """
+    try:
+        for key in ('alisea_language_flags', '_language_flags'):
+            cached = _normalize_flags(_pkg_get(package, key))
+            if cached:
+                return cached
+
+        raw = _language_raw_from_package(package)
+        if not _normalize_language_list(raw):
+            pkg_id = _pkg_get(package, 'id') or _pkg_get(package, 'name')
+            if pkg_id:
+                try:
+                    full = tk.get_action('package_show')(
+                        _action_context(),
+                        {'id': pkg_id},
+                    )
+                    raw = _language_raw_from_package(full)
+                except Exception as exc:
+                    log.warning(
+                        'Could not load language for %s: %s', pkg_id, exc
+                    )
+
+        return _flags_from_languages(raw)
+    except Exception as exc:
+        log.warning('get_dataset_language_flags failed: %s', exc)
+        return []
 
 
 def get_organization_structured_data():
